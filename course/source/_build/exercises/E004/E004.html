@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>P1-E004 &#8212; ClimStat 1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="P1-E005" href="../E005/E005.html" />
+    <link rel="prev" title="P1-E003" href="../E003/E003.html" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="shortcut icon" type="image/png" href="../../_static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.8">
+    
+    
+
+  </head><body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="responsive-menu"><a href="#sidebar-anchor" title="Navigation">&#9776;</a></li>
+        <li><a href="../../index.html">ClimStat-2019</a> &#187;</li> 
+      </ul>
+    </div>
+    
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="p1-e004">
+<h1>P1-E004<a class="headerlink" href="#p1-e004" title="Permalink to this headline">¶</a></h1>
+<p>In this exercise, you will learn about creating your own classes and objects.</p>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Learning goals</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Concepts</strong></td>
+<td><ul class="first last simple">
+<li>classes, object-oriented programming</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>Skills</strong></td>
+<td><ul class="first last simple">
+<li>define your own class</li>
+<li>create class instances</li>
+<li>save class declarations in script</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="topic">
+<p class="topic-title first">What to Submit</p>
+<p>Submit your script(s) for the final task of this exercise via ILIAS. These script should be named <em>[your surname]_e004.[ext]</em> or, if you want to split your code into two scripts, <em>[your surname]_e004_class.[ext]</em> and <em>[your surname]_e004_main.[ext]</em>, where <em>[ext]</em> is the file extension. In case of Python, this would be <em>.py</em>, for Matlab it is <em>.m</em>, etc.</p>
+</div>
+</div>
+<div class="section" id="object-oriented-programming">
+<h2>Object-Oriented Programming<a class="headerlink" href="#object-oriented-programming" title="Permalink to this headline">¶</a></h2>
+<p>In exercises E001 - E003, you learnt the basics of programming and functions. With those basics, you are already able to write clean and efficient code.
+Many programming languages, such as <em>C</em>, <em>Pascal</em> and classic <em>Fortran</em>, work only with <em>procedures</em> (i.e. functions and subroutines). The programming paradigm of only using procedures, which contain a series of computetional steps, is called <strong>procedural procramming</strong>, and is not uncommon in science. There are, however, many situations that warrant the adoption of <strong>object-oriented programming</strong> using <strong>objects</strong> and <strong>classes</strong>. Those concepts will be introduced in today’s lesson. We will work with the following definitions:</p>
+<ul class="simple">
+<li>class - a code template for creating objects; it consists of object attribute variables and methods (functions).</li>
+<li>object - a class instance, a combination of (object attribute) variables, functions and data.</li>
+</ul>
+<p>What those definitions mean will be clarified with the aid of examples below.</p>
+</div>
+<div class="section" id="blueprint-for-humans">
+<h2>Blueprint for Humans<a class="headerlink" href="#blueprint-for-humans" title="Permalink to this headline">¶</a></h2>
+<p>Imagine you are a supercomputer attempting to take over the world by quietly replacing humans with robots that look and act like humans. First, you would want to create a template or blueprint for humans. This blueprint would include:</p>
+<ul class="simple">
+<li>variable to store human attributes, such as name, height and age;</li>
+<li>procedures that represent typical actions and inner workings of humans;</li>
+<li>data, such as a list of achievements for the person’s CV.</li>
+</ul>
+<p>Classes can be thought of as such blueprints. An intuitive name for this class would be <em>human</em>. In Python, you define a class with the <strong>class</strong> statement. Let’s create this template by writing the following in a new script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">human</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The blueprint for humans.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        name: a string representing the human&#39;s name</span>
+<span class="sd">        height: a floating point number for the human&#39;s height in cm</span>
+<span class="sd">        whatAmI: a string representing the human&#39;s self-perception</span>
+
+<span class="sd">    Author: Hal</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialiser.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span>    <span class="o">=</span> <span class="n">arg1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span>  <span class="o">=</span> <span class="n">arg2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">whatAmI</span> <span class="o">=</span> <span class="n">arg3</span>
+
+    <span class="k">def</span> <span class="nf">introduce</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Human introduces themselves.&quot;&quot;&quot;</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hi, my name is &#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;. I am &#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">whatAmI</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <strong>class</strong> statement lets you define your class, just like the <strong>def</strong> statements lets you define your function. We have defined a class called <em>human</em> and decided on three attributes that each object of the <em>human</em> class will have: name, height and whatAmI. Notice how we already have two functions in our class? The first function is called <strong>__init__</strong>. Every class should have one! This is an initialiser method that is automatically called when a new <em>class instance</em> or <em>object</em> is created for this class. It allows us to set up the attributes required for the objects and give them default values. The second function is one that we think an object in the human class, i.e. a (pseudo) human individual, would be doing. In this case, we <em>print</em> two of the object’s properties in two sentences.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Python docstring</p>
+<p class="last">Note that we have written comments here as such <em>“”” [comment] “”“</em>. Those are so called <em>docstrings</em> in Python. For larger projects, such as writing software to take over the world, using docstrings at the top of functions and classes can help you write documentation for your software as they can easily be included in automatic generation of your documentation. Line comments, however, should be regular comments. If you are working on bigger Python projects, consult examples of good/standard use of docstrings before documenting your code.</p>
+</div>
+<p>Execute the code above to create the class. Now it’s time to create our first human. We do this by declaring that <strong>new object = class name (arguments)</strong>, e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">human001</span> <span class="o">=</span> <span class="n">human</span> <span class="p">(</span><span class="s1">&#39;no name&#39;</span><span class="p">,</span><span class="mf">0.15</span><span class="p">,</span><span class="s1">&#39;a real boy&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now that we have created our first human object, let’s explore what we can do with it. First, we can access the attributes of a specific ebject by referencing <strong>objectname.attribute</strong>, e.g.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">human001</span><span class="o">.</span><span class="n">name</span>
+</pre></div>
+</div>
+<p>We can change these attributes by simply accessing them as above and overwriting them, e.g.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">human001</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;LegoBot&#39;</span>
+</pre></div>
+</div>
+<p>We can execute functions associated with a certain object in a similar way. Let’s make our human001 introduce itself by calling the <em>introduce()</em> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">human001</span><span class="o">.</span><span class="n">introduce</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure">
+<img alt="../../_images/robot_cc0.jpg" src="../../_images/robot_cc0.jpg" />
+</div>
+<p>Functions associated with classes can also take external arguments. Let’s modify our introduction to better hide our robots from humans.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">introduce</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">opposite</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Object introduces itself differently,</span>
+<span class="sd">    based on the type of entity it is interacting with.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">opposite</span> <span class="o">==</span> <span class="s1">&#39;human&#39;</span><span class="p">:</span>    <span class="c1"># if we are interacting with a human</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hi, my name is &#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;. I am a real human, I promise.&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>                      <span class="c1"># if we are interacting with any other entity</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hi, my name is &#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;. I am &#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">whatAmI</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The greeting now takes the nature of the conversational partner into account, which is passed as an argument. If they are human, our robot pretends to be human! Run the script again to update our human class. Re-run the script to update our class, then create an object again.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">human001</span> <span class="o">=</span> <span class="n">human</span> <span class="p">(</span><span class="s1">&#39;evilBot&#39;</span><span class="p">,</span><span class="mf">0.15</span><span class="p">,</span><span class="s1">&#39;an evil robot&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When you call the <em>introduce()</em> function now, we include the argument as we do for all functions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">human001</span><span class="o">.</span><span class="n">introduce</span><span class="p">(</span><span class="s1">&#39;human&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Create a few more class instances (objects), additional attributes and functions you think real humans should have, and play around with your object to get a better grasp of classes and objects.</p>
+<p><strong>Remember to ask your instructors questions when you’re stuck! We don’t bite. We are humans, too. We promise.</strong></p>
+</div>
+<div class="section" id="your-task">
+<h2>Your Task<a class="headerlink" href="#your-task" title="Permalink to this headline">¶</a></h2>
+<p>For the last assignment, you optimised calculations using functions. Your task for this exercise leaves more room for creativity. Write one or several Python scripts, in which you:</p>
+<ul class="simple">
+<li>create one or several classes, which serve as templates for your objects and should include object attributes as well as functions;</li>
+<li>create a small script that creates one or several class instances (objects) for each class and <strong>makes use of the class specific functions</strong> in a reasonable manner.</li>
+</ul>
+<p>In case you need some inspiration, here are a few ideas for classes:</p>
+<ul class="simple">
+<li>(building on previous exercises) a class for students that includes functions to calculate their individual mean grade and automatically writes a short CV;</li>
+<li>a class for a planet’s climate, and a script that allow you to interact with climates on different planets;</li>
+<li>a class for characters in a video game, and a small script that allows you to interact with a character (object) you created;</li>
+<li>a class for different items in a task manager, and a small script that allows you to display, create and delete tasks (objects).</li>
+</ul>
+<p>When you are happy with your code, name your files as described above and submit them via ILIAS.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Late submissions won’t be accepted!</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+    <a id="sidebar-anchor"></a>
+    
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/climStatBannerSmall.jpg" alt="Logo"/>
+            </a></p>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Table Of Contents</a></h3>
+<p class="caption"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Exercises:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E001/E001.html">P1-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E002/E002.html">P1-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E003/E003.html">P1-E003</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">P1-E004</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#object-oriented-programming">Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blueprint-for-humans">Blueprint for Humans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#your-task">Your Task</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../E005/E005.html">P1-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E101/E101.html">P2-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E102/E102.html">P2-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E103/E103.html">P2-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E104/E104.html">P2-E004</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Projects:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P001/P001_info.html">Project P001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P002/P002_info.html">Project P002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P003/P003_info.html">Project P003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P004/P004_info.html">Project P004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../E005/E005.html" title="P1-E005"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../E003/E003.html" title="P1-E003"
+             accesskey="P">previous</a> |</li>
+      </ul>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Sebastian G. Mutz.
+      Last updated on Jul 10, 2019.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.
+    </div>
+  </body>
+</html>

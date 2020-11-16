@@ -1,0 +1,16 @@
+REQUIREMENTS
+
+debian (and derivatives)
+========================
+apt-get install python3-sphinx
+apt install python3-pip
+#pip3 install sphinx_theme
+pip3 install sphinx_py3doc_enhanced_theme
+
+OSX
+===
+(requires xcode and mac ports)
+port install py37-sphinx
+port install py37-pip
+#pip install sphinx_theme
+pip-3.7 install --user sphinx_py3doc_enhanced_theme

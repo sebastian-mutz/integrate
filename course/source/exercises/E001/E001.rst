@@ -1,0 +1,319 @@
+P1-E001
+=======
+
+In this exercise, you learn about some basic concepts of programming, commonly used tools, and how to write and execute a script. You may come across some important vocabulary that you are not yet familiar with. 
+
+Information
+----------- 
+
++----------------------+--------------------------------------------------------+
+| Learning goals                                                                |
++======================+========================================================+
+|**Concepts**          |                                                        |
+|                      |   * programming language                               |
+|                      |   * programme/script                                   |
+|                      |   * IDE, terminal emulator, console                    |
+|                      |   * data types                                         |
+|                      |   * modules                                            |
++----------------------+--------------------------------------------------------+
+|**Skills**            |                                                        |    
+|                      |   * work with an IDE (basics)                          | 
+|                      |   * create and execute a (Python) script               |
+|                      |   * define variables                                   |
+|                      |   * using built-in functions                           |
++----------------------+--------------------------------------------------------+
+
+.. topic:: What to Submit
+
+      Submit your script for the final task of this exercise via ILIAS. The script should be named *[your surname]_e001.[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for Matlab it is *.m*, etc.
+
+Anaconda - It Won't Bite!
+-------------------------      
+
+In this course, we will be working with the Anaconda Python distribution. It comes with many tools that a programmer working with Python may need. We will be using the following components:
+
+* Python - the programming language we will use for this course! 
+* Spyder - an integrated development environment (IDE) for Python.
+* numPy - a standard Python package for linear algebra and other important elements in scientific computing. We will use this later in the course for some calculations!
+* matplotlib -a 2D Python plotting library. This is how we visualise data and our results!
+
+Go ahead and launch the *Anaconda Navigator* to get an overview of everything Anaconda related:
+
+.. figure:: anaconda-navigator.jpg   
+
+
+
+Spyder - The Arachnophobe-Friendly Version
+------------------------------------------
+
+*Spyder* is an IDE for Python, and it includes a code editor (text editor), debubber and a console. This is where we will be developing our Python code. It can be launched directly or from the *Anaconda Navigator*. Once you have launched it, you should be looking at something like this:
+
+.. figure:: spyder.jpg   
+
+The code editor is where you write, edit and save your programmes, which are a series of commands to be issued to the computer upon programme execution. The console is where you can execute either single Python commands or a set of commands you saved as a script. Python scripts have a .py extensions. Consequently, the script files you save may look like this::
+
+   myScript.py
+   wow_such_script.py
+
+      
+Simple Maths
+------------      
+
+Before we start writing commands in a script using the editor in *Spyder*, we have a closer look at the console and try out a few commands for doing simple maths in Python. 
+
+  +------------------------+--------------------------------------------------------+---------------------------------+
+  | Operator               | Description                                            | Examples                        |
+  +========================+========================================================+=================================+
+  | `+`                    | addition                                               | 20 + 22                         |
+  +------------------------+--------------------------------------------------------+---------------------------------+  
+  | `-`                    | subtraction                                            | 2077 - 93                       |
+  +------------------------+--------------------------------------------------------+---------------------------------+  
+  | `*`                    | multiplication                                         | 578 * 4                         |
+  +------------------------+--------------------------------------------------------+---------------------------------+  
+  | `/`                    | division                                               | 1332/2                          |
+  +------------------------+--------------------------------------------------------+---------------------------------+  
+  | `**`                   | exponent                                               | 16**2                           |
+  +------------------------+--------------------------------------------------------+---------------------------------+  
+  
+Type the examples into the console and hit enter on your keyboard after each entry.
+First, let's try adding two values::
+
+    20 + 22
+
+... now try subtraction::
+
+    2077 - 93
+
+... multiplication::
+
+    578 * 4
+    
+... division::
+
+    1332/2
+  
+... and the exponent operator::
+
+    16**2
+
+After hitting enter, the console should have returned the result of your operations in the next line. The results should have been::
+
+    42
+    1984
+    2312
+    666
+    256   
+    
+Simple Functions
+----------------
+
+A function is a unit of code performing a specific task. Functions typically take one or several input arguments and return a value that is the result of performing the task under conditions set by the input arguments. Python comes with many standard functions you find in virtually all programming languages. One such function is the *print* function. The *print* function allows you to display the value of an input argument/variable. Note how in the example above, the console returned the result of your mathematical operations? Usually, you will have to explicitly ask for values to be displayed like above. 
+
+Let's try the *print* function to display the words "wow, many print". Type the following into the console and hit enter
+
+.. code-block:: python
+
+    print('wow, many print')
+
+The console should have returned *"wow, many print"*. In this case, the input argument was *"wow, many print"*, i.e. the value to be displayed, and the function *print* displayed it.
+
+Modules
+-------
+
+Doing maths only with the operators above can be tedious. Luckily, Python has a *math* module that comes with some additional, useful functions. Modules are part of a programme (a component) that contain one or several functions. To get access to these functions, you first have to import the module (whether you're working directly in the console or on a script). You import the Python *math* module in several ways:
+
+**1 - simple import**
+
+.. code-block:: python
+
+    import math
+    
+Import the module, and then use the *sin()* function of the *math* module by typing:   
+
+.. code-block:: python
+
+    math.sin(2.0)
+
+This should yield::
+
+    0.9092974268256817
+    
+Note that you have to add *math.* in front of your function to declare that you are using the *sin()* function of the *math* module. If you simply type *sin(2)*, you will get an error message! However, you can make it work by importing the module's functions as below.
+
+**2 - import everything from a module**
+
+.. code-block:: python
+    
+    from math import *
+
+Now, if you simply type 
+
+.. code-block:: python
+
+    sin(2.0) 
+    
+you will get the same result as from typing *math.sin(2)*. However, in most cases it is wiser to remain explicit. 
+
+**3 - import as [your choice]**
+
+If you do not wish to write out the full name of the module (some can be quite long), you can import it with a name of your choice To try this, let's shorten *math* to *mt* by importing the module as follows:
+
+.. code-block:: python
+    
+    import math as mt
+    
+If you now type 
+
+.. code-block:: python
+    
+    mt.sin(2.0) 
+    
+you will get the same result as typing *math.sin(2)* before.
+
+.. note:: 
+
+    In all the working cases above, the function we called was *sin()* and the input argument for the sin calculation was the number 2. Note that the input arguments for functions are always written into the brackets behing the function.
+
+    
+Combining Functions
+-------------------          
+
+Using functions separately and having to temporarily store the values in variables (more on variables later) can be inefficient and tedious. Luckily, functions can be combined. In the example below, we *print* (1st function) the result of taking the square root of 64 (2nd function): 
+
+.. code-block:: python
+
+    print( math.sqrt(64) )
+    
+Note that some functions (can) take several input arguments. In case of the *print* function, you can pass a list of items to be displayed. In the example below, we add 'square root of 64 =' in front of the calculation:    
+    
+.. code-block:: python
+
+    print( 'square root of 64 =', math.sqrt(64) )
+
+Executing this code in the console will give you::
+    
+    square root of 64 = 8.0
+    
+Variables
+----------
+Variables allow you to store the value of an operation to use in other operations within your programme. Like a mathematical variable, it stores values and has a specific name (anything from *x* to *u_wot_m8*). Let's try storing the result of our calculation and the printed words above in variables.
+
+.. code-block:: python
+
+    x = math.sqrt(64)
+    a = 'square root of 64 ='
+
+The result of our calculation is now stored in variable *x*, and our words are stored in *a*. Now we can pass them as arguments to the *print* function as such:
+
+.. code-block:: python
+
+    print( a, x )
+    
+This will yield the same result as above. Note how this can shorten your code a lot and allows you to use the result of your calculation in a lot of other operations without having to re-calculate it each time. Try this by using *x* in the operation below: 
+
+.. code-block:: python
+
+     y = 0.5*x + 2
+     print( y )
+
+Again, you stored the result of a calculation in a variable (*y*), the value of which (*6*) you then displayed using the *print* function. You are also able to overwrite the data stored in a variable by assigning a new value to it, such as:
+
+.. code-block:: python
+
+     x = 0.5*x + 2
+
+Before we look at data types, try one last thing - this time with the variable *a*:
+
+.. code-block:: python
+
+     y = 0.5*a
+     
+This didn't work, did it? You got an erroor message that reads::
+
+    Traceback (most recent call last):
+
+      File "<ipython-input-11-55b14d72f40d>", line 1, in <module>
+        y = 0.5*a
+
+    TypeError: can't multiply sequence by non-int of type 'float'
+
+Don't get intimidated by error messages - they are your friends and let you fix your code. They usually show you the line in which the error occured. Since we have just written one line, the error occured in line 1. At the bottom of the message, it tells us what kind of error we have. In this case, we have a *TypeError*. This happens when you try to do an operation on a variable of inappropriate type. Here, we tried to multiply a *string* with a *float* (floating point number) 0.5. This brings us to the next topic: *Data Types*. 
+
+Data Types
+----------
+
+Data types are categories for data, which specify which type of value a variable can take. These include:
+
+  +------------------------+--------------------------------------------------------+---------------------------------+
+  | Data Type              | Explanation                                            | Examples                        |
+  +========================+========================================================+=================================+
+  | Integer                | whole numbers                                          | 42, 451                         |
+  +------------------------+--------------------------------------------------------+---------------------------------+  
+  | Float                  | (floating point) numbers with decimal points           | 20.77, 19.84, 2.312             |
+  +------------------------+--------------------------------------------------------+---------------------------------+  
+  | Boolean                | representing the two values of boolean logic           | True, False                     |
+  +------------------------+--------------------------------------------------------+---------------------------------+  
+  | String                 | alphanumeric characters                                | *dogge*, *system_shock_2019*    |
+  +------------------------+--------------------------------------------------------+---------------------------------+    
+
+There are way to convert data types for specific purposes. For example, we may want to let a programme generate the name of output files automatically based on numbers used in your programme. First, let's save an integeter in the variable *year*:
+
+.. code-block:: python
+
+     year = 2019
+
+Let's now try to generate a file name by combining (with a *+*) a string with the integer and pass it to a new variable (*outfile*) storing our file name.
+
+.. code-block:: python
+
+     outfile = 'myFile' + year
+
+Again, you get a *TypeError* because you cannot add a string (*'myFile'*) to an integer. We will have to convert the integer to a string with another built-in function: *str()*
+
+.. code-block:: python
+
+     outfile = 'myFile' + str(year)
+     print(outfile)
+     
+Typing the above into the console should give you::
+
+    myFile2019
+  
+Writing Scripts
+---------------
+  
+Now, let's use the editor. In your editor window, type the following:
+
+.. literalinclude:: test.py
+    
+Save the file in a location of your choice as *test.py*. You can execute the Python file from outside or inside your IDE. In your IDE, simply click the *run* button: 
+
+.. figure:: spyderRun.jpg   
+  
+The commands will be executed in succession to give you::
+
+    42 1984 2312 666.0 256
+
+Let's have a look at what happened exactly: The first 3 lines were ignored, because line 2 was empty and lines 1 and 3 started with a hash (*#*). The hash tells the Python interpreter to ignore whatever comes behind it. Such *comments* are an excellent way to document what we are doing to make sure that our code remains understandable. The following 5 lines of code perform the operations we did at the beginning of the exercise, and the results are saved in variables named *a*, *b*, *c*, *d* and *e*. Finally, the values of all the variables are displayed using the *print* function. Note that we have another comment in the same line. It is possible to add comments next to executed code. What comes behind # is ignored, but what comes before it in the same line will still be executed.
+
+.. note:: *Comments*
+
+    It is good practice to explain every line of code in a script with a comment, and to add a few comments at the beginning of the script to explain what the script does. In a Python script, everything that follows the *#* in a specific line is interpreted a comment and will not be executed. 
+    
+Your Task
+---------
+
+Now you've covered enough of the basics of practical programming in the sections above to start writing in own script. To complete this exercise, **write and submit a script that does the following**:
+
+  * calculates and displays the circumference and area of a circle with radius of 2
+  * uses mathematical operators
+  * loads a module and uses at least one function from it
+  * stores values in variables somewhere in the script
+  * combines 2 functions somewhere in the script
+  * includes *comments* for every instruction (executed line of code) in the script
+  
+When you are happy with your script, save it as *[your surname]_e001.[ext]* and submit it via ILIAS.
+
+.. warning::
+
+    Late submissions won't be accepted!

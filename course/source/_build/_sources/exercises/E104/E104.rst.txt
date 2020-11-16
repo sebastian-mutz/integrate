@@ -1,0 +1,82 @@
+P2-E004
+=======
+
+The El Nino Southern Oscillation directly and indirectly controls much of regional climates elsewhere. In the accompanying lecture to this exercise, you learned about ENSO and statistical Pearson's and Spearman Rank Correlation. This exercise is designed to investigate the statistical dependence between ENSO and climate variables at different stations.
+
+
+Information
+----------- 
+
++----------------------+--------------------------------------------------------+
+| Learning goals                                                                |
++======================+========================================================+
+|**Skills**            |                                                        |    
+|                      |   * Correlation                                        |
+|                      |   * Significance test for correlation                  |
++----------------------+--------------------------------------------------------+
+
+
+.. topic:: What to Submit
+
+      Submit your script(s) and 1-2 sentence answers to the questions for the tasks of this exercise via ILIAS. You may include the answers as comments in your script(s). Make sure to also comment each of your calculations (using the terminology you were introduced to). The script should be named *[your surname]_e104.[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for Matlab it is *.m*, etc.
+      
+.. figure:: MEI.jpg  
+      
+Investigating Statistical Dependence     
+------------------------------------
+
+You are provided with data from three different (southern hemisphere) weather stations with different latitudinal and similar longitudinal coordinates: 
+
+Central Chile:
+:download:`Antofagasta.cvs <Antofagasta.csv>`   
+
+Central-South Chile: 
+:download:`Quintero.cvs <Quintero.csv>`   
+
+South Chile:
+:download:`Puerto_Montt_el_Tepual.cvs <Puerto_Montt_El_Tepual.csv>`   
+
+Furthermore, a time series of the Multivariate ENSO Index (MEI) and Antarctic Oscillation Index (AAOI) is provided. 
+
+:download:`MEI Time Series<mei.csv>`   
+
+:download:`AAOI Time Series<aaoi.csv>`   
+
+.. note:: This the MEI is computed from different variables and represents ENSO variability over time. The AAOI represents the expansion and contraction of the belts of Westerlies in the southern hemisphere and thus the frontal systems.
+
+Choose three variables from the station datasets and investigate their correlation with the variability of ENSO and seouthern hemisphere Westerlies. How much do the correlation coefficients differ? Are they significant? Do you see a pattern in dependence and does this make sense given what you know about climate?
+
+**HINT**
+
+* Think about how seasons will affect your quantification of statistical dependence and think of a way to circumvent problems that may arise from this.
+* Think about different ways to quantify statistical dependence and how to implement code for it. Is there a way you can use previous code as modules/components for your computations here? 
+
+.. warning::
+
+    Late submissions won't be accepted!
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
