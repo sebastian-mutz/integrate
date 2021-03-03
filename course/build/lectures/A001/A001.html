@@ -1,0 +1,637 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Building a Climate I &mdash; INTEGRATE 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Building a Climate II" href="../A002/A002.html" />
+    <link rel="prev" title="Intro" href="../info.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> INTEGRATE
+          
+
+          
+            
+            <img src="../../_static/integrateLogo_256_256.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2021
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Intro</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building a Climate I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definitions">Definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#weather">Weather</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#climate">Climate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#systems">Systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#steady-state">Steady State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-paths">System Paths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-climate-system">The Climate System</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reminder-units">Reminder: Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#retaining-an-atmosphere">Retaining an Atmosphere</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#escape-velocity">Escape Velocity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-speed-of-molecules">The Speed of Molecules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gases-in-the-atmosphere">Gases in the Atmosphere</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dissecting-the-atmosphere">Dissecting the Atmosphere</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#layering">Layering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperature-defined-boundaries">Temperature-Defined Boundaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#troposphere">Troposphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stratosphere">Stratosphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mesosphere">Mesosphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#thermosphere-and-exosphere">Thermosphere and Exosphere</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../A002/A002.html">Building a Climate II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A003/A003.html">Building a Climate III</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A004/A004.html">Building a Climate IV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A005/A005.html">Building a Climate V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A006/A006.html">Building a Climate VI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A007/A007.html">Building a Climate VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A008/A008.html">Building a Climate VIII</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Exercises:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E001/E001.html">P1-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E002/E002.html">P1-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E003/E003.html">P1-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E004/E004.html">P1-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E005/E005.html">P1-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E101/E101.html">P2-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">P2-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Projects:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P001/P001_info.html">Project P001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P002/P002_info.html">Project P002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P003/P003_info.html">Project P003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P004/P004_info.html">Project P004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">INTEGRATE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Building a Climate I</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lectures/A001/A001.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="building-a-climate-i">
+<h1>Building a Climate I<a class="headerlink" href="#building-a-climate-i" title="Permalink to this headline">¶</a></h1>
+<p><strong>Retaining an Atmosphere</strong></p>
+<p>This lecture introduces basic terminology and important units in climatology. Furthermore, we learn about how we are able to retain an atmosphere on Earth and other planets. Finally, we learn about the vertical structure of the atmosphere and why it exists.</p>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Learning goals</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ul class="simple">
+<li><p>Important definitions in climate science</p></li>
+<li><p>How to retain an atmosphere?</p></li>
+<li><p>The vertical structure of the atmosphere</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="definitions">
+<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<p>First, we will agree on the definitions of various terminology used in the course. This way, we ensure effective communication. In some cases, there is more than one valid definition, but the definitions used here do not significantly deviate (if at all) from other common definitions.</p>
+<div class="section" id="weather">
+<h3>Weather<a class="headerlink" href="#weather" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id1" style="width: 300px">
+<a class="reference internal image-reference" href="../../_images/cirrus_noaa.jpg"><img alt="../../_images/cirrus_noaa.jpg" src="../../_images/cirrus_noaa.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Cirrus clouds. [image: noaa.gov]</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Intuitively, weather can be described as the relatively short-lived, temporary mood of the atmosphere at a specific location. More formally, weather can be described as the condition of meteorological processes at a specific location over a short time span.</p>
+<p><strong>Informal definition</strong> (intuitive): “The temporary mood of the atmosphere at a specific location”</p>
+<p><strong>Formal defition</strong> (one of many): “Condition of meteorological processes at a specific location over a short time span (usually a day)” [Kuttler W., 2013]</p>
+</div>
+<div class="section" id="climate">
+<h3>Climate<a class="headerlink" href="#climate" title="Permalink to this headline">¶</a></h3>
+<p>Extending the analogy above to climate, we can say the following: If weather is the temporary mood of the atmosphere, climate can be regarded as the character of the atmosphere. While the character can be seen as the average set of moods you can have, it does determine probabilities of certain moods.</p>
+<div class="figure align-left" id="id2" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/palaeoclimate.jpg"><img alt="../../_images/palaeoclimate.jpg" src="../../_images/palaeoclimate.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Temperature climatologies for a pre-industrial world (left), and temperature deviations from pre-industrial climatologies for the Last Glacial Maximum (middle) and mid_Pliocene (right) [data: Mutz et al., 2018].</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Informal definition</strong> (intuitive): “The character of the atmosphere (that determines probabilities for different moods)”</p>
+<p><strong>Formal defition</strong> (one of many): “Summary of weather of a specific region over longer time scales (typically at least 30 years)” [Kuttler W., 2013]</p>
+<p>We use the term <strong>climatology</strong> to refer to temporally averaged weather conditions. The standard averaging period to construct a climatology is 30 years, but it can vary depending on the purpose.</p>
+</div>
+<div class="section" id="systems">
+<h3>Systems<a class="headerlink" href="#systems" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/systemBoundarySurroundings.jpg"><img alt="../../_images/systemBoundarySurroundings.jpg" src="../../_images/systemBoundarySurroundings.jpg" style="width: 400px;" /></a>
+</div>
+<p>The <strong>system</strong> is our object of study that consists of many processes and attributes. The <strong>boundary</strong> is where the system exchanges mass and/or energy with the <strong>surroundings</strong>. In climatology, this can be something as small as an air or water parcel, or something as comprehensive as the climate system.</p>
+<p>There are several models for systems:</p>
+<ul class="simple">
+<li><p>An <strong>open system</strong> allows mass and energy flow through the boundary.</p></li>
+<li><p>An <strong>isolated system</strong> allows no mass or energy folw through the boundary.</p></li>
+<li><p>A <strong>closed system</strong> allows energy, but no mass flow through the bounday.</p></li>
+</ul>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/thermosAndCup.jpg" src="../../_images/thermosAndCup.jpg" />
+<p class="caption"><span class="caption-text">A thermos flask can be seen as an example of a closed, isolated or open system depending on its closeness to an idealised thermos flask and its current state (open or closed). How would you categorise a to-go cup?</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>An idealised thermos flask with a closed lid can be taken as an example of closd system, because neither mass nor heat is allowed to escape. For real (non-idealised) thermos flasks, we experience that the latter is not entirely true of course, since a lot of heat is allowed to flow through the boundary quite easily over the course of a day. We could therefore argue that a real (non-idealised) thermos flask should be categorised as an isolated system instead. Once you open the flask, you turn it into an open system, allowing exchange of mass and energy.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>How would you categorise a to-go cup? How would you categorise a human?</p>
+</div>
+</div>
+<div class="section" id="steady-state">
+<h3>Steady State<a class="headerlink" href="#steady-state" title="Permalink to this headline">¶</a></h3>
+<p>When <strong>state variables</strong> that define system behaviour or processes are not changing with time, we say that the system is in steady state or equibibrium. So we could write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \frac {\delta p}{\delta t}=0
+\end{equation}\]</div>
+<p>For system properties (or elements) <strong>p</strong>, the derivative with respect to time <strong>t</strong> is zero.</p>
+<p>Systems can be in different types of steady state. If a system is in <strong>static equilibrium</strong>, all forces are balanced, there is no acceleration and all elements are at rest. If a system is in <strong>dynamic equilibrium</strong>, elements are not at rest, but processes are balanced, so that there is no net change over time.</p>
+</div>
+<div class="section" id="system-paths">
+<h3>System Paths<a class="headerlink" href="#system-paths" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/systemPathsAnnotated.jpg"><img alt="../../_images/systemPathsAnnotated.jpg" src="../../_images/systemPathsAnnotated.jpg" style="width: 400px;" /></a>
+</div>
+<p>System paths are the paths taken, usually in the form of modification of the system attribute variables, to get from one equilibrium state to another. In this example, we go from an equilibrium state characterised by high temperature and pressure to an equilibrium state characterised by low temperature and pressure. The two possible paths shown on here are (1) decreasing pressure, then decresing temperature, and (2) simultaneously decreasing pressure and temperature. Path (1) includes an <strong>isobaric</strong> change, which involves no change in pressure, followed by an <strong>isothermal</strong> change, which involves no changes in temperature.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Can you think of more paths the system can take?</p>
+</div>
+</div>
+<div class="section" id="the-climate-system">
+<h3>The Climate System<a class="headerlink" href="#the-climate-system" title="Permalink to this headline">¶</a></h3>
+<p>Typically, the climate system on Earth includes the atmosphere, cryosphere, hydrosphere, biosphere and land surface. <strong>Climate elements</strong> are measurable meteorological quantities that can be statisticall processed with regard to the measurement period. They are the state variables of the climate system. <strong>Climate factors</strong> are influencing quantities that modify climate elements, and <strong>climate forcings</strong> are climate factors that drive/force/control climate elements from outside the climate system. Finally, we use the term <strong>climate dynamics</strong> to describe (1) effects of (external) forcings on the system or (2) forces and movements that characterise the system.</p>
+<div class="figure align-center" id="id4" style="width: 700px">
+<a class="reference internal image-reference" href="../../_images/_climateSystem.jpg"><img alt="../../_images/_climateSystem.jpg" src="../../_images/_climateSystem.jpg" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">The different parts of the climate system and how they interact.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Discuss how the climate factors in the figure modify climate elements in the climate system.</p>
+</div>
+</div>
+</div>
+<div class="section" id="reminder-units">
+<h2>Reminder: Units<a class="headerlink" href="#reminder-units" title="Permalink to this headline">¶</a></h2>
+<p>For this course, we use the International System of Units. Before getting into any calculations for this course, let’s remind ourselves of all relevant units.</p>
+<p>These include the 7 base units:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>unit</p></th>
+<th class="head"><p>abbreviation and explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>metre</p></td>
+<td><p>m, length/distance</p></td>
+</tr>
+<tr class="row-odd"><td><p>kilogram</p></td>
+<td><p>kg, mass</p></td>
+</tr>
+<tr class="row-even"><td><p>second</p></td>
+<td><p>s, time</p></td>
+</tr>
+<tr class="row-odd"><td><p>ampere</p></td>
+<td><p>A, electric current</p></td>
+</tr>
+<tr class="row-even"><td><p>kelvin</p></td>
+<td><p>K, temperature</p></td>
+</tr>
+<tr class="row-odd"><td><p>mole</p></td>
+<td><p>mol, substance amount</p></td>
+</tr>
+<tr class="row-even"><td><p>candela</p></td>
+<td><p>cd, light intensity</p></td>
+</tr>
+</tbody>
+</table>
+<p>You will frequently come accross the following derived units in this course and climate science in general:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>unit</p></th>
+<th class="head"><p>abbreviation and explanation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Newton</p></td>
+<td><p>N (kg·m/s<sup>2</sup>), force</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pascal</p></td>
+<td><p>Pa (N/m<sup>2</sup>), pressure</p></td>
+</tr>
+<tr class="row-even"><td><p>Joule</p></td>
+<td><p>J (N·m), energy/work</p></td>
+</tr>
+<tr class="row-odd"><td><p>Watt</p></td>
+<td><p>W (J/s), power</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: Outside of equations, this course uses <strong>·</strong> and <strong>/</strong> to denote multiplication and division respectively. In equations, you often see multiplication implied by concatenation of letters representing variables. This can be confusing when variable are represented by more than one letter. We therefore always explicitly use the multiplication signs in all equations for this course.</p>
+</div>
+<div class="section" id="retaining-an-atmosphere">
+<h2>Retaining an Atmosphere<a class="headerlink" href="#retaining-an-atmosphere" title="Permalink to this headline">¶</a></h2>
+<p>Some may be familiar with the movie “Spaceballs”, in which a shield around the planet prevents the atmosphere from escaping. Here, we explore why we do not need such a shield on Earth to prevent (too much of) the atmosphere from escaping. To understand how we can retain an atmosphere, we need to have a look at its composition and 2 important concepts: <strong>molecular speed</strong> and <strong>escape velocity</strong>.</p>
+<div class="section" id="escape-velocity">
+<h3>Escape Velocity<a class="headerlink" href="#escape-velocity" title="Permalink to this headline">¶</a></h3>
+<p>The escape velocity is the minimum speed required for a free object to escape from the gravitational influence of a massive body. It can be calculated as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  v_e = \sqrt {\frac {2·G·M}{r}}
+\end{equation}\]</div>
+<ul class="simple">
+<li><p>G - the universal gravitational constant (G ≈ 6.67×10−11 m<sup>3</sup>·kg<sup>-1</sup>·s<sup>-2</sup>).</p></li>
+<li><p>M - the mass of the body to be escaped from.</p></li>
+<li><p>r - the distance from the center of mass of the body to the object.</p></li>
+<li><p>v<sub>e</sub> (Earth) =  11190 m/s</p></li>
+</ul>
+<p><strong>Note</strong>: solar winds also remove molecules; molecules bouncing into each other also speed up some</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Is escape velocity a property of the escaping object or the body that the object escapes from? Have a closer look at the equation to answer this. Can you calculate v<sub>e</sub> (Earth) on your own in Python or another language? How about v<sub>e</sub> (Mars)?</p>
+</div>
+</div>
+<div class="section" id="the-speed-of-molecules">
+<h3>The Speed of Molecules<a class="headerlink" href="#the-speed-of-molecules" title="Permalink to this headline">¶</a></h3>
+<p>The speed of molecules can be calculated as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  v_m = \sqrt {\frac {3·k_b·T}{m}}
+\end{equation}\]</div>
+<ul class="simple">
+<li><p>v<sub>m</sub>- molecular speed</p></li>
+<li><p>k<sub>b</sub> - gas constant (8.314 kg·m<sub>2</sub>/s<sub>2</sub>·mol·K)</p></li>
+<li><p>T   - temperature</p></li>
+<li><p>m   - mass (molecular)</p></li>
+</ul>
+<p><strong>Note</strong>: Interactions between molecules in the atmosphere can speed them up beyond what is calculated here.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Examine the equation to infer the different controls for the speed of molecules.</p>
+</div>
+</div>
+<div class="section" id="gases-in-the-atmosphere">
+<h3>Gases in the Atmosphere<a class="headerlink" href="#gases-in-the-atmosphere" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Nitrogen, N (78%) - no GHG</p></li>
+<li><p>Oxygen, O2 (21%) - no GHG</p></li>
+<li><p>Water vapour, H2O (&lt;1%, up to 3% in parts of tropics)</p></li>
+<li><p>Carbon Dioxide, CO2 (0.04%, 400ppm)*</p></li>
+<li><p>Methane, CH4 (0.00018%, 1.85 ppm)*</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Calculate Earth’s escape velocity and the speed of commonly occuring molecules and discuss.</p>
+</div>
+</div>
+</div>
+<div class="section" id="dissecting-the-atmosphere">
+<h2>Dissecting the Atmosphere<a class="headerlink" href="#dissecting-the-atmosphere" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="layering">
+<h3>Layering<a class="headerlink" href="#layering" title="Permalink to this headline">¶</a></h3>
+<p>We use the following, common layering scheme for the atmosphere. It subdivides the atmosphere into Troposphere, Stratosphere, Mesosphere and Thermosphere.</p>
+<div class="figure align-center" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do you know how the atmosphere is layered? By pressure? By temperature? Can you think of more ways to layer the atmosphere in a merited way?</p>
+</div>
+</div>
+<div class="section" id="temperature-defined-boundaries">
+<h3>Temperature-Defined Boundaries<a class="headerlink" href="#temperature-defined-boundaries" title="Permalink to this headline">¶</a></h3>
+<p>We subdivide the atmopheric profile by air temperature, because boundaries more easily tied to specific heights than compositional boundaries. The figure shows a (very conceptual) vertical temperature profile of the atmosphere.</p>
+<div class="figure align-center" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+</div>
+<p>We will walk through the different layers and look at their attributes step-by-step.</p>
+</div>
+<div class="section" id="troposphere">
+<h3>Troposphere<a class="headerlink" href="#troposphere" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+</div>
+<p><strong>Troposhpere fact sheet</strong>:</p>
+<ul class="simple">
+<li><p>Temperature decreases upwards with a gradient of dT/dz = -6.5 K/km.</p></li>
+<li><p>There is lots of vertical and horizontal mixing, high (but very variable) water vapor content.</p></li>
+<li><p>The lowest part (ca. 1km) is known as the PBL (planetary boundary layer).</p></li>
+</ul>
+<p><strong>Tropopause</strong>:</p>
+<ul class="simple">
+<li><p>The Tropopause is the upper boundary of troposphere, where main jet streams are.</p></li>
+<li><p>Tropopause height varies and is controlled by surface energy exchange.</p></li>
+<li><p>It is highest at equator (ca. 17km) and lowest in polar regions (ca. 9km).</p></li>
+<li><p>It is not a continuous layer; there are multiple Tropopauses and “gaps” enable exchange of trace elements between troposphere and stratosphere.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Think about the temperature lapse rate of -6.5 K/km. Can you confirm this with personal experiences?</p>
+</div>
+</div>
+<div class="section" id="stratosphere">
+<h3>Stratosphere<a class="headerlink" href="#stratosphere" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+</div>
+<p><strong>Stratosphere fact sheet</strong>:</p>
+<ul class="simple">
+<li><p>8-17km to ca. 50km.</p></li>
+<li><p>Its lower part has a lapse rate of <strong>dT/dz = 0 K/km</strong>. Temperature remains fairly constant, so we can say it is isothermal.</p></li>
+<li><p>Its upper part has a lapse rate of <strong>dT/dz = 3 K/km</strong>. temperature actually starts to increase again upwards. We call this the stratospheric thermal inversion.</p></li>
+<li><p>It has an Ozone concentration of ~320ppb. (The Troposphere only has ~34ppb).</p></li>
+<li><p>The Stratopause is the boundary between Stratosphere and Mesosphere and is marked by the temperature peak from the stratospheric thermal inversion.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Think about what the Stratosphere’s temperature profile means for vertical transport of air masses. Would you expect the stratosphere to be wet or dry?</p>
+</div>
+<p><strong>Stratospheric Thermal Inversion</strong>:</p>
+<p>The thermal inversion, i.e. the upward warming, is related to Ozone. Below are the reactions involved:</p>
+<ul class="simple">
+<li><p>Photodissociation at wavelength of 242 nm (UV) follows:</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/chem01.jpg"><img alt="../../_images/chem01.jpg" src="../../_images/chem01.jpg" style="width: 150px;" /></a>
+<ul class="simple">
+<li><p>Ozone formation is facilitated by a 3 body collision reaction involving a third body <strong>M</strong>. This third body can, for example, be Nitrogen. Excess energy from the reaction is passed to <strong>M</strong>, which results in the heating of the upper Stratosphere. It follows:</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/chem02.jpg"><img alt="../../_images/chem02.jpg" src="../../_images/chem02.jpg" style="width: 150px;" /></a>
+<ul class="simple">
+<li><p>Ozone formation is balanced with its photodissociation at lower energy UV radiation (at wavelength 310 nm):</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/chem03.jpg"><img alt="../../_images/chem03.jpg" src="../../_images/chem03.jpg" style="width: 200px;" /></a>
+</div>
+<div class="section" id="mesosphere">
+<h3>Mesosphere<a class="headerlink" href="#mesosphere" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+</div>
+<p><strong>Mesosphere fact sheet</strong>:</p>
+<ul class="simple">
+<li><p>50km to 80/85km.</p></li>
+<li><p>Negative temperature lapse rate of <strong>dT/dz = -3 K/km</strong>.</p></li>
+<li><p>Temperature at top of Mesosphere is ~ 75°C to -90°C, the coldest in the atmosphere.</p></li>
+</ul>
+<p><strong>Mesopause</strong></p>
+<ul class="simple">
+<li><p>It separates Mesophere from Thermosphere.</p></li>
+<li><p>It also separates homosphere (where gases are well mixed) from heterosphere (where gases start separating by mass).</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>What conditions are required to see gases separating by mass?</p>
+</div>
+</div>
+<div class="section" id="thermosphere-and-exosphere">
+<h3>Thermosphere and Exosphere<a class="headerlink" href="#thermosphere-and-exosphere" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+</div>
+<p><strong>Thermosphere</strong></p>
+<ul class="simple">
+<li><p>At ~100 km.</p></li>
+<li><p>Extremely low pressure conditions (less than 0.0002 hPa).</p></li>
+<li><p>Temperature can rise to 100s of °C, depending on solar radiation.</p></li>
+</ul>
+<p><strong>Exosphere</strong></p>
+<ul class="simple">
+<li><p>It is the uppermost layer in atmosphere.</p></li>
+<li><p>It transitions into interplanetary space.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../A002/A002.html" class="btn btn-neutral float-right" title="Building a Climate II" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../info.html" class="btn btn-neutral float-left" title="Intro" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Sebastian G. Mutz
+      <span class="lastupdated">
+        Last updated on Feb 25, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+Building a Climate VIII
+=======================
+
+**Precipitation**
+
+This lecture logically follows the lecture on atmospheric stability and introduces precipitation formation.
+
+Information
+----------- 
+
++---------------------------------------------------------+
+| Learning goals                                          |
++=========================================================+
+| * Important hydrometeorological terminology             |
+| * Understand different precipitation formation processes|
++---------------------------------------------------------+
+
+
+Atmospheric Water
+-----------------
+
+Measuring the Amount of Water
+.............................
+
+
+Clausius-Clapeyron Ratio
+........................
+   
+.. math:: 
+
+    \begin{equation}
+      \frac {dP}{dT} = \frac {L}{T · \Delta v} = \frac {\Delta s}{\Delta v}     
+    \end{equation}         
+   
+   
+Clausius-Clapeyron Equation
+............................   
+   
+.. math:: \Delta v \approx v_g   
+   
+.. math:: 
+
+    \begin{equation}
+      P · V = n · \bar{R} · T
+    \end{equation}            
+   
+.. math:: 
+
+    \begin{equation}
+      P · v = \bar{R} · T
+    \end{equation}               
+   
+.. math:: 
+
+    \begin{equation}
+      v_g = \frac {R · T} {P}
+    \end{equation}                  
+   
+.. math::    
+    \begin{equation}
+      \frac {dP}{dT} = \frac {L}{T · \Delta v}      
+    \end{equation}     
+   
+.. math::    
+    \begin{equation}
+      \frac {dP}{dT} = \frac {L}{T^2 · R}      
+    \end{equation}     
+   
+   
+   
+Saturation Vapour Pressure   
+..........................
+
+.. math::    
+    \begin{equation}
+      P_s = 610.78 · e^{ \frac {17.2684 · t} {t + 238.3}}      
+    \end{equation}     
+
+.. math::    
+    \begin{equation}
+      P_s = c · e^{ \frac {a · t} {t + b}}      
+    \end{equation}       
+    
+.. math:: a = 17.625
+
+.. math:: b = 233.04    
+
+.. math:: c = 610.94
+
+.. math::    
+    \begin{equation}
+      P_s = \frac {exp(43.494-\frac{6545.8}{t+237.1}) } {(t+105)^{1.57}}      
+    \end{equation}       
+
+
+Dew Point Temperature
+.....................
+   
+.. math::    
+    \begin{equation}
+      RH = \frac {P_v}{P_s(t)} · 100      
+    \end{equation}        
+   
+.. math::    
+    \begin{equation}
+      P_s = c · e^{ \frac {a · t} {t + b}}      
+    \end{equation}           
+   
+.. math::    
+    \begin{equation}
+      t_d = \frac {b · [ln( \frac {RH}{100} ) + \frac {a · t}{b + t} ]} {a - ln ( \frac {RH}{100} ) - \frac {a · t}{b + t}}      
+    \end{equation}           
+    
+.. math::    
+    \begin{equation}
+      t_d = t - ( \frac {100 - RH} {5} )      
+    \end{equation}               
+    
+   
+   
+Precipitation Formation
+-----------------------
+
+Terminology
+...........
+
+
+Reaching Saturation
+...................
+
+
+Formation Mechanisms
+....................
+
+Coalescence:
+
+Wegener - Bergeron - Findeisen Process:
+
+Overview:
+
+Precipitation Types
+...................

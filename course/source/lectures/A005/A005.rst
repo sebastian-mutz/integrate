@@ -1,0 +1,77 @@
+Building a Climate V
+====================
+
+**Atmospheric Circulation**
+
+We have previously looked at vertical transport and radiative fluxes. Here, we will explore horizontal transport and how differential heating and heat transport control atmospheric circulation.
+
+Information
+----------- 
+
++------------------------------------------------------+
+| Learning goals                                       |
++======================================================+
+| * Understand drivers of atmospheric circulation      |
+| * Gain an overview of Earth's circulation structure  |
++------------------------------------------------------+
+
+
+Differential Heating and Heat Transport
+---------------------------------------
+
+.. math:: 
+
+    \begin{equation}
+      \Phi_m = \rho · u · A
+    \end{equation}   
+
+    
+.. math:: 
+
+    \begin{equation}
+      \Phi_h = \rho · u · A · C_p · T 
+    \end{equation}   
+    
+.. math:: C_{air} = 1006 Jkg^{-1}K^{-1}
+    
+    
+The Global Situation
+....................
+
+
+
+Earth's Energy Balance
+......................
+   
+   
+Atmospheric and Oceanic Heat Transport
+......................................
+   
+   
+   
+Atmospheric Heat Flow
+.....................
+   
+   
+Atmospheric Circulation
+-----------------------
+
+Hadley Cell
+...........
+
+
+1-Cell Model
+............
+
+
+3-Cell Model
+............
+   
+
+Exploring Complexities through Climate Models
+.............................................
+
+
+
+
+   

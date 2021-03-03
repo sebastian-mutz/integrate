@@ -1,0 +1,192 @@
+Building a Climate IV 
+=====================
+
+**Pressure and Buoyancy**
+
+This lecture explores the topics of atmospheric pressure, buoyancy and vertical transport in the atmosphere.
+
+Information
+----------- 
+
++--------------------------------------------------------------+
+| Learning goals                                               |
++==============================================================+
+| * Understand partial pressure and the ideal gas law          |
+| * Understand drivers of vertical transport in the atmosphere |
++--------------------------------------------------------------+
+
+
+Atmospheric Pressure
+--------------------
+
+Before we explore any specifics, we familiarise ourselves with a few important concepts related to pressure.
+
+Partial Pressures
+.................
+
+.. math:: T_{red} = T_{blue}
+
+.. math:: P_t = T_{red} + T_{blue}
+
+
+Ideal Gas Law
+.............
+
+.. math:: 
+
+    \begin{equation}
+      P · V = n · \bar{R} · T
+    \end{equation}         
+    
+
+Mass Density
+............
+
+.. math:: 
+
+    \begin{equation}
+      \rho = \frac {n · M} {V}
+    \end{equation}         
+    
+
+
+Specific Gas Constant
+.....................
+
+.. math:: 
+
+    \begin{equation}
+      R = \frac {\bar{R}} {M}
+    \end{equation}     
+
+
+"Air"
+.....
+
+.. math:: M_{air} \approx 29
+
+.. math:: R_{air} \approx 287 Jkg^{-1}K^{-1}
+
+
+Ideal Gas Law (modified)
+........................
+   
+.. math:: 
+
+    \begin{equation}
+      P = \rho · R · T
+    \end{equation}        
+   
+   
+.. math:: R \approx 287 Jkg^{-1}K^{-1}   
+.. math:: T \approx 19°C = 292.15 K      
+.. math:: \rho \approx 1.2985 kgm^{-3}        
+   
+.. math:: 
+
+    \begin{equation}
+      P_{troposphere} = 1.2985 kgm^{-3} · 287 Jkg^{-1}K^{-1} · 292.15 K 
+      \approx 108900 Pa
+    \end{equation}           
+   
+Buoyancy
+--------
+
+To understand vertical transport, mixing and precipitation formation in the atmosphere, we need to first familiarise ourselves with the buoyancy force.
+   
+   
+Buoyancy Force
+..............
+
+.. math:: 
+
+    \begin{equation}
+      B = V · \rho · g
+    \end{equation}           
+
+
+
+Buoyancy Force: Example I
+.........................
+
+.. math:: P_p = P_e
+
+
+.. math:: 
+
+    \begin{equation}
+      P = \rho · R · T
+    \end{equation}     
+    
+.. math:: 
+
+    \begin{equation}
+      P_e = \frac {P_e} {R · T_e} 
+      = \frac {101000 Pa} {287 Jkg^{-1}K^{-1} · 278 K} 
+      = 1.266 kgm^{-3}
+    \end{equation}         
+
+    
+.. math:: 
+
+    \begin{equation}
+      P_p = \frac {P_p} {R · T_p} 
+      = \frac {101000 Pa} {287 Jkg^{-1}K^{-1} · 288 K} 
+      = 1.222 kgm^{-3}
+    \end{equation}             
+
+    
+Buoyancy Force: Example II (changing chemistry)
+...............................................
+
+.. math:: P_p = P_e
+.. math:: T_p = T_e
+    
+.. math:: 
+
+    \begin{equation}
+      P = \rho · R · T
+    \end{equation}       
+    
+.. math:: 
+
+    \begin{equation}
+      B = V · \rho · g
+    \end{equation}           
+    
+
+Pressure and Altitude
+---------------------
+
+
+Barometric Formula
+..................
+
+.. math:: 
+
+    \begin{equation}
+      P_h = P_0 · e ^{- \frac {h · m · g} {R · T} } 
+    \end{equation}           
+
+    
+Hydrostatic Balance
+...................
+
+.. math:: 
+
+    \begin{equation}
+      P · A = m · g
+    \end{equation}           
+
+.. math::     
+    \begin{equation}
+      \frac {P} {g} = \frac {m} {A}
+    \end{equation}           
+    
+.. math::     
+    \begin{equation}
+      P_G - P_T = \rho · \Delta z · g
+    \end{equation}               
+    
+    
+    

@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>P1-E005 &mdash; INTEGRATE 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="P2-E001" href="../E101/E101.html" />
+    <link rel="prev" title="P1-E004" href="../E004/E004.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> INTEGRATE
+          
+
+          
+            
+            <img src="../../_static/integrateLogo_256_256.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2021
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A001/A001.html">Building a Climate I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A002/A002.html">Building a Climate II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A003/A003.html">Building a Climate III</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A004/A004.html">Building a Climate IV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A005/A005.html">Building a Climate V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A006/A006.html">Building a Climate VI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A007/A007.html">Building a Climate VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A008/A008.html">Building a Climate VIII</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Exercises:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E001/E001.html">P1-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E002/E002.html">P1-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E003/E003.html">P1-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E004/E004.html">P1-E004</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">P1-E005</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#numpy-and-matplotlib">NumPy and Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#input-output">Input/Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rng-testing">RNG Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#your-task">Your Task</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../E101/E101.html">P2-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E102/E102.html">P2-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E103/E103.html">P2-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E104/E104.html">P2-E004</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Projects:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P001/P001_info.html">Project P001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P002/P002_info.html">Project P002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P003/P003_info.html">Project P003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P004/P004_info.html">Project P004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">INTEGRATE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>P1-E005</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/exercises/E005/E005.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="p1-e005">
+<h1>P1-E005<a class="headerlink" href="#p1-e005" title="Permalink to this headline">¶</a></h1>
+<p>In this exercise, you will learn about reading from files, writing into files, operations with the <em>numpy</em> library and visualising data with the <em>matplotlib</em> library.</p>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Learning goals</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Concepts</strong></p></td>
+<td><ul class="simple">
+<li><p>reading and writing data</p></li>
+<li><p>data visualisation</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Skills</strong></p></td>
+<td><ul class="simple">
+<li><p>simple operations with <em>numpy</em></p></li>
+<li><p>read and write input/output</p></li>
+<li><p>create simple plots with <em>matplotlib</em></p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="topic">
+<p class="topic-title">What to Submit</p>
+<p>Submit your script(s), output file(s) and figure(s) for the final task of this exercise via ILIAS. These script should be named <em>[your surname]_e005.[ext]</em>, where <em>[ext]</em> is the file extension, the input/output file should be named <em>[your surname]_[input/output]_e005.asc</em>, and the figure should be named <em>[your surname]_e005.jpg</em>.</p>
+</div>
+</div>
+<div class="section" id="numpy-and-matplotlib">
+<h2>NumPy and Matplotlib<a class="headerlink" href="#numpy-and-matplotlib" title="Permalink to this headline">¶</a></h2>
+<p>NumPy is a very commonly used Python library for numerical computing. Many other Python libraries use NumPy. Matplotlib, on the other hand, is one of the most commonly used Python libraries for plotting scientific data and results. In this excercise, we make heavy use of those two libraries, because (a) they are very commonly used, (b) they have fewer dependencies than many alternatives, and (c) there are comparable libraries for other programming languages you may prefer using. In fact, Matplotlib’s <em>pyplot</em> is similar to plotting with Matlab.</p>
+</div>
+<div class="section" id="input-output">
+<h2>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h2>
+<p>In exercises E001 - E004, we have covered the basics of practical programming, procedural and object-oriented programming and let the computer perform various tasks for us. However, so far, we created data within our scripts, and the results of our calculations were lost once we ended our coding session. In this exercise, we will learn how to read data from a simple text file and write your results into another. Reading and writing into files of a specific formats, such as netCDF, requires the use of specific libraries. In some cases, different libraries allow you to perform the same input/output actions; in other cases, you may not even need to load any libraries to read and write into simple files. To reduce the number of libraries we use in this excercise, <strong>we will only deal with simple text(ascii) files read and write data with NumPy</strong>.</p>
+</div>
+<div class="section" id="rng-testing">
+<h2>RNG Testing<a class="headerlink" href="#rng-testing" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="../../_images/dice_cc0.jpg" src="../../_images/dice_cc0.jpg" />
+</div>
+<p>Imagine we have written a Fortran module <em>rnd</em>, a random number generator (RNG) that creates random numbers from a specific distribution. We want to test this module now and created two time series: One for random normally distributed data, and one for random data from an exponential distribution. We now want to quickly plot the test series to check if they look reasonable. Our Fortran programme generated two text files for the series:</p>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../_downloads/1abb60582cc2eba06b4051ea90ea73ee/test_rnd_normal.asc"><code class="xref download docutils literal notranslate"><span class="pre">test_rnd_normal.asc</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/216f38926ae77fa8da76b905c862b8b7/test_rnd_exponential.asc"><code class="xref download docutils literal notranslate"><span class="pre">test_rnd_exponential.asc</span></code></a></p></li>
+</ul>
+<p>Let’s download the files above and use NumPy to read those files and store the data in <em>dat_nrm</em> and <em>dat_exp</em> respectively. The reading is done by using NumPy’s <em>genfromtxt()</em> function, a general function for reading data separated by common separators, such as spaces and commas.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import module</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c1"># read files</span>
+<span class="n">dat_nrm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;test_rnd_normal.asc&#39;</span><span class="p">)</span>
+<span class="n">dat_exp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;test_rnd_exponential.asc&#39;</span><span class="p">)</span>
+
+<span class="c1"># display data</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dat_nrm</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dat_exp</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are different way in which text files can be read even with NumPy. <em>loadtxt()</em> is another option.</p>
+</div>
+<p>Notice how we have two values per line: The first we interpret as a time step, the second is the data of interest. Unless we have magical statistics-vision (Stat-Woman to the rescue!), we won’t be able to tell from this data dump how the data is distributed. We use matplotlib to visualise our data. Let’s start with the random numbers from a normal distribution. Examine and execute the code below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># import module</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="c1"># read files</span>
+<span class="n">dat_nrm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;test_rnd_normal.asc&#39;</span><span class="p">)</span>
+<span class="n">dat_exp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">&#39;test_rnd_exponential.asc&#39;</span><span class="p">)</span>
+
+<span class="c1"># pass data from normal distribution to x and y vectors</span>
+<span class="n">x</span><span class="o">=</span><span class="n">dat_nrm</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="n">dat_nrm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># create simple x-y plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>                          <span class="c1"># number your figures</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>                         <span class="c1"># create a simple x-y plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;rnd: normal distribution&#39;</span><span class="p">)</span>  <span class="c1"># set a title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time steps&#39;</span><span class="p">)</span>               <span class="c1"># label the x axis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;random number&#39;</span><span class="p">)</span>            <span class="c1"># label the y axis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>              <span class="c1"># give x and y bounds</span>
+</pre></div>
+</div>
+<p>We should now be looking at a figure like this:</p>
+<div class="figure align-default">
+<img alt="../../_images/rnd_norm.jpg" src="../../_images/rnd_norm.jpg" />
+</div>
+<p>Once you think you know what’s going on here, expand the script to include code that plots the data from the exponential distribution. Feel free to browse the web for plot options and choose the type of plot you regard as most fitting for exponentially distributed data. Think about the type of data visualisation that will most easily allow you to get a sense of the frequency distribution of random numbers.</p>
+<p><strong>Ask the instructor(s) for help if needed.</strong></p>
+<p>Creating a histogram from your vectors may be one option to better visualise the randomly generated numbers. If you haven’t already, generate a histogram from one of your y vectors and save it into a text file as such:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a histogram from y, use 10 bins</span>
+<span class="n">y_hist</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1"># write frequency in file</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;histogram.asc&#39;</span><span class="p">,</span> <span class="n">y_hist</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.3f</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that we only write the frequency of y_hist using <em>savetxt()</em>, and we specify a format (fmt). Is this the best way to go about it? If not, what would you do differently?</p>
+</div>
+<div class="section" id="your-task">
+<h2>Your Task<a class="headerlink" href="#your-task" title="Permalink to this headline">¶</a></h2>
+<p>We’re finally sufficiently equipped to do something useful. For the final task in phase 1 of this course, create one or several scripts that make use of the following:</p>
+<ul class="simple">
+<li><p>arrays</p></li>
+<li><p>functions</p></li>
+<li><p>classes</p></li>
+<li><p>reading/writing data</p></li>
+<li><p>data visualisation</p></li>
+</ul>
+<p>You are given complete creative freedom here. The only requirement is that the type of tasks you instruct the computer to do are warranted. In case you need some inspiration, here is one way you can build on your work of previous exercises:</p>
+<ul class="simple">
+<li><p>create a class for students, and create several objects for this class</p></li>
+<li><p>for different semesters, read the grades of students from a text file</p></li>
+<li><p>using a class-specific function, calculate the average and semester average grades for each object (student)</p></li>
+<li><p>write the average grades into a text file</p></li>
+<li><p>plot the grades in a way that allows you to get a sense of the distribution of grades or the progress of individual students</p></li>
+</ul>
+<p>When you are happy with your code, data and plots, name your files as described above and submit them via ILIAS.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Late submissions won’t be accepted!</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../E101/E101.html" class="btn btn-neutral float-right" title="P2-E001" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../E004/E004.html" class="btn btn-neutral float-left" title="P1-E004" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Sebastian G. Mutz
+      <span class="lastupdated">
+        Last updated on Feb 25, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+Building a Climate VII
+======================
+
+**Atmospehric Stability**
+
+This lecture introduces the concepts and implications of atmospheric stability and instability.
+
+Information
+----------- 
+
++----------------------------------------------------------------------+
+| Learning goals                                                       |
++======================================================================+
+| * Understand atmospheric stability and how it relates to lapse rates |
+| * Understand implications of thermal inversions and instability      |
++----------------------------------------------------------------------+
+
+
+Temperature Lapse Rate 
+----------------------
+
+Adiabatic Lapse Rate
+--------------------
+
+
+Adiabatic Lapse Rate (Dry)
+..........................
+   
+.. math:: 
+
+    \begin{equation}
+      \Delta U = Q - W
+    \end{equation}      
+
+.. math:: 
+
+    \begin{equation}
+      \Delta P = -\rho · \Delta z · g    
+    \end{equation}          
+    
+.. math:: 
+
+    \begin{equation}
+      \Gamma = \frac {g}{C_p}   
+    \end{equation}          
+    
+
+Adiabatic Lapse Rate (Dry): Example
+...................................
+   
+.. math:: 
+
+    \begin{equation}
+      \Gamma = \frac {g}{C_p} 
+      = \frac { 9.81 ms^{-2} }{ 1006 Jkg^{-1}K^{-1} }
+      = 9.75 Km^{-1}
+    \end{equation}          
+   
+   
+Atmospheric Stability
+---------------------
+
+Stable Atmosphere
+.................
+
+Very Stable Atmosphere (Temperature Inversion)
+..............................................
+
+
+Unstable Atmosphere
+...................
+   
+
+Stability and Vertical Mixing
+.............................
+   

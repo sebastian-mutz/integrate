@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>INTEGRATE Lecture and Exercise Series &mdash; INTEGRATE 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/style.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="General" href="general/info.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> INTEGRATE
+          
+
+          
+            
+            <img src="_static/integrateLogo_256_256.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2021
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="general/info.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general/syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general/credits.html">Credits</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lectures/info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A001/A001.html">Building a Climate I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A002/A002.html">Building a Climate II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A003/A003.html">Building a Climate III</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A004/A004.html">Building a Climate IV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A005/A005.html">Building a Climate V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A006/A006.html">Building a Climate VI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A007/A007.html">Building a Climate VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A008/A008.html">Building a Climate VIII</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Exercises:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="exercises/info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E001/E001.html">P1-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E002/E002.html">P1-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E003/E003.html">P1-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E004/E004.html">P1-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E005/E005.html">P1-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E101/E101.html">P2-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E102/E102.html">P2-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E103/E103.html">P2-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E104/E104.html">P2-E004</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Projects:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projects/P001/P001_info.html">Project P001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P002/P002_info.html">Project P002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P003/P003_info.html">Project P003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P004/P004_info.html">Project P004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P005/P005_info.html">Project P005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P006/P006_info.html">Project P006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P007/P007_info.html">Project P007</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="resources/dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources/reading.html">Reading</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">INTEGRATE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>INTEGRATE Lecture and Exercise Series</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="figure align-default">
+<img alt="_images/banner001.jpg" src="_images/banner001.jpg" />
+</div>
+<div class="section" id="integrate-lecture-and-exercise-series">
+<h1>INTEGRATE Lecture and Exercise Series<a class="headerlink" href="#integrate-lecture-and-exercise-series" title="Permalink to this headline">¶</a></h1>
+<p>The INTEGRATE (Integrated Teaching of Atmospheric Science, Technical/Computer Skills and Empirical Methods) teaching package covers the theory and hands-on approach of collecting atmospheric data and working with readily available climatological records on real problems using modern empirical methods. Resources produced will include slides and notes, a repository with instructions and materials for practical and projects, and short videos to assist instructors deliver the course.</p>
+<p>Welcome to <strong>ClimStat</strong>, the exercise series of the <strong>Climate Dynamics, Probability and Statistics</strong> course offered at the University of Tübingen. The course teaches the basics of (Python) programming, statistics, and the application of machine learning techniques (to problems in climatology). The <strong>course is open to everyone</strong> interested in learning about these topics and techniques. To see if you are eligible for supervision and ECTS credits, consult our information on <a class="reference internal" href="general/info.html"><span class="doc">eligibility criteria</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For teachers</p>
+<p>We support the use and further development of our materials by other teachers and thus release the course source code under a very permissive license on our <a class="reference external" href="https://github.com/climstat/climstat.github.io">GitHub page</a>. Please consult <a class="reference internal" href="general/license.html"><span class="doc">our licensing and terms of use</span></a>.</p>
+</div>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="general/info.html">General</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="general/info.html#short-description">Short Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/info.html#learning-goals">Learning Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/info.html#instructors">Instructors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/info.html#course-meetings">Course meetings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/info.html#languages">Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/info.html#course-materials">Course Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/info.html#eligibility">Eligibility</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="general/syllabus.html">Syllabus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="general/syllabus.html#didactics">Didactics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/syllabus.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/syllabus.html#exercises-phase-1">Exercises: Phase 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="general/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general/license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="general/license.html#instructional-materials">Instructional Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/license.html#source-code-for-course">Source Code for Course</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="general/credits.html">Credits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="general/credits.html#version-history">Version History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general/credits.html#acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Lectures:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lectures/info.html">Intro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lectures/info.html#learning-goals">Learning Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/info.html#exercise-materials">Exercise Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/info.html#terminology">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/info.html#submissions">Submissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/info.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/info.html#ask-questions">Ask Questions!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A001/A001.html">Building a Climate I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A001/A001.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A001/A001.html#definitions">Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A001/A001.html#reminder-units">Reminder: Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A001/A001.html#retaining-an-atmosphere">Retaining an Atmosphere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A001/A001.html#dissecting-the-atmosphere">Dissecting the Atmosphere</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A002/A002.html">Building a Climate II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A002/A002.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A002/A002.html#celestial-mechanics-and-orbital-forcing">Celestial Mechanics and Orbital Forcing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A002/A002.html#kepler-s-laws-of-planetary-motion">Kepler’s Laws of Planetary Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A002/A002.html#milankovich-cycles">Milankovich Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A002/A002.html#detecting-orbital-forcing">Detecting Orbital Forcing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A003/A003.html">Building a Climate III</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A003/A003.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A003/A003.html#black-body-radiation">Black Body Radiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A003/A003.html#the-solar-constant">The Solar Constant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A003/A003.html#albedo">Albedo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A003/A003.html#calculating-temperature-on-earth">Calculating Temperature on Earth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A003/A003.html#greenhouse-effect">Greenhouse Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A003/A003.html#atmospheric-transmissivity-and-opacity">Atmospheric Transmissivity and Opacity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A004/A004.html">Building a Climate IV</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A004/A004.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A004/A004.html#atmospheric-pressure">Atmospheric Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A004/A004.html#buoyancy">Buoyancy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A004/A004.html#pressure-and-altitude">Pressure and Altitude</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A005/A005.html">Building a Climate V</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A005/A005.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A005/A005.html#differential-heating-and-heat-transport">Differential Heating and Heat Transport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A005/A005.html#atmospheric-circulation">Atmospheric Circulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A006/A006.html">Building a Climate VI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A006/A006.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A006/A006.html#coriolis-force">Coriolis Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A006/A006.html#geostrophic-balance-and-wind-speeds">Geostrophic Balance and Wind Speeds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A006/A006.html#atmospheric-movement-so-far-summarised">Atmospheric Movement (So Far) Summarised</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A006/A006.html#advection">Advection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A006/A006.html#differential-equations-and-phase-space">Differential Equations and Phase Space</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A007/A007.html">Building a Climate VII</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A007/A007.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A007/A007.html#temperature-lapse-rate">Temperature Lapse Rate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A007/A007.html#adiabatic-lapse-rate">Adiabatic Lapse Rate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A007/A007.html#atmospheric-stability">Atmospheric Stability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lectures/A008/A008.html">Building a Climate VIII</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A008/A008.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A008/A008.html#atmospheric-water">Atmospheric Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lectures/A008/A008.html#precipitation-formation">Precipitation Formation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Exercises:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="exercises/info.html">Intro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/info.html#learning-goals">Learning Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/info.html#exercise-materials">Exercise Materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/info.html#terminology">Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/info.html#submissions">Submissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/info.html#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/info.html#ask-questions">Ask Questions!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E001/E001.html">P1-E001</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#anaconda-it-won-t-bite">Anaconda - It Won’t Bite!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#spyder-the-arachnophobe-friendly-version">Spyder - The Arachnophobe-Friendly Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#simple-maths">Simple Maths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#simple-functions">Simple Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#combining-functions">Combining Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#data-types">Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#writing-scripts">Writing Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E001/E001.html#your-task">Your Task</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E002/E002.html">P1-E002</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E002/E002.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E002/E002.html#array-like-collections">Array like collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E002/E002.html#index-values">Index Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E002/E002.html#useful-list-functions">Useful List Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E002/E002.html#comparison-operators">Comparison Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E002/E002.html#if-statements">If Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E002/E002.html#for-loops">For Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E002/E002.html#your-task">Your Task</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E003/E003.html">P1-E003</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E003/E003.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E003/E003.html#functions-from-modules">Functions from Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E003/E003.html#cashier-function-example">Cashier Function Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E003/E003.html#unit-converter-module">Unit Converter Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E003/E003.html#your-task">Your Task</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E004/E004.html">P1-E004</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E004/E004.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E004/E004.html#object-oriented-programming">Object-Oriented Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E004/E004.html#blueprint-for-humans">Blueprint for Humans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E004/E004.html#your-task">Your Task</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E005/E005.html">P1-E005</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E005/E005.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E005/E005.html#numpy-and-matplotlib">NumPy and Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E005/E005.html#input-output">Input/Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E005/E005.html#rng-testing">RNG Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E005/E005.html#your-task">Your Task</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E101/E101.html">P2-E001</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E101/E101.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E101/E101.html#temperatures-in-the-atacama">Temperatures in the Atacama</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E101/E101.html#sampling-strategy-reversing-the-problem">Sampling Strategy - Reversing the Problem</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E102/E102.html">P2-E002</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E102/E102.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E102/E102.html#hypothesis-testing-temperatures-near-antofagasta">Hypothesis Testing: Temperatures near Antofagasta</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E103/E103.html">P2-E003</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E103/E103.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E103/E103.html#bayesian-categorisation-assigning-data-to-a-location">Bayesian Categorisation - Assigning Data to a Location</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exercises/E104/E104.html">P2-E004</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E104/E104.html#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises/E104/E104.html#investigating-statistical-dependence">Investigating Statistical Dependence</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Projects:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projects/P001/P001_info.html">Project P001</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects/P001/P001_info.html#project-goals">Project Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P001/P001_info.html#project-data">Project Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P001/P001_info.html#project-methods">Project Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P002/P002_info.html">Project P002</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects/P002/P002_info.html#project-goals">Project Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P002/P002_info.html#project-data">Project Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P002/P002_info.html#project-methods">Project Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P003/P003_info.html">Project P003</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects/P003/P003_info.html#project-goals">Project Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P003/P003_info.html#project-data">Project Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P003/P003_info.html#project-methods">Project Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P004/P004_info.html">Project P004</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects/P004/P004_info.html#project-goals">Project Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P004/P004_info.html#project-data">Project Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P004/P004_info.html#project-methods">Project Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P005/P005_info.html">Project P005</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects/P005/P005_info.html#project-goals">Project Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P005/P005_info.html#project-data">Project Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P005/P005_info.html#project-methods">Project Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P006/P006_info.html">Project P006</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects/P006/P006_info.html#project-goals">Project Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P006/P006_info.html#project-data">Project Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P006/P006_info.html#project-methods">Project Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects/P007/P007_info.html">Project P007</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects/P007/P007_info.html#project-goals">Project Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P007/P007_info.html#project-data">Project Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/P007/P007_info.html#project-methods">Project Methods</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="resources/dictionary.html">Dictionary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources/dictionary.html#programming">Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/dictionary.html#python">Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources/reading.html">Reading</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="general/info.html" class="btn btn-neutral float-right" title="General" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Sebastian G. Mutz
+      <span class="lastupdated">
+        Last updated on Mar 03, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

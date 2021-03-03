@@ -1,0 +1,116 @@
+Building a Climate VI
+=====================
+
+**Coriolis Force**
+
+This lecture introduces the Coriolis force, the geostrophic balance and their implications for climate.
+
+Information
+----------- 
+
++------------------------------------------------------------------------+
+| Learning goals                                                         |
++========================================================================+
+| * Understand the Coriolis force and how to calculate it                |
+| * Understand the geostrophic balance and how it relates to wind speeds |
++------------------------------------------------------------------------+
+
+
+Coriolis Force
+--------------
+
+.. math:: 
+
+    \begin{equation}
+      F_c = 2 · m · u · \Omega · sin(\phi)
+    \end{equation}   
+
+.. math:: 
+
+    \begin{equation}
+      \Omega = \frac {2 · \pi (rad)} {60 · 60 · 24 (s)} 
+      = 2.27 · 10^{-5}s^{-1} 
+    \end{equation}       
+    
+
+Geostrophic Balance and Wind Speeds
+-----------------------------------
+
+.. math:: 
+
+    \begin{equation}
+      F_p = \frac {\Delta P}{\Delta} · V
+      = \nabla P · V
+    \end{equation}   
+    
+.. math:: 
+
+    \begin{equation}
+      F_c = 2 · m · u · \Omega · sin(\phi)
+    \end{equation}   
+    
+.. math:: m =  \rho · V      
+
+.. math:: F_p = F_c      
+
+.. math:: 
+
+    \begin{equation}
+      \nabla P · V = 2 · \rho · V · u · \Omega · sin(\phi)
+    \end{equation}   
+
+.. math:: 
+
+    \begin{equation}
+      u_g = \frac {\nabla P} {2 · \rho · \Omega · sin(\phi) }
+    \end{equation}   
+
+
+Geostrophic Balance: Example Problem
+....................................
+
+.. math:: 
+
+    \begin{equation}
+      \nabla P = \frac {1 · 10^2 Pa}{1 · 10^5m}
+      = 1 · 10^{-3} Pa m^{-1}
+    \end{equation}   
+
+    
+.. math:: 
+
+    \begin{equation}
+      u_g = \frac {1 · 10^{-3} Pa m^{-1}} {2 · 1.2 kgm^{-3} · 2.27 · 10^{-5}s{-1} · sin(28.5) }
+      \approx 18.7 ms^{-1}
+    \end{equation}       
+    
+
+Geostrophic Winds
+.................
+
+
+Isolating Pressure Cells
+........................
+
+
+Atmospheric Movement (So Far) Summarised   
+----------------------------------------   
+   
+   
+Advection
+---------
+
+So far, we have not written much of what we learned in differential form. Why? Because it is easier to understand. However, note that for most modelling applications, we cannot get around differential equations.
+
+
+Differential Equations and Phase Space
+--------------------------------------
+
+
+Advection: Example Schemes
+..........................   
+   
+   
+   
+   
+   

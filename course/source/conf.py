@@ -30,13 +30,13 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 # General information about the project.
-project = 'ClimStat'
-year = '2019'
+project = 'INTEGRATE'
+year = '2021'
 author = 'Sebastian G. Mutz'
 copyright = '{0}, {1}'.format(year, author)
 
 # The short X.Y version.
-version = '2019'
+version = '2021'
 # The full version, including alpha/beta/rc tags.
 release = '1.0'
 
@@ -49,20 +49,20 @@ templates_path = ['.']
 
 # -- Options for HTML output ----------------------------------------------
 
-html_logo = "img/climStatBannerSmall.jpg"
+html_logo = "img/integrateLogo_256_256.png"
 #html_favicon = "img/climStatBannerSmall001"
 
-# The theme to use for HTML and HTML Help pages.
-import sphinx_py3doc_enhanced_theme
-html_theme = "sphinx_py3doc_enhanced_theme"
-html_theme_path = [sphinx_py3doc_enhanced_theme.get_html_theme_path()]
+html_theme = 'sphinx_rtd_theme'
+import sphinx_rtd_theme
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
-html_theme_options = {
-    'codefont': 'monospace,sans-serif',
-    'linkcolor': '#0072AA',
-    'visitedlinkcolor': '#6363bb',
-    'extrastyling': False,
-}
+# These folders are copied to the documentation's HTML output
+html_static_path = ['_static']
+
+# These paths are relative to html_static_path
+html_css_files = [
+    'css/style.css',
+]
 
 html_use_smartypants = True
 html_last_updated_fmt = '%b %d, %Y'

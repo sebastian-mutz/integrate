@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Building a Climate III &mdash; INTEGRATE 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Building a Climate IV" href="../A004/A004.html" />
+    <link rel="prev" title="Building a Climate II" href="../A002/A002.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> INTEGRATE
+          
+
+          
+            
+            <img src="../../_static/integrateLogo_256_256.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2021
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A001/A001.html">Building a Climate I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A002/A002.html">Building a Climate II</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building a Climate III</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#black-body-radiation">Black Body Radiation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wien-s-law">Wien’s Law</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stefan-boltzman-law">Stefan-Boltzman Law</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-solar-constant">The Solar Constant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#albedo">Albedo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculating-temperature-on-earth">Calculating Temperature on Earth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#greenhouse-effect">Greenhouse Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#atmospheric-transmissivity-and-opacity">Atmospheric Transmissivity and Opacity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../A004/A004.html">Building a Climate IV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A005/A005.html">Building a Climate V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A006/A006.html">Building a Climate VI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A007/A007.html">Building a Climate VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A008/A008.html">Building a Climate VIII</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Exercises:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E001/E001.html">P1-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E002/E002.html">P1-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E003/E003.html">P1-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E004/E004.html">P1-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E005/E005.html">P1-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E101/E101.html">P2-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">P2-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Projects:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P001/P001_info.html">Project P001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P002/P002_info.html">Project P002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P003/P003_info.html">Project P003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P004/P004_info.html">Project P004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">INTEGRATE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Building a Climate III</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lectures/A003/A003.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="building-a-climate-iii">
+<h1>Building a Climate III<a class="headerlink" href="#building-a-climate-iii" title="Permalink to this headline">¶</a></h1>
+<p><strong>Radiative Fluxes</strong></p>
+<p>This lecture introduces radiative fluxes and the influence of insolation, albedo and greenhouse gases on average planetary temperatures. After this lecture, you should be able to predict average temperature of planets and understand why this is possible.</p>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Learning goals</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ul class="simple">
+<li><p>Gain quantitative understanding of radiative fluxes in the atmosphere</p></li>
+<li><p>Understand influence of insolation and greenhouse gases on mean temperature</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="black-body-radiation">
+<h2>Black Body Radiation<a class="headerlink" href="#black-body-radiation" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/radFlux001_ccby_SebastianMutz.jpg" src="../../_images/radFlux001_ccby_SebastianMutz.jpg" />
+<p class="caption"><span class="caption-text">The concept of black body radiation is essential in understanding radiative fluxes (the input and output) of Earth. Specifically, it lets us calculate the nature of incoming and outgoing radiation, as well as the mean global temperatures on Earth or any planet if the whole system is in equilibrium.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>A <strong>black body</strong> is an idealised opaque, non-reflective object or system that absorbs all incident radiation and re-radiates energy. <strong>Black body radiation</strong> is the electromagnetic radiation emitted by a black body (that is in thermodynamic equilibrium with its environment). Its spectrum of of wavelengths depends only on the body’s temperature. The characteristics of black body radiation are therefore only dependent on the system’s attributes (temperature) rather than the nature of previously absorbed radiation. The concept of black body radiation is central in understanding the important radiative fluxes of the climate system and global mean temperatures on Earth.</p>
+<div class="section" id="wien-s-law">
+<h3>Wien’s Law<a class="headerlink" href="#wien-s-law" title="Permalink to this headline">¶</a></h3>
+<p>In case of black body radiation, an increase n temperature causes higher emission of radiation of all wavelenghts, but esp. for short wavelength radiation. Therefore, the radiation peak on the wavelength spectrum shifts as temperature changes. This is described by Wien’s Law, which states that the emission curve (see figure) peaks at different wavelengths inversely proportional to temperature:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \lambda_{max} = \frac {C}{T}
+\end{equation}\]</div>
+<p>In the equation above:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lambda_{max}\)</span> - the maximum wavelength</p></li>
+<li><p>c - proportionality constant; ca. 2.897·10<sup>-3</sup></p></li>
+<li><p>T - temperature</p></li>
+</ul>
+<p>Two important peaks to remember for the climate system on Earth are:</p>
+<div class="math notranslate nohighlight">
+\[\lambda_{max(sun)} \approx 0.49 \mu m\]</div>
+<div class="math notranslate nohighlight">
+\[\lambda_{max(earth)} \approx 0.49 \mu m\]</div>
+</div>
+<div class="section" id="stefan-boltzman-law">
+<h3>Stefan-Boltzman Law<a class="headerlink" href="#stefan-boltzman-law" title="Permalink to this headline">¶</a></h3>
+<p>Stefan-Boltzman Law describes the total energy radiated per unit time per surface area of a black body <em>across all wavelengths</em>. It can be calculated as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \frac {power}{area} = \sigma · T^4
+\end{equation}\]</div>
+<p>Sigma (<span class="math notranslate nohighlight">\(\sigma\)</span> ) is the Stefan-Boltzman constant. <span class="math notranslate nohighlight">\(\sigma = 5.670373 · 10^{-8}Wm^{-2}K^{-4}\)</span> . We will later make use of this equation to calculate the mean global temperature of Earth.</p>
+</div>
+</div>
+<div class="section" id="the-solar-constant">
+<h2>The Solar Constant<a class="headerlink" href="#the-solar-constant" title="Permalink to this headline">¶</a></h2>
+<p>The solar constant (E<sub>0</sub>) is the radiation intensity that hits the outer atmosphere of Earth and thus an important parameter to remember in climatology. <span class="math notranslate nohighlight">\(E_0 \approx 1380Wm^{-2}\)</span> , but let’s take a step back and see where that number comes from. To unterstand where the number comes from, let’s go back to the source of it all: the sun. The sun fuses 4H (H for Hydrogen) to He (Helium), and the resulting mass deficit is resolved by releasing radiation - solar electromagnetic radiation we call <span class="math notranslate nohighlight">\(\Phi_{sol}\)</span> . <span class="math notranslate nohighlight">\(\Phi_{sol} \approx 3.9 · 10^{26} W\)</span> .</p>
+<div class="figure align-center">
+<img alt="../../_images/radFlux002_ccby_SebastianMutz.jpg" src="../../_images/radFlux002_ccby_SebastianMutz.jpg" />
+</div>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/radFlux004_ccby_SebastianMutz.jpg"><img alt="../../_images/radFlux004_ccby_SebastianMutz.jpg" src="../../_images/radFlux004_ccby_SebastianMutz.jpg" style="width: 400px;" /></a>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  E_0 = \frac { \Phi_{sol} }{ 4·\pi·R^2 }
+  = \frac { 3.9·10^{26} W }{ 4·\pi·(1.5·10^{11} m)^2 }
+  \approx 1380 Wm^2
+\end{equation}\]</div>
+<div class="figure align-center">
+<img alt="../../_images/radFlux003_ccby_SebastianMutz.jpg" src="../../_images/radFlux003_ccby_SebastianMutz.jpg" />
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  radiation_{intercepted} = E_0 · \pi · r^2_{earth}
+\end{equation}\]</div>
+</div>
+<div class="section" id="albedo">
+<h2>Albedo<a class="headerlink" href="#albedo" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  radiation_{absorbed} = E_0 · \pi · r^2_{earth} · (1-\alpha)
+\end{equation}\]</div>
+</div>
+<div class="section" id="calculating-temperature-on-earth">
+<h2>Calculating Temperature on Earth<a class="headerlink" href="#calculating-temperature-on-earth" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  E_0 · (1-\alpha) = 4 · \sigma · T^4_{earth}
+\end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  T_{earth} = \sqrt[4] { \frac {E_0 · (1-\alpha)} {4 · \sigma}}
+  =  \sqrt[4] { \frac {1380 Wm^{-2} · (1-0.33)} {4 · 5.67 · 10^{-8} Wm^{-2}K^{-4} }}
+  \approx 252K
+\end{equation}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do you know the mean global temperature on Earth? How does this compare to our estimate?</p>
+</div>
+</div>
+<div class="section" id="greenhouse-effect">
+<h2>Greenhouse Effect<a class="headerlink" href="#greenhouse-effect" title="Permalink to this headline">¶</a></h2>
+<p>If you converted our estimate of 252K mean global temperature to more commonly used units of °C (subtract 273.15), you may have noticed that our estimate seems a tad cool. You would be right about that, because:</p>
+<div class="math notranslate nohighlight">
+\[T_{earth(predicted)} \approx 252K\]</div>
+<div class="math notranslate nohighlight">
+\[T_{earth(actual)} \approx 288K\]</div>
+<p>The actual temperature on Earth is about 36K warmer - this makes Earth more habitable for most of the current fauna and flora. The difference comes from one important factor we neglected in our calculation of mean global temperature: greenhouse gases.</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/ghg.jpg" src="../../_images/ghg.jpg" />
+<p class="caption"><span class="caption-text">Greenhouse gases are the reason Earth is approximately 36K warmer than we would expect the planet to be without an atmosphere (that contains such gases). They absorb radiation and emit some of it back to the planet’s surface.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>A <strong>greenhouse gas</strong> (<strong>GHG</strong>) is a gas that can absorb and emit infrared radiation. Molecules that have a dipole moment can absorb and emit radiation. Important GHGs on Earth include:</p>
+<ul class="simple">
+<li><p>H<sub>2</sub>O - a strong absorber in 5.5-7µm range and &gt; 27µm.</p></li>
+<li><p>CO<sub>2</sub>mostly absorbs thermal infrared radiation.</p></li>
+<li><p>O<sub>3</sub>strongly absorbs radiation in the UV spectrum.</p></li>
+</ul>
+</div>
+<div class="section" id="atmospheric-transmissivity-and-opacity">
+<h2>Atmospheric Transmissivity and Opacity<a class="headerlink" href="#atmospheric-transmissivity-and-opacity" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../A004/A004.html" class="btn btn-neutral float-right" title="Building a Climate IV" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../A002/A002.html" class="btn btn-neutral float-left" title="Building a Climate II" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Sebastian G. Mutz
+      <span class="lastupdated">
+        Last updated on Mar 03, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

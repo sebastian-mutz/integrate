@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Building a Climate V &mdash; INTEGRATE 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/style.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Building a Climate VI" href="../A006/A006.html" />
+    <link rel="prev" title="Building a Climate IV" href="../A004/A004.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> INTEGRATE
+          
+
+          
+            
+            <img src="../../_static/integrateLogo_256_256.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2021
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lectures:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A001/A001.html">Building a Climate I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A002/A002.html">Building a Climate II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A003/A003.html">Building a Climate III</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A004/A004.html">Building a Climate IV</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building a Climate V</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#differential-heating-and-heat-transport">Differential Heating and Heat Transport</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-global-situation">The Global Situation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#earth-s-energy-balance">Earth’s Energy Balance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#atmospheric-and-oceanic-heat-transport">Atmospheric and Oceanic Heat Transport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#atmospheric-heat-flow">Atmospheric Heat Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#atmospheric-circulation">Atmospheric Circulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hadley-cell">Hadley Cell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cell-model">1-Cell Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3-Cell Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exploring-complexities-through-climate-models">Exploring Complexities through Climate Models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../A006/A006.html">Building a Climate VI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A007/A007.html">Building a Climate VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A008/A008.html">Building a Climate VIII</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Exercises:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E001/E001.html">P1-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E002/E002.html">P1-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E003/E003.html">P1-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E004/E004.html">P1-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E005/E005.html">P1-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E101/E101.html">P2-E001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">P2-E002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Projects:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P001/P001_info.html">Project P001</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P002/P002_info.html">Project P002</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P003/P003_info.html">Project P003</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P004/P004_info.html">Project P004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">INTEGRATE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Building a Climate V</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lectures/A005/A005.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="building-a-climate-v">
+<h1>Building a Climate V<a class="headerlink" href="#building-a-climate-v" title="Permalink to this headline">¶</a></h1>
+<p><strong>Atmospheric Circulation</strong></p>
+<p>We have previously looked at vertical transport and radiative fluxes. Here, we will explore horizontal transport and how differential heating and heat transport control atmospheric circulation.</p>
+<div class="section" id="information">
+<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Learning goals</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ul class="simple">
+<li><p>Understand drivers of atmospheric circulation</p></li>
+<li><p>Gain an overview of Earth’s circulation structure</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="differential-heating-and-heat-transport">
+<h2>Differential Heating and Heat Transport<a class="headerlink" href="#differential-heating-and-heat-transport" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \Phi_m = \rho · u · A
+\end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \Phi_h = \rho · u · A · C_p · T
+\end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[C_{air} = 1006 Jkg^{-1}K^{-1}\]</div>
+<div class="section" id="the-global-situation">
+<h3>The Global Situation<a class="headerlink" href="#the-global-situation" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="earth-s-energy-balance">
+<h3>Earth’s Energy Balance<a class="headerlink" href="#earth-s-energy-balance" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="atmospheric-and-oceanic-heat-transport">
+<h3>Atmospheric and Oceanic Heat Transport<a class="headerlink" href="#atmospheric-and-oceanic-heat-transport" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="atmospheric-heat-flow">
+<h3>Atmospheric Heat Flow<a class="headerlink" href="#atmospheric-heat-flow" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="atmospheric-circulation">
+<h2>Atmospheric Circulation<a class="headerlink" href="#atmospheric-circulation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hadley-cell">
+<h3>Hadley Cell<a class="headerlink" href="#hadley-cell" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cell-model">
+<h3>1-Cell Model<a class="headerlink" href="#cell-model" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id1">
+<h3>3-Cell Model<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="exploring-complexities-through-climate-models">
+<h3>Exploring Complexities through Climate Models<a class="headerlink" href="#exploring-complexities-through-climate-models" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../A006/A006.html" class="btn btn-neutral float-right" title="Building a Climate VI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../A004/A004.html" class="btn btn-neutral float-left" title="Building a Climate IV" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Sebastian G. Mutz
+      <span class="lastupdated">
+        Last updated on Mar 02, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
