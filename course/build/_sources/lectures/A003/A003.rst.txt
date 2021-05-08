@@ -23,7 +23,7 @@ Black Body Radiation
 .. figure:: img/radFlux001_ccby_SebastianMutz.jpg  
    :align: center
    
-   The concept of black body radiation is essential in understanding radiative fluxes (the input and output) of Earth. Specifically, it lets us calculate the nature of incoming and outgoing radiation, as well as the mean global temperatures on Earth or any planet if the whole system is in equilibrium.
+   The concept of black body radiation is essential in understanding radiative fluxes (the input and output) of Earth. Specifically, it lets us calculate the nature of incoming and outgoing radiation, as well as the mean global temperatures on Earth or any planet if the whole system is in equilibrium. [image: cc-by Sebastian Mutz]
 
 A **black body** is an idealised opaque, non-reflective object or system that absorbs all incident radiation and re-radiates energy. **Black body radiation** is the electromagnetic radiation emitted by a black body (that is in thermodynamic equilibrium with its environment). Its spectrum of of wavelengths depends only on the body's temperature. The characteristics of black body radiation are therefore only dependent on the system's attributes (temperature) rather than the nature of previously absorbed radiation. The concept of black body radiation is central in understanding the important radiative fluxes of the climate system and global mean temperatures on Earth. 
 
@@ -31,7 +31,14 @@ A **black body** is an idealised opaque, non-reflective object or system that ab
 Wien's Law
 ..........
 
-In case of black body radiation, an increase n temperature causes higher emission of radiation of all wavelenghts, but esp. for short wavelength radiation. Therefore, the radiation peak on the wavelength spectrum shifts as temperature changes. This is described by Wien's Law, which states that the emission curve (see figure) peaks at different wavelengths inversely proportional to temperature:
+.. figure:: img/blackBody_ccby_LisaRauschenbach.jpg
+   :figwidth: 300px
+   :width: 300px
+   :align: right   
+   
+   An increase in temperature causes higher emission of radiation of all wavelenghts and shifts the radiation peak towards shorter wavelengths. [image: cc-by Lisa Rauschenbach]
+
+In case of black body radiation, an increase in temperature causes higher emission of radiation of all wavelenghts, but esp. for short wavelength radiation. Therefore, the radiation peak on the wavelength spectrum shifts as temperature changes. This is described by Wien's Law, which states that the emission curve (see figure) peaks at different wavelengths inversely proportional to temperature:
 
 .. math::
 
@@ -50,8 +57,21 @@ Two important peaks to remember for the climate system on Earth are:
 .. math:: \lambda_{max(sun)} \approx 0.49 \mu m
    
 .. math:: \lambda_{max(earth)} \approx 0.49 \mu m
-        
-    
+
+
+Revisiting the Electromagnetic Spectrum
+.......................................
+
+Before we move on, let us remind ourselves of the electromagnetic spectrum, the visible spectrum and where the energy in Earth's climate system fits. Examine the figure below.
+
+.. figure:: img/spectrum_ccby_LisaRauschenbach.jpg  
+   :align: center
+   
+   The elextromagnetic spectrum, visible light and where the energy in Earth's climate system fits. [image: cc-by Lisa Rauschenbach]
+
+.. note:: Determine the peak radiation for different temperature black bodies. Repeat this for the sun and Earth. Do your results match the previous figure? Why do you think we are able to see this particular range in the electromagnetic spectrum?
+
+
 Stefan-Boltzman Law
 ....................
 
@@ -65,23 +85,29 @@ Stefan-Boltzman Law describes the total energy radiated per unit time per surfac
 
 Sigma (\ :math:`\sigma` \) is the Stefan-Boltzman constant. \ :math:`\sigma = 5.670373 · 10^{-8}Wm^{-2}K^{-4}` \. We will later make use of this equation to calculate the mean global temperature of Earth.
 
+.. note:: The sun's temperature is approximately 5778K. Can you calculate its power output per area? How would you calculate its total power output (not per area)?
+
+
 The Solar Constant
 ------------------
-
-The solar constant (E\ :sub:`0`\) is the radiation intensity that hits the outer atmosphere of Earth and thus an important parameter to remember in climatology. \ :math:`E_0 \approx 1380Wm^{-2}` \, but let's take a step back and see where that number comes from. To unterstand where the number comes from, let's go back to the source of it all: the sun. The sun fuses 4H (H for Hydrogen) to He (Helium), and the resulting mass deficit is resolved by releasing radiation - solar electromagnetic radiation we call \ :math:`\Phi_{sol}` \. \ :math:`\Phi_{sol} \approx 3.9 · 10^{26} W` \.
-
-
-
 
 .. figure:: img/radFlux002_ccby_SebastianMutz.jpg  
    :align: center
    
+   The sun fuses 4H to He and releases solar electromagnetic radiation in the process. It's the main (and only significant) energy input to Earth's climate system. [image: cc-by Sebastian Mutz]
 
+The **solar constant** (\ :math:`E_0` \) is the radiation intensity that hits the outer atmosphere of Earth and thus an important parameter to remember in climatology. \ :math:`E_0 \approx 1380Wm^{-2}` \, but let's take a step back and see where that number comes from. To unterstand where the number comes from, let's go back to the source of it all: the sun. 
 
 .. figure:: img/radFlux004_ccby_SebastianMutz.jpg  
-   :figwidth: 400px
-   :width: 400px
+   :figwidth: 350px
+   :width: 350px
    :align: left
+   
+   In our calculation of \ :math:`E_0` \ from \ :math:`\Phi_{sol}` \ we need to account for spreading. We do this by dividing \ :math:`\Phi_{sol}` \ by the surface area of a sphere with radius **R**. [image: cc-by Sebastian Mutz]
+
+The sun fuses 4H (H for Hydrogen) to He (Helium), and the resulting mass deficit is resolved by releasing radiation - **solar electromagnetic radiation** we call \ :math:`\Phi_{sol}` \. \ :math:`\Phi_{sol} \approx 3.9 · 10^{26} W` \.   
+   
+Sun rays "spread out" into space and radiation becomes less as an inverse square law. Imagine a sphere wrapping around the sun at its centre. This sphere has the radius **R**, which is the distance between the sun and the Earth. We can account for said spreading by dividing \ :math:`\Phi_{sol}` \ by the surface area of a sphere with radius **R**. You may recall that the surface area (SA) of a sphere is calculated as \ :math:`SA = 4·\pi·r^2` \. We can therefore easily calculate the solar constant from \ :math:`\Phi_{sol}` \ as follows:
 
 .. math::
 
@@ -91,30 +117,53 @@ The solar constant (E\ :sub:`0`\) is the radiation intensity that hits the outer
       \approx 1380 Wm^2
     \end{equation}          
 
+.. note:: What would the solar constant be for Mars?    
     
-.. figure:: img/radFlux003_ccby_SebastianMutz.jpg  
-   :align: center
+    
+Calculating Temperature on Earth
+--------------------------------
+
+We already calculated \ :math:`E_0` \, the radiation intensity hitting the outer layer of Earth. However, in order to calculate global mean temperatures on Earth, we need to know how much of the incoming radiation is absorbed, because only absorbed radiation can do anything on Earth. 
+
+Albedo and Absorbed Radiation
+.............................
+
+Let's first look at how much radiation is actually intercepted by Earth. Imagine a small globe in a pitch black room that sits next to a light source. When shining the light onto the globe, it casts a shadow behind it. In an idealised setting (without scattering), the shadow will be circular with very sharp edges. The surface area of that circle represents the amount of light that is being intercepted. The surface area of a circle is \ :math:`\pi·r^2` \, where r is its radius. In our case, r is the radius of Earth. We can therefore say that:  
    
-    
 .. math::
 
     \begin{equation}
       radiation_{intercepted} = E_0 · \pi · r^2_{earth}
     \end{equation}          
  
+Note how we went from units of \ :math:`Wm^2` \ to \ :math:`W` \ by multiplication of \ :math:`E_0` \ with an area.
 
-Albedo
-------
+.. figure:: img/radFlux003_ccby_SebastianMutz.jpg  
+   :align: center
+   
+   The surface area of the circular shade that is hypothetically cast by the Earth as the sun shines onto it from the other side represents the intercepted radiation. [image: cc-by Sebastian Mutz]
+
+Next, we need to take into account that the **Earth is not a perfect black body**. Earth is fairly reflective and therefore reflects some of the intercepted radiation directly back into space. Note that relfection is not the same as emission. Reflected radiation is not absorbed and re-emitted, but simply "sent" back into space. **Albedo** (\ :math:`\alpha` \) is the measure of a planet's reflectivity. It is a number between 0 and 1. This number is the fraction of incoming radiation that is reflected back into space. **Earth has an albedo of ~0.33**, which means 33% of incoming radiation is reflected. We can account for it and calculate absorbed radiation as follows:
 
 .. math::
 
     \begin{equation}
       radiation_{absorbed} = E_0 · \pi · r^2_{earth} · (1-\alpha)
-    \end{equation}              
-
+    \end{equation}                   
     
-Calculating Temperature on Earth
---------------------------------
+Earth's Mean Global Temperature
+...............................
+
+Since our system is in euilibrium, the total amount of radiation absorbed by Earth equals the total amount of radiation emitted Earth. We have previously established that we can calculate the total amount of emitted radiation (per area) using the Stefan-Boltzman equation and the temperature of an object (or planet). In this case, the temperature of the object is the mean global temperature on Earth, i.e. the element we want to calculate! Note that we previously calculated the total absorbed radiation, but the Stephan-Boltzman equation gives us power per area. We therefore have to correct for area before equating the two. To calculate the absorbed radiation per unit area, we can simply multiply by the area ( \ :math:`\pi·r^2` \) again and get:
+
+.. math::
+
+    \begin{equation}
+      \frac {radiation_{absorbed}}{area} = E_0 · (1-\alpha)
+    \end{equation}     
+    
+
+With the assumption of equilibrium, we can now equate the equations:    
 
 .. math::
 
@@ -122,6 +171,9 @@ Calculating Temperature on Earth
       E_0 · (1-\alpha) = 4 · \sigma · T^4_{earth}
     \end{equation}                  
     
+**Note**: Since the Stefan-Boltzman equation gives us power per area, we can equate it with the absorbed radiation per area. When uncertain, it helps to check that your units work out!        
+    
+Finally, we can re-arrange the equation above to solve for \ :math:`T_{earth}` \:
     
 .. math::
 
@@ -159,6 +211,23 @@ A **greenhouse gas** (**GHG**) is a gas that can absorb and emit infrared radiat
 
 Atmospheric Transmissivity and Opacity
 --------------------------------------
+
+Not all wavelengths of radiation are able to pass through an atmosphere equally easily. For some wavelenghts, an atmosphere may be **opaque**, meaning radiation on of those wavelengths are not able to pass through the atmosphere and reach the planet's surface. **Transmissivity** describes this ability. For example, the atmosphere is transparent for radiation in the visible light spectrum, thus allowing transmission in that part of the electromagnetic spectrum.
+
+.. figure:: img/transmiss_ccby_LisaRauschenbach.jpg
+   :align: center   
+   
+   The atmosphere is more transparent for some wavelengths than for others. [image: cc-by Lisa Rauschenbach]
+
+.. note:: Have a closer look at the transmission figure. Do you know where radiowaves fit? Does it make sense to use radio waves for long distance transmission given what you see on this figure?
+
+.. note:: On what part of the electromagnetic spectrum does Earth's emission peak? How opaque/transparent is Earth's atmosphere for radiation emitted by Earth? 
+
+
+Radiative Fluxes on Earth
+-------------------------
+
+\ :math:`E_0` \ is the radiation arriving at the top of the atmosphere. However, since the Earth is spherical rather than circular, this is distributed around the globe. Note that the difference between the area of a circle (\ :math:`\pi·r^2` \) and the area of a sphere (\ :math:`4·\pi·r^2` \) is a factor of 4, we can account for this by dividing \ :math:`E_0` \ by 4. This yields ~ \ :math:`345 Wm^{-2}` \ as the radiation per unit area arriving at the top of the atmosphere. (Note that this number is reported differently depending on the book you consult.)
 
 
 

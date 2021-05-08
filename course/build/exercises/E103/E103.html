@@ -95,7 +95,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
 </ul>
@@ -122,11 +121,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../E101/E101.html">P2-E001</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../E102/E102.html">P2-E002</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">P2-E003</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bayesian-categorisation-assigning-data-to-a-location">Bayesian Categorisation - Assigning Data to a Location</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercise">Exercise</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#information">Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bayesian-categorisation-assigning-data-to-a-location">Bayesian Categorisation - Assigning Data to a Location</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../E104/E104.html">P2-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E105/E105.html">P2-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E201/E201.html">P3-E201</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Projects:</span></p>
 <ul>
@@ -137,11 +142,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P008/P008_info.html">Project P008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P009/P009_info.html">Project P009</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Resources:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/guide.html">Guide</a></li>
 </ul>
 
             
@@ -209,9 +220,20 @@
             
   <div class="section" id="p2-e003">
 <h1>P2-E003<a class="headerlink" href="#p2-e003" title="Permalink to this headline">¶</a></h1>
-<p>The Bayes theorem allows you to <strong>learn</strong> from new data and update your knowlege about a system/model/hypothesis. In the accompanying lecture to this exercise, you learned about the Bayes theorem and one of its many applications. This exercise is designed to introduce you to a different use for the same theorem in order to give you a more intuitive grasp of it.</p>
+<p>You are encouraged to familiarise yourself with a few topics prior to the exercise. The background section will provide you with some basic information and pointers. The exercise itself is designed to give you some practice in working with these concepts to give you a more intuitive grasp of them. The teacher will be able to supervise your during the exercise and explain the underlying theory if uncertainties remained during your preparation for the exercise.</p>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>The Bayes Theorem allows you to from new data and update your knowlege about a system/model/hypothesis. This exercise is designed to introduce you to a different use for the same theorem in order to give you a more intuitive grasp of it. If you have completed previous exercises, you will have sufficient skill to work with provided datasets. To prepare for this exercise, you will need to familiarise yourself with the <strong>Bayes Theorem</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  P(A|B)=\frac {P(B/A)·P(A)}{P(B)}
+\end{equation}\]</div>
+<p>Make sure you understand each term. Reading about the basics of <strong>Naive Bayes Classifiers</strong> prior to the exercise will be an advantage.</p>
+</div>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="information">
-<h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
+<h3>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 28%" />
@@ -233,15 +255,16 @@
 </table>
 <div class="topic">
 <p class="topic-title">What to Submit</p>
-<p>Submit your script(s) and 1-2 sentence answers to the questions for the tasks of this exercise via ILIAS. You may include the answers as comments in your script(s). Make sure to also comment each of your calculations (using the terminology you were introduced to). The script should be named <em>[your surname]_e103.[ext]</em>, where <em>[ext]</em> is the file extension. In case of Python, this would be <em>.py</em>, for Matlab it is <em>.m</em>, etc.</p>
-</div>
-<div class="figure align-default">
-<img alt="../../_images/categorisation.jpg" src="../../_images/categorisation.jpg" />
+<p>Submit your script(s) and 1-2 sentence answers to the questions for the tasks of this exercise. You may include the answers as comments in your script(s). Make sure to also comment each of your calculations (using the terminology you were introduced to). The script should be named <em>[your surname]_e103.[ext]</em>, where <em>[ext]</em> is the file extension. In case of Python, this would be <em>.py</em>, for Matlab it is <em>.m</em>, etc.</p>
 </div>
 </div>
 <div class="section" id="bayesian-categorisation-assigning-data-to-a-location">
-<h2>Bayesian Categorisation - Assigning Data to a Location<a class="headerlink" href="#bayesian-categorisation-assigning-data-to-a-location" title="Permalink to this headline">¶</a></h2>
-<p>You are provided with data from three different (southern hemisphere) weather stations with different latitudinal and similar longitudinal coordinates:</p>
+<h3>Bayesian Categorisation - Assigning Data to a Location<a class="headerlink" href="#bayesian-categorisation-assigning-data-to-a-location" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/categorisation_ccby_KirstinUebernickel.jpg" src="../../_images/categorisation_ccby_KirstinUebernickel.jpg" />
+<p class="caption"><span class="caption-text">Bayes Theorem can be used for categorisation. In this exercise, we categorise data of unknown origin into records from 3 different locations. [photo: Weather stations at Santa Gracia, La Campana and Nahuelbuta; cc-by Kirstin Übernickel]</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>You are provided with ERA-Interim re-analysis data extracted from three different (southern hemisphere) locations (near weather stations) with different latitudinal and similar longitudinal coordinates:</p>
 <p>Central Chile:
 <a class="reference download internal" download="" href="../../_downloads/6b7645ad75d25f61ac1a716f2835e9d7/Antofagasta.csv"><code class="xref download docutils literal notranslate"><span class="pre">Antofagasta.cvs</span></code></a></p>
 <p>Central-South Chile:
@@ -262,10 +285,12 @@
 <p><strong>HINT</strong></p>
 <ul class="simple">
 <li><p>Think carefully about how to take seasons into consideration when constructing your wind direction model.</p></li>
+<li><p>Does it make sense to use wind direction in degrees for this exercise? Feel free to discuss with students and teachers.</p></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Late submissions won’t be accepted!</p>
+</div>
 </div>
 </div>
 </div>
@@ -293,7 +318,7 @@
         
         &copy; Copyright 2021, Sebastian G. Mutz
       <span class="lastupdated">
-        Last updated on Feb 25, 2021.
+        Last updated on May 08, 2021.
       </span>
 
     </p>

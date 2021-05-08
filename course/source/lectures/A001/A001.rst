@@ -26,13 +26,6 @@ First, we will agree on the definitions of various terminology used in the cours
 Weather
 .......
 
-.. figure:: img/cirrus_noaa.jpg
-   :figwidth: 300px
-   :width: 300px
-   :align: right
-
-   Cirrus clouds. [image: noaa.gov]
-
 Intuitively, weather can be described as the relatively short-lived, temporary mood of the atmosphere at a specific location. More formally, weather can be described as the condition of meteorological processes at a specific location over a short time span.
 
 **Informal definition** (intuitive): "The temporary mood of the atmosphere at a specific location"
@@ -45,12 +38,12 @@ Climate
 
 Extending the analogy above to climate, we can say the following: If weather is the temporary mood of the atmosphere, climate can be regarded as the character of the atmosphere. While the character can be seen as the average set of moods you can have, it does determine probabilities of certain moods. 
 
-.. figure:: img/palaeoclimate.jpg  
+.. figure:: img/palaeoclimate_ccby_SebastianMutz.jpg  
    :figwidth: 400px
    :width: 400px
-   :align: left
+   :align: right
    
-   Temperature climatologies for a pre-industrial world (left), and temperature deviations from pre-industrial climatologies for the Last Glacial Maximum (middle) and mid_Pliocene (right) [data: Mutz et al., 2018].
+   Temperature climatologies for a pre-industrial world (left), and temperature deviations from pre-industrial climatologies for the Last Glacial Maximum (middle) and mid_Pliocene (right). [image: cc-by Sebastian Mutz; data: Mutz et al., 2018]
 
 
 **Informal definition** (intuitive): “The character of the atmosphere (that determines probabilities for different moods)"
@@ -120,12 +113,12 @@ The Climate System
 
 Typically, the climate system on Earth includes the atmosphere, cryosphere, hydrosphere, biosphere and land surface. **Climate elements** are measurable meteorological quantities that can be statisticall processed with regard to the measurement period. They are the state variables of the climate system. **Climate factors** are influencing quantities that modify climate elements, and **climate forcings** are climate factors that drive/force/control climate elements from outside the climate system. Finally, we use the term **climate dynamics** to describe (1) effects of (external) forcings on the system or (2) forces and movements that characterise the system.
 
-.. figure:: img/_climateSystem.jpg
+.. figure:: img/climateSystem_ccby_LisaRauschenbach.jpg
    :figwidth: 700px
    :width: 700px
    :align: center
    
-   The different parts of the climate system and how they interact.
+   The different parts of the climate system and how they interact. [image: cc-by Lisa Rauschenbach]
 
 .. note:: Discuss how the climate factors in the figure modify climate elements in the climate system.
 
@@ -238,10 +231,12 @@ Layering
 We use the following, common layering scheme for the atmosphere. It subdivides the atmosphere into Troposphere, Stratosphere, Mesosphere and Thermosphere.
 
 
-.. figure:: img/_atmProf0.jpg
+.. figure:: img/atmProf0_ccby_LisaRauschenbach.jpg
    :figwidth: 400px
    :width: 400px
    :align: center
+   
+   [image: cc-by Lisa Rauschenbach]
    
 .. note:: Do you know how the atmosphere is layered? By pressure? By temperature? Can you think of more ways to layer the atmosphere in a merited way?
 
@@ -251,20 +246,24 @@ Temperature-Defined Boundaries
 
 We subdivide the atmopheric profile by air temperature, because boundaries more easily tied to specific heights than compositional boundaries. The figure shows a (very conceptual) vertical temperature profile of the atmosphere.
 
-.. figure:: img/_atmProf0.jpg
+.. figure:: img/atmProf1_ccby_LisaRauschenbach.jpg
    :figwidth: 400px
    :width: 400px
    :align: center
+   
+   [image: cc-by Lisa Rauschenbach]
 
 We will walk through the different layers and look at their attributes step-by-step.      
    
 Troposphere
 ............
 
-.. figure:: img/_atmProf0.jpg
+.. figure:: img/atmProf2_ccby_LisaRauschenbach.jpg
    :figwidth: 400px
    :width: 400px
    :align: left
+   
+   [image: cc-by Lisa Rauschenbach]
    
 **Troposhpere fact sheet**:  
 
@@ -285,10 +284,12 @@ Troposphere
 Stratosphere
 ............
 
-.. figure:: img/_atmProf0.jpg
+.. figure:: img/atmProf3_ccby_LisaRauschenbach.jpg
    :figwidth: 400px
    :width: 400px
-   :align: left   
+   :align: left
+   
+   [image: cc-by Lisa Rauschenbach]
    
 **Stratosphere fact sheet**:   
 
@@ -323,10 +324,12 @@ The thermal inversion, i.e. the upward warming, is related to Ozone. Below are t
 Mesosphere
 ..........
 
-.. figure:: img/_atmProf0.jpg
+.. figure:: img/atmProf4_ccby_LisaRauschenbach.jpg
    :figwidth: 400px
    :width: 400px
    :align: left   
+   
+   [image: cc-by Lisa Rauschenbach]
    
    
 **Mesosphere fact sheet**:   
@@ -345,10 +348,12 @@ Mesosphere
 Thermosphere and Exosphere
 ..........................
 
-.. figure:: img/_atmProf0.jpg
+.. figure:: img/atmProf5_ccby_LisaRauschenbach.jpg
    :figwidth: 400px
    :width: 400px
    :align: left   
+   
+   [image: cc-by Lisa Rauschenbach]
    
 **Thermosphere**
 

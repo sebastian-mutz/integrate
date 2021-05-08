@@ -25,7 +25,7 @@ Information
 
 .. topic:: What to Submit
 
-      Submit your script for the final task of this exercise via ILIAS. The script should be named *[your surname]_e001.[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for Matlab it is *.m*, etc.
+      Submit your script for the final task of this exercise. The script should be named *[your surname]_e001.[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for Matlab it is *.m*, etc.
 
 Anaconda - It Won't Bite!
 -------------------------      

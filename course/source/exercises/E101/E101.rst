@@ -1,11 +1,71 @@
 P2-E001
 =======
 
-In the accompanying lecture to this exercise, you learned about the implications of the the central limit theorem, standard error and confidence intervals. This exercise is designed to give you some practice in working with these concepts to give you a more intuitive grasp of them.
+You are encouraged to familiarise yourself with a few topics prior to the exercise. The background section will provide you with some basic information and pointers. The exercise itself is designed to give you some practice in working with these concepts to give you a more intuitive grasp of them. The teacher will be able to supervise your during the exercise and explain the underlying theory if uncertainties remained during your preparation for the exercise.
 
+Background
+---------- 
+
+The following are topics you should try to familiarise yourself with prior to the exercise. Note that the serve as pointers and checks for your studies rather than as full instructional materials.
+
+**Topic 1**: First, (re-)familiarise yourself with the **normal distribution**. Are you able to make sense of the figure, equation and labels below?
+
+.. figure:: img/normal.jpg
+   :align: center
+   :figwidth: 400px
+
+**Topic 2**: Next, you need to know about **z-scoes**. They are a standardised distance from a specific point to the mean, i.e. the distance expressed in standard deviations. In other words, the signal (distance) is put in relation to dispersion. \ :math:`\sigma` \ is the standard deviation, \ :math:`\mu` \ is the mean.
+
+.. figure:: img/z-score.jpg
+   :align: center
+   :figwidth: 500px
+
+   
+**Topic 3**: Familiarise yourself with **central limit theorem** and its implications. 
+
+Consider the following scenario. Variable x is distributed as shown below. Its mean (\ :math:`\mu` \) is 3. You take n (5) random samples (S) from a population x. 
+
+.. figure:: img/samples1.jpg
+   :align: center
+   :figwidth: 400px
+
+For each of the samples, you can calculate the **sample means**.
+
+.. figure:: img/samples2.jpg
+   :align: center
+   :figwidth: 400px
+
+Note that we have a mean of 2.5 twice. One time for sample 1 and one time for sample 2. If you plotted the frequency of the sample means, it would look like this:
+   
+.. figure:: img/samples3.jpg
+   :align: center
+   :figwidth: 400px   
+   
+   
+If you increased the number of samples you take from the original set, you would see observe that the frequency is highest where \ :math:`\mu` \ is located. The mean of all sample means (\ :math:`\mu_{\bar{x}}` \) would shift closer and closer towards the population mean (\ :math:`\mu` \). 
+
+.. figure:: img/samples4.jpg
+   :align: center
+   :figwidth: 400px   
+
+Note also that the distribution of sample means is beginning to resemble a normal distribution in disregard of the original distribution of x. There is another very important effect of increasing the sample size. The dispersion of the sampling distribution decreases. We can thus summarise: 
+
+.. figure:: img/samples5.jpg
+   :align: center
+   :figwidth: 600px   
+
+* As sample size increases, the sample means of a random variable approaches a normal distribution even when the original variables are not normally distributed. 
+* \ :math:`\mu \approx \mu_{\bar{x}}` \
+* The dispersion of the sampling distribution (\ :math:`\sigma_{\bar{x}}` \) decreases as sample size increases. It can be computed as \ :math:`\sigma_{\bar{x}} = \frac {\sigma}{\sqrt {n}}` \. Since \ :math:`\sigma` \ is usually not known, the sample standard deviation **s** is often used as an approximation for \ :math:`\sigma` \, giving us an approximation for the dispersion of the sampling distribution (\ :math:`\hat{\sigma}_{\bar{x}}` \).
+      
+**Topic 4**: Finally, familiarise yourself with the concepts of **standard error**, **confidence intervals**, the **t-distribution** and how it is related to the normal distribution.
+
+
+Exercise
+--------
 
 Information
------------ 
+...........
 
 +----------------------+--------------------------------------------------------+
 | Learning goals                                                                |
@@ -19,14 +79,15 @@ Information
 
 .. topic:: What to Submit
 
-      Submit your script(s) and 1-2 sentence answers to the questions for the tasks of this exercise via ILIAS. You may include the answers as comments in your script(s). Make sure to also comment each of your calculations (using the terminology you were introduced to). The script should be named *[your surname]_e101.[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for Matlab it is *.m*, etc.
-
-.. note:: For this exercise, we'll take a frequentist approach to probability and uncertainty.      
-      
-.. figure:: azucar.jpg      
-      
+      Submit your script(s) and 1-2 sentence answers to the questions for the tasks of this exercise. You may include the answers as comments in your script(s). Make sure to also comment each of your calculations (using the terminology you were introduced to). The script should be named *[your surname]_e101.[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for Matlab it is *.m*, etc.
+  
 Temperatures in the Atacama      
----------------------------
+...........................
+
+.. figure:: img/PanDeAzucar_ccby_KirstinUebernickel.jpg
+   :align: center
+
+   Weather station in Pan de Azucar National Park. [photo: cc-by Kirstin Übernickel]  
 
 The Atacama desert is the driest place on Earth, and it can also get a little warm. Through careful experimentation, namely GCM (General Circulation Model) simulations, you were able to construct two models in form of PDF's (probability density functions) for summer temperatures in this desert. The simulations represent two very possible regional climate scenarios. Model 1 has a mean of 24.2°C and standard deviation of 6.1°C. Model 2 has a mean of 25.9°C and standard deviation of 5.5°C. A study suggested that mean summer temperatures above 23°C are related to increased health risks in the local population. The budget of the local goverment is large enough to keep the population healthy if the mean summer temperatures for the 30 year planning period do not exceed 24.5°C. 
 
@@ -34,7 +95,7 @@ What is the probability of the local government running out of money within the 
 
 
 Sampling Strategy - Reversing the Problem
------------------------------------------
+.........................................
 
 You're planning a field campaign to the Alps to collect samples of carbonates to reconstruct mean annual temperatures (MAT) for the Middle Miocene, and through some groundbreaking research, those carbonates are now able to adequately represent palaeo-MAT. You have limited time and resources, but still want to end up with a large enough sample size to be able to conduct decent research. More specifically, you want to have a sample number that allows you to be 95% confident that your true Middle Miocene MAT lies within 0.5°C of your sample mean. Temperatures constructed from similar samples of a pilot study have a standard deviation of 1.1°C.
 

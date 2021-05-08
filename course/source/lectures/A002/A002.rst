@@ -21,11 +21,6 @@ Celestial Mechanics and Orbital Forcing
 
 Broadly speaking, **celestial mechanics** is concerned with the movements of objects in outer space. This includes the way planets orbit the stars like Earth is orbiting our sun. This is of particular interest to climatologists, because the nature and rhythms of the ways in which Earth orbits the sun changes the **solar radiation** that different regions on Earth receive in particular seasons. In turn, this redistribution of solar radiation creates very different climates. When climate is changed as a result of changing orbital parameters, we speak of **orbital forcing** of our climate. Note that these changes are slow and take place on **orbital time scales** of 10s to 100s ka. These changes happen at a higher frequency than changes on the **geological/tectonic timr scale**, and at a lower frequency than changes on the **historical time scale** and **millenial/deglacial time scale**.
 
-.. figure:: img/_climTimScale.jpg  
-   :align: center
-   
-   The frequencies for past climate change can broadly be categorised into tectonic/geological, orbital, millenial/deglacial and historical.
-
 .. note:: Can you think of well known climate change events? On which time scales did they take place and how were they forced?
 
 
@@ -34,12 +29,12 @@ Kepler's Laws of Planetary Motion
 
 Kepler's Laws of Planetary Motion, published by Johannes Kepler in the 1600s, describe how planets orbit the sun. Before we get into any details, let's recall the general set-up of Earth's orbit around the sun.
 
-.. figure:: img/_orbit001.jpg  
+.. figure:: img/orbit001_ccby_LisaRauschenbach.jpg  
    :figwidth: 500px
    :width: 500px
    :align: right
    
-   The Earth's orbital path around the sun. Its current tilt is ~23.5°, the 2 equinoxes occur on March 21-22 and September 22-23, and the 2 solstices occur on June 21-22 and December 21-22.
+   The Earth's orbital path around the sun. Its current tilt is ~23.5°, the 2 equinoxes occur on March 21-22 and September 22-23, and the 2 solstices occur on June 21-22 and December 21-22. [image: cc-by Lisa Rauschenbach]
 
 The current tilt of the Earth's axis (the angle between its rotational axis and orbital axis) is ~23.5°. The equinox, roughly translating from latin as "equal night", marks the date(s) when nighttime and daytime duration are approximately equal. The solstice marks the date(s) when the sun appears to reach its most northern/southern position and the longest day (in case of the summer solstice) or shortest day (in case of the winter solstice) in the year is experienced at a particulat location that does not lie on the equator. The term roughly translates from latin as "the sun stands still", because it appears to stop migrating north/south before it reverses its direction.   
 
@@ -153,7 +148,7 @@ Obliquity or **axial tilt** describes the angle between a planetary object's rot
 .. figure:: img/tilt_ccby_SebastianMutz.jpg  
    :align: center
    
-   The thick white line (orbital axis) is perpendicular to the orbital plane of Earth. (In this 2D figure, the orbital plane could be represented by a line joining the centre of Earth and sun). The thin white line represents the rotational axis of Earth and the dashed line the equatorial plane (here in in 2D). The axial tilt is the difference between the thick and thin white line, or the difference between the equatorial and orbital plane.
+   The thick white line (orbital axis) is perpendicular to the orbital plane of Earth. (In this 2D figure, the orbital plane could be represented by a line joining the centre of Earth and sun). The thin white line represents the rotational axis of Earth and the dashed line the equatorial plane (here in in 2D). The axial tilt is the difference between the thick and thin white line, or the difference between the equatorial and orbital plane. [image: cc-by Sebastian Mutz]
 
 .. note:: Consider the figure. What implications would a change in axial tilt have on northern/southern hemisphere winter/summer? 
  
@@ -173,10 +168,10 @@ Imagine turning a spinning top (toy). If you give it a good spin, its rotational
 If we transfer this concept into the setup of our solar system, the results are changes in the positions of solstices and equinoxes in Earth’s elliptical path. This is represented by sin ω (values from +1 to -1), where ω is the angle between vernal equinox (20. March) and perihelion.  11 ka from now (half a precession cycle), December will be in aphelion.
 
 
-.. figure:: img/_orbit002.jpg  
+.. figure:: img/orbit002_ccby_LisaRauschenbach.jpg  
    :align: center
    
-   Axial precession ("wobble") is represented by sin ω, where ω is the angle between vernal equinox (20. March) and perihelion.
+   Axial precession ("wobble") is represented by sin ω, where ω is the angle between vernal equinox (20. March) and perihelion. [image: cc-by Lisa Rauschenbach]
 
 .. note:: Consider the interplay between precession and changes in the elliptical nature of Earth's orbital path. Can you see why precession would be **modulated** by eccentricity?
 
@@ -191,20 +186,7 @@ Milakovich Cycles Summary
 Detecting Orbital Forcing
 -------------------------
 
-Small Excursion I: Stable Isotopes in Water
-...........................................
-
-Small Excursion II: Spectral Density Estimation
-...............................................
-
-.. math::
-
-    \begin{equation}
-        \vec{Y} \approx A·x
-    \end{equation}
-
-
-.. note:: Zachos et al. (2001) investigate different time periods in the geological past with respect to orbital forcing. It makes a good case study for topics covered in this lecture.
+.. note:: The article "Trends, Rhythms, and Abberations in Global Climate 65 Ma to present" by Zachos et al. (2001) investigate different time periods in the geological past with respect to orbital forcing. It makes a good case study for topics covered in this lecture and demonstrates how to detect orbital forcing in a palaeoclimate time series. It allows for good discussion of the topic in class.
    
    
    

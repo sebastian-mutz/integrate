@@ -95,7 +95,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
 </ul>
@@ -120,11 +119,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#milakovich-cycles-summary">Milakovich Cycles Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#detecting-orbital-forcing">Detecting Orbital Forcing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#small-excursion-i-stable-isotopes-in-water">Small Excursion I: Stable Isotopes in Water</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#small-excursion-ii-spectral-density-estimation">Small Excursion II: Spectral Density Estimation</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#detecting-orbital-forcing">Detecting Orbital Forcing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../A003/A003.html">Building a Climate III</a></li>
@@ -146,6 +141,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">P2-E002</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E105/E105.html">P2-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E201/E201.html">P3-E201</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Projects:</span></p>
 <ul>
@@ -156,11 +153,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P008/P008_info.html">Project P008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P009/P009_info.html">Project P009</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Resources:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/guide.html">Guide</a></li>
 </ul>
 
             
@@ -253,10 +256,6 @@
 <div class="section" id="celestial-mechanics-and-orbital-forcing">
 <h2>Celestial Mechanics and Orbital Forcing<a class="headerlink" href="#celestial-mechanics-and-orbital-forcing" title="Permalink to this headline">¶</a></h2>
 <p>Broadly speaking, <strong>celestial mechanics</strong> is concerned with the movements of objects in outer space. This includes the way planets orbit the stars like Earth is orbiting our sun. This is of particular interest to climatologists, because the nature and rhythms of the ways in which Earth orbits the sun changes the <strong>solar radiation</strong> that different regions on Earth receive in particular seasons. In turn, this redistribution of solar radiation creates very different climates. When climate is changed as a result of changing orbital parameters, we speak of <strong>orbital forcing</strong> of our climate. Note that these changes are slow and take place on <strong>orbital time scales</strong> of 10s to 100s ka. These changes happen at a higher frequency than changes on the <strong>geological/tectonic timr scale</strong>, and at a lower frequency than changes on the <strong>historical time scale</strong> and <strong>millenial/deglacial time scale</strong>.</p>
-<div class="figure align-center" id="id1">
-<img alt="../../_images/_climTimScale.jpg" src="../../_images/_climTimScale.jpg" />
-<p class="caption"><span class="caption-text">The frequencies for past climate change can broadly be categorised into tectonic/geological, orbital, millenial/deglacial and historical.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Can you think of well known climate change events? On which time scales did they take place and how were they forced?</p>
@@ -265,9 +264,9 @@
 <div class="section" id="kepler-s-laws-of-planetary-motion">
 <h2>Kepler’s Laws of Planetary Motion<a class="headerlink" href="#kepler-s-laws-of-planetary-motion" title="Permalink to this headline">¶</a></h2>
 <p>Kepler’s Laws of Planetary Motion, published by Johannes Kepler in the 1600s, describe how planets orbit the sun. Before we get into any details, let’s recall the general set-up of Earth’s orbit around the sun.</p>
-<div class="figure align-right" id="id2" style="width: 500px">
-<a class="reference internal image-reference" href="../../_images/_orbit001.jpg"><img alt="../../_images/_orbit001.jpg" src="../../_images/_orbit001.jpg" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">The Earth’s orbital path around the sun. Its current tilt is ~23.5°, the 2 equinoxes occur on March 21-22 and September 22-23, and the 2 solstices occur on June 21-22 and December 21-22.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<div class="figure align-right" id="id1" style="width: 500px">
+<a class="reference internal image-reference" href="../../_images/orbit001_ccby_LisaRauschenbach.jpg"><img alt="../../_images/orbit001_ccby_LisaRauschenbach.jpg" src="../../_images/orbit001_ccby_LisaRauschenbach.jpg" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-text">The Earth’s orbital path around the sun. Its current tilt is ~23.5°, the 2 equinoxes occur on March 21-22 and September 22-23, and the 2 solstices occur on June 21-22 and December 21-22. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>The current tilt of the Earth’s axis (the angle between its rotational axis and orbital axis) is ~23.5°. The equinox, roughly translating from latin as “equal night”, marks the date(s) when nighttime and daytime duration are approximately equal. The solstice marks the date(s) when the sun appears to reach its most northern/southern position and the longest day (in case of the summer solstice) or shortest day (in case of the winter solstice) in the year is experienced at a particulat location that does not lie on the equator. The term roughly translates from latin as “the sun stands still”, because it appears to stop migrating north/south before it reverses its direction.</p>
 <div class="admonition note">
@@ -276,9 +275,9 @@
 </div>
 <div class="section" id="first-law-of-planetary-motion">
 <h3>First Law of Planetary Motion<a class="headerlink" href="#first-law-of-planetary-motion" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-left" id="id3" style="width: 200px">
+<div class="figure align-left" id="id2" style="width: 200px">
 <a class="reference internal image-reference" href="../../_images/kepler01.jpg"><img alt="../../_images/kepler01.jpg" src="../../_images/kepler01.jpg" style="width: 200px;" /></a>
-<p class="caption"><span class="caption-text">Earth’s (very exaggerated) elliptical path around the sun with perihelion and aphelion marked on it.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Earth’s (very exaggerated) elliptical path around the sun with perihelion and aphelion marked on it.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Orbits are ellipses with the sun at one of its two foci.</strong></p>
 <p>Elliptical orbits come with a few additional properties that are relevant to <strong>eccentricity</strong>, i.e. the measure of how elliptical the planet’s path is. <strong>Apoapsis</strong> and <strong>periapsis</strong> are the points in the path of the orbiting body that are (respectively) farthest away and nearest to the centre of mass of the system. On the other hand, <strong>aphelion</strong> and <strong>perihelion</strong> are the points in the path of the orbiting body that are (respectively) farthest away and nearest to the body (sun) they orbit.</p>
@@ -335,9 +334,9 @@
 <li><p>Amplitude -  amount by which cycles deviate from long term mean.</p></li>
 <li><p>Modulation - varying the properties (e.g. amplitude) of cycles.</p></li>
 </ul>
-<div class="figure align-center" id="id4">
+<div class="figure align-center" id="id3">
 <img alt="../../_images/am_cc0.jpg" src="../../_images/am_cc0.jpg" />
-<p class="caption"><span class="caption-text">Example of amplitude modulation: The modulating wave (left) modulates the carrier wave (middle) to produce the modulated result (right).</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Example of amplitude modulation: The modulating wave (left) modulates the carrier wave (middle) to produce the modulated result (right).</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>Amplitide and frequency modulation are commonly used in radio and audio technology, music production and engineering. It is the concept of amplitude modulation that helps us understand said interplay, because <strong>precession</strong> is modulated by <strong>eccentricity</strong> in the same manner. We will have a look at these parameters in more detail now.</p>
 </div>
@@ -353,9 +352,9 @@
 <div class="section" id="obliquity">
 <h3>Obliquity<a class="headerlink" href="#obliquity" title="Permalink to this headline">¶</a></h3>
 <p>Obliquity or <strong>axial tilt</strong> describes the angle between a planetary object’s rotational axis and orbital axis, which also the angle between the equatorial plane and orbital plane. Earth’s current axial tilt is ~23.5°, but it <strong>oscillates between 22.2° and 24.5° with a very regular cycle of 41 ka</strong>.</p>
-<div class="figure align-center" id="id5">
+<div class="figure align-center" id="id4">
 <img alt="../../_images/tilt_ccby_SebastianMutz.jpg" src="../../_images/tilt_ccby_SebastianMutz.jpg" />
-<p class="caption"><span class="caption-text">The thick white line (orbital axis) is perpendicular to the orbital plane of Earth. (In this 2D figure, the orbital plane could be represented by a line joining the centre of Earth and sun). The thin white line represents the rotational axis of Earth and the dashed line the equatorial plane (here in in 2D). The axial tilt is the difference between the thick and thin white line, or the difference between the equatorial and orbital plane.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The thick white line (orbital axis) is perpendicular to the orbital plane of Earth. (In this 2D figure, the orbital plane could be represented by a line joining the centre of Earth and sun). The thin white line represents the rotational axis of Earth and the dashed line the equatorial plane (here in in 2D). The axial tilt is the difference between the thick and thin white line, or the difference between the equatorial and orbital plane. [image: cc-by Sebastian Mutz]</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -364,16 +363,16 @@
 </div>
 <div class="section" id="axial-precession-wobble">
 <h3>Axial Precession (“Wobble”)<a class="headerlink" href="#axial-precession-wobble" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-left" id="id6" style="width: 300px">
+<div class="figure align-left" id="id5" style="width: 300px">
 <a class="reference internal image-reference" href="../../_images/spinningTop_cc0.jpg"><img alt="../../_images/spinningTop_cc0.jpg" src="../../_images/spinningTop_cc0.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Axial precession or “wobble” can best be visualised by the change in direction of the spinning axis of a spinning top when it begins to wobble as it slows down.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Axial precession or “wobble” can best be visualised by the change in direction of the spinning axis of a spinning top when it begins to wobble as it slows down.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <p>Imagine turning a spinning top (toy). If you give it a good spin, its rotational axis remains upright and shows little or no changes in inclination. As it begins to slow down, the spinning top begins to wobble. In other words, it changes its axial tilt as well as the direction of the rotational axis. For planetary bodies, the latter parameter is called <strong>axial precession</strong> - it is the change in direction of axial tilt, but not the change in tilt itself. Earth’s precessesion has <strong>1 strong cycle at 23 ka and 1 weaker cycle at 19 ka</strong>.</p>
 <p><strong>How do we quantify this?</strong>
 If we transfer this concept into the setup of our solar system, the results are changes in the positions of solstices and equinoxes in Earth’s elliptical path. This is represented by sin ω (values from +1 to -1), where ω is the angle between vernal equinox (20. March) and perihelion.  11 ka from now (half a precession cycle), December will be in aphelion.</p>
-<div class="figure align-center" id="id7">
-<img alt="../../_images/_orbit002.jpg" src="../../_images/_orbit002.jpg" />
-<p class="caption"><span class="caption-text">Axial precession (“wobble”) is represented by sin ω, where ω is the angle between vernal equinox (20. March) and perihelion.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id6">
+<img alt="../../_images/orbit002_ccby_LisaRauschenbach.jpg" src="../../_images/orbit002_ccby_LisaRauschenbach.jpg" />
+<p class="caption"><span class="caption-text">Axial precession (“wobble”) is represented by sin ω, where ω is the angle between vernal equinox (20. March) and perihelion. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -391,19 +390,9 @@ If we transfer this concept into the setup of our solar system, the results are 
 </div>
 <div class="section" id="detecting-orbital-forcing">
 <h2>Detecting Orbital Forcing<a class="headerlink" href="#detecting-orbital-forcing" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="small-excursion-i-stable-isotopes-in-water">
-<h3>Small Excursion I: Stable Isotopes in Water<a class="headerlink" href="#small-excursion-i-stable-isotopes-in-water" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="small-excursion-ii-spectral-density-estimation">
-<h3>Small Excursion II: Spectral Density Estimation<a class="headerlink" href="#small-excursion-ii-spectral-density-estimation" title="Permalink to this headline">¶</a></h3>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-    \vec{Y} \approx A·x
-\end{equation}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Zachos et al. (2001) investigate different time periods in the geological past with respect to orbital forcing. It makes a good case study for topics covered in this lecture.</p>
-</div>
+<p>The article “Trends, Rhythms, and Abberations in Global Climate 65 Ma to present” by Zachos et al. (2001) investigate different time periods in the geological past with respect to orbital forcing. It makes a good case study for topics covered in this lecture and demonstrates how to detect orbital forcing in a palaeoclimate time series. It allows for good discussion of the topic in class.</p>
 </div>
 </div>
 </div>
@@ -431,7 +420,7 @@ If we transfer this concept into the setup of our solar system, the results are 
         
         &copy; Copyright 2021, Sebastian G. Mutz
       <span class="lastupdated">
-        Last updated on Mar 03, 2021.
+        Last updated on May 08, 2021.
       </span>
 
     </p>

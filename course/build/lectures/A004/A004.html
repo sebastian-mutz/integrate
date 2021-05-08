@@ -95,7 +95,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
 </ul>
@@ -146,6 +145,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">P2-E002</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E105/E105.html">P2-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E201/E201.html">P3-E201</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Projects:</span></p>
 <ul>
@@ -156,11 +157,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P008/P008_info.html">Project P008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P009/P009_info.html">Project P009</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Resources:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/guide.html">Guide</a></li>
 </ul>
 
             
@@ -255,34 +262,117 @@
 <p>Before we explore any specifics, we familiarise ourselves with a few important concepts related to pressure.</p>
 <div class="section" id="partial-pressures">
 <h3>Partial Pressures<a class="headerlink" href="#partial-pressures" title="Permalink to this headline">¶</a></h3>
-<div class="math notranslate nohighlight">
-\[T_{red} = T_{blue}\]</div>
-<div class="math notranslate nohighlight">
-\[P_t = T_{red} + T_{blue}\]</div>
+<div class="figure align-left" id="id3" style="width: 300px">
+<a class="reference internal image-reference" href="../../_images/pressure01.jpg"><img alt="../../_images/pressure01.jpg" src="../../_images/pressure01.jpg" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Mixture of two gases represented by blue and red elements.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Partial pressure is the pressure that an individual gas exerts in a mixture of gases. Temperature eqiulibrates quickly, so that</p>
+<p><span class="math notranslate nohighlight">\(T_{red} = T_{blue}\)</span> </p>
+<p>in a mixture of two gases represented by blue and red molecules in the figure. The total pressure is the additive of partial pressures so that</p>
+<p><span class="math notranslate nohighlight">\(P_t=P_{red}+P_{blue}\)</span> </p>
+<p>in our mixture of the two gases.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do you remember the chemical composition of the air (gas) mixture?</p>
+</div>
 </div>
 <div class="section" id="ideal-gas-law">
 <h3>Ideal Gas Law<a class="headerlink" href="#ideal-gas-law" title="Permalink to this headline">¶</a></h3>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  P · V = n · \bar{R} · T
-\end{equation}\]</div>
+<div class="figure align-left" style="width: 300px">
+<a class="reference internal image-reference" href="../../_images/pressure02.jpg"><img alt="../../_images/pressure02.jpg" src="../../_images/pressure02.jpg" style="width: 300px;" /></a>
+</div>
+<p>We can use the ideal gas law to solve many climatological or meteorological problems that involve (ideal) gases in a mixture:</p>
+<p><span class="math notranslate nohighlight">\(P · V = n · \bar{R} · T\)</span> </p>
+<p>The meaning of individual terms is listed here:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> - pressure</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> - volume of the container</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> - number of moles/amount of substance</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar{R}\)</span> - universal gas constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> - temperature</p></li>
+</ul>
 </div>
 <div class="section" id="mass-density">
 <h3>Mass Density<a class="headerlink" href="#mass-density" title="Permalink to this headline">¶</a></h3>
+<p>The mass density or mass per volume for a gas mixture can be written as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   \rho = \frac {n · M} {V}
 \end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> - mass density (“air density” in most of our cases)</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> - number of moles/amount of substance</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> - molecular weight</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> - volume</p></li>
+</ul>
 </div>
 <div class="section" id="specific-gas-constant">
 <h3>Specific Gas Constant<a class="headerlink" href="#specific-gas-constant" title="Permalink to this headline">¶</a></h3>
+<p>If we put the universal gas constant in relation to moleculat weight, we can calculate the specific gas constant:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   R = \frac {\bar{R}} {M}
 \end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R\)</span> - specific gas constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar{R}\)</span> - universal gas constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> - moleculat weight</p></li>
+</ul>
 </div>
 <div class="section" id="air">
 <h3>“Air”<a class="headerlink" href="#air" title="Permalink to this headline">¶</a></h3>
+<p>Air is a mixture of gases. It is well mixed and does not change with latitude, so that we can safely assume the following composition and the gases’ contribution to air’s volume and mass:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 39%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>gas</p></th>
+<th class="head"><p>contribution to volume</p></th>
+<th class="head"><p>contribution to mass</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>N<sub>2</sub></p></td>
+<td><p>78%</p></td>
+<td><p>75.5%</p></td>
+</tr>
+<tr class="row-odd"><td><p>O<sub>2</sub></p></td>
+<td><p>21%</p></td>
+<td><p>23.2%</p></td>
+</tr>
+<tr class="row-even"><td><p>Ar</p></td>
+<td><p>0.9%</p></td>
+<td><p>1.3%</p></td>
+</tr>
+</tbody>
+</table>
+<p>These are the major contributors to volume and mass. Additionally, there are everal important trace gases that do vary in concentration much more (in time and space):</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>trace gas</p></th>
+<th class="head"><p>contribution to volume</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>H<sub>2</sub>O</p></td>
+<td><p>1%-4% near the surface</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO<sub>2</sub></p></td>
+<td><p>400 ppm +/- 5%*</p></td>
+</tr>
+</tbody>
+</table>
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>CO<sub>2</sub> concentrations are rapidly changing due to human activity.</p>
+<p>The composition of “air” leads to its commonly used attributes:</p>
 <div class="math notranslate nohighlight">
 \[M_{air} \approx 29\]</div>
 <div class="math notranslate nohighlight">
@@ -290,16 +380,26 @@
 </div>
 <div class="section" id="ideal-gas-law-modified">
 <h3>Ideal Gas Law (modified)<a class="headerlink" href="#ideal-gas-law-modified" title="Permalink to this headline">¶</a></h3>
+<p>From our knowledge of the computation of mass density and the specific gas constant, we can rewrite the ideal gas law as follows:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   P = \rho · R · T
 \end{equation}\]</div>
-<div class="math notranslate nohighlight">
-\[R \approx 287 Jkg^{-1}K^{-1}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> - pressure</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> - mass density (“air density” in most of our cases)</p></li>
+<li><p><span class="math notranslate nohighlight">\(R\)</span> - specific gas constant (gas constant for the gas in question)</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> - temperature</p></li>
+</ul>
+<p>In meteorological and climatological practice, this is a more useful form. It allows us to easily calculate pressure based on known parameters. For example:</p>
 <div class="math notranslate nohighlight">
 \[T \approx 19°C = 292.15 K\]</div>
 <div class="math notranslate nohighlight">
+\[R \approx 287 Jkg^{-1}K^{-1}\]</div>
+<div class="math notranslate nohighlight">
 \[\rho \approx 1.2985 kgm^{-3}\]</div>
+<p>As we established before, <span class="math notranslate nohighlight">\(\rho\)</span> and R do not change much for air. We can therefore calculate (tropospheric) air pressure based on temperature quite easily as follows:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   P_{troposphere} = 1.2985 kgm^{-3} · 287 Jkg^{-1}K^{-1} · 292.15 K
@@ -312,71 +412,154 @@
 <p>To understand vertical transport, mixing and precipitation formation in the atmosphere, we need to first familiarise ourselves with the buoyancy force.</p>
 <div class="section" id="buoyancy-force">
 <h3>Buoyancy Force<a class="headerlink" href="#buoyancy-force" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" id="id4" style="width: 450px">
+<a class="reference internal image-reference" href="../../_images/buoyancy01.jpg"><img alt="../../_images/buoyancy01.jpg" src="../../_images/buoyancy01.jpg" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-text">In a fluid in a gravity field,pressure increases with depth. The pressure exterted on an immersed object is higher at the bottom of that object than at the top of that object.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>The buoyancy force is a pressure force acting on an object immersed in a fluid in a gravity field. In a fluid in a gravity field, such as a water tank on the Earth’s surface, pressure increases with depth. The pressure exterted on an immersed object is higher at the bottom of that object than at the top of that object. The net result is an upward (against gravity) force exerted on the immersed object. This buoyancy force is the same force you experience that seems acts against your efforts to push an inflated ball into a water tank.</p>
+<div class="figure align-left" id="id5" style="width: 450px">
+<a class="reference internal image-reference" href="../../_images/buoyancy02.jpg"><img alt="../../_images/buoyancy02.jpg" src="../../_images/buoyancy02.jpg" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-text">Archimede’s Principle: The upward buoyant force equals the weight of the fluid that is displaced by the immersed object.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>This raises the next question: How do we actually calculate buoyancy?</p>
+<p><strong>Archimede’s Principle</strong> states that the upward buoyant force equals the weight of the fluid that is displaced by the immersed object. We therefore need to know the gravitational acceleration and can write:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   B = V · \rho · g
 \end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(B\)</span> - buoyancy force</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> - volume of object</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> - density of fluid</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> - gravitational acceleration</p></li>
+</ul>
 </div>
 <div class="section" id="buoyancy-force-example-i">
 <h3>Buoyancy Force: Example I<a class="headerlink" href="#buoyancy-force-example-i" title="Permalink to this headline">¶</a></h3>
-<div class="math notranslate nohighlight">
-\[P_p = P_e\]</div>
+<div class="figure align-right" style="width: 350px">
+<a class="reference internal image-reference" href="../../_images/buoyancy03.jpg"><img alt="../../_images/buoyancy03.jpg" src="../../_images/buoyancy03.jpg" style="width: 350px;" /></a>
+</div>
+<p>An <strong>air parcel</strong> is an imaginary body of air with approximately uniform properties. It is a concept frequently used in atmospheric sciences. The analogue in hydrological sciences is a <strong>water parcel</strong>. Typically used attributes of an air parcel include the parcel’s pressure(<span class="math notranslate nohighlight">\(P_p\)</span> ), temperature(<span class="math notranslate nohighlight">\(T_p\)</span> ) and density(<span class="math notranslate nohighlight">\(\rho_p\)</span> ). We denote the same attributes for the environment as <span class="math notranslate nohighlight">\(P_e\)</span> , <span class="math notranslate nohighlight">\(T_e\)</span> and <span class="math notranslate nohighlight">\(\rho_e\)</span> respectively. Since pressure equalises quickly in the atmosphere (and more quickly than temperature), we will assume that <span class="math notranslate nohighlight">\(P_p = P_e\)</span> for this example.</p>
+<p>Now consider the following scenario:</p>
+<div class="figure align-left" style="width: 350px">
+<a class="reference internal image-reference" href="../../_images/buoyancy04.jpg"><img alt="../../_images/buoyancy04.jpg" src="../../_images/buoyancy04.jpg" style="width: 350px;" /></a>
+</div>
+<p>We know the temperature and pressure of parcel and environment, but do not know the density of them. The pressure for environment and parcel is 101000Pa, and temperatures are 288K and 278K for parcel and environment respectively. However, we need to know the densities to computer the gravitational and the buoyancy force acting on the parcel.</p>
+<p>The buoyancy (“upward”) force is related to the density of the environment:</p>
+<p><span class="math notranslate nohighlight">\(B = V · \rho_e · g\)</span> </p>
+<p>The “downward” force is related to the density of the parcel:</p>
+<p><span class="math notranslate nohighlight">\(g = V · \rho_p · g\)</span> </p>
+<p>Once this parcel of air has equilibrates pressure with its environment, which happens very rapidly, the parcel density will be lower, buoyancy will be greater, a net “upward” force is the result and the air parcel rises. If the air parcel were cooler, the opposit would happen.</p>
+<p>Consider our version of the ideal gas constant:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   P = \rho · R · T
 \end{equation}\]</div>
+<p>We can rearrange it to solve for density. We can then use the known temperatures and pressure of the environment and air parcel to calculate the density of the environment and air parcel respectively:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
-  P_e = \frac {P_e} {R · T_e}
+  \rho_{e} = \frac {P_e} {R · T_e}
   = \frac {101000 Pa} {287 Jkg^{-1}K^{-1} · 278 K}
   = 1.266 kgm^{-3}
 \end{equation}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
-  P_p = \frac {P_p} {R · T_p}
+  \rho_{p} = \frac {P_p} {R · T_p}
   = \frac {101000 Pa} {287 Jkg^{-1}K^{-1} · 288 K}
   = 1.222 kgm^{-3}
 \end{equation}\]</div>
+<p>We can then use these densities to calculate the gravitational and buoyancy force acting on the parcel.</p>
 </div>
 <div class="section" id="buoyancy-force-example-ii-changing-chemistry">
 <h3>Buoyancy Force: Example II (changing chemistry)<a class="headerlink" href="#buoyancy-force-example-ii-changing-chemistry" title="Permalink to this headline">¶</a></h3>
-<div class="math notranslate nohighlight">
-\[P_p = P_e\]</div>
-<div class="math notranslate nohighlight">
-\[T_p = T_e\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  P = \rho · R · T
-\end{equation}\]</div>
+<div class="figure align-left" style="width: 450px">
+<a class="reference internal image-reference" href="../../_images/buoyancy05.jpg"><img alt="../../_images/buoyancy05.jpg" src="../../_images/buoyancy05.jpg" style="width: 450px;" /></a>
+</div>
+<p>For example II, we consider a very similar setup. However, this time our air parcel consists of Helium and we assume no mixing with the environment is possible (as would be the case for a Helium balloon). We will still assume that <span class="math notranslate nohighlight">\(P_p = P_e\)</span> . Additionally, we will assume that <span class="math notranslate nohighlight">\(T_p = T_e\)</span> .</p>
+<p>So what changes? Helium has a different specific gas constant than the “air” mixture. What does that mean for the density of the parcel and the environment?</p>
+<p>Let’s have a look at how we would compute the density of the environment and parcel using the ideal gas law:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
-  B = V · \rho · g
+  \rho_e = \frac {P_e}{R_{air} · T_e}
 \end{equation}\]</div>
+<p>On the other hand, the density of the parcel is</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \rho_p = \frac {P_p}{R_{Helium} · T_p}
+\end{equation}\]</div>
+<p>So even though we have equal pressures, we have differing densities due to different specific gas constants. These are different due to different molecular weights.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Look up the molecular weight and specific gas constant for Helium. Can you calculate the density of the environment and air parcel? Goes a greater molecular weight result in a net upward or downward force?</p>
+</div>
 </div>
 </div>
 <div class="section" id="pressure-and-altitude">
 <h2>Pressure and Altitude<a class="headerlink" href="#pressure-and-altitude" title="Permalink to this headline">¶</a></h2>
+<p>In the last part of the lecture about pressure, we investigate how it varies with altitude. In most cases, it is approximated with the concept of hydrostatic pressure.</p>
 <div class="section" id="barometric-formula">
 <h3>Barometric Formula<a class="headerlink" href="#barometric-formula" title="Permalink to this headline">¶</a></h3>
+<p>The most common way to appximate pressure at a specific height is by application of the so-called Barometric Formula. It can be written as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
-  P_h = P_0 · e ^{- \frac {h · m · g} {R · T} }
+  P_h = P_0 · e ^{- \frac {h · m · g} { \bar{R} · T} }
 \end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(h\)</span> - altitude above surface</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_h\)</span> - pressure at height h</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_0\)</span> - pressure at sea level</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> - molecular mass (of air)</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_h\)</span> - acceleration due to gravity</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar{R}\)</span> - universal gas constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> - temperature</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>What pressure do you expect at the lowest and heighest altitude in the area you live in?</p>
+</div>
 </div>
 <div class="section" id="hydrostatic-balance">
 <h3>Hydrostatic Balance<a class="headerlink" href="#hydrostatic-balance" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" id="id6" style="width: 200px">
+<a class="reference internal image-reference" href="../../_images/hydrostatic01.jpg"><img alt="../../_images/hydrostatic01.jpg" src="../../_images/hydrostatic01.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">In a column of air with no vertical acceleration, the downward and upward forces are balanced. In this case, the column reaches the top of the atmosphere where pressure is negligible.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Imagine a column/cylinder extracted from the atmosphere for consideration. The weight of the atmosphere (<span class="math notranslate nohighlight">\(m · g\)</span> ) acting downward can be balanced with the force acting upward (<span class="math notranslate nohighlight">\(P · A\)</span> ). This assumption is called the <strong>hydrostatic equilibrium</strong> or <strong>hydrostatic balance</strong> and can be assumed when there is no vertical acceleration. Note that this cannot be assumed when the fluid (air) is not rest and we observe vertical acceleration. The assumption of hydrostatic equilibrium is therefore problematic in mountain regions. However, for most other cases we can assume this balance:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   P · A = m · g
 \end{equation}\]</div>
+<p>and:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   \frac {P} {g} = \frac {m} {A}
 \end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m\)</span> - mass</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> - gravitational acceleration</p></li>
+<li><p><span class="math notranslate nohighlight">\(P\)</span> - pressure at the ground</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> - area of cylinder</p></li>
+</ul>
+<div class="figure align-right" id="id7" style="width: 200px">
+<a class="reference internal image-reference" href="../../_images/hydrostatic02.jpg"><img alt="../../_images/hydrostatic02.jpg" src="../../_images/hydrostatic02.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-text">For more common problems concerning a specific section of the atmosphere, we need additional terms in our equation.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Note that in the above example, we assumed the atmospheric column reached into space, so that the top of the column represented the top of the atmophere, where pressure was negligible. A more useful form for common problems and a specific section of the atmospheric column is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   P_G - P_T = \rho · \Delta z · g
 \end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P_T\)</span> - pressure at the top</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_G\)</span> - pressure at the ground</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> - density</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta z\)</span> - change in height</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> - gravitational acceleration</p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -404,7 +587,7 @@
         
         &copy; Copyright 2021, Sebastian G. Mutz
       <span class="lastupdated">
-        Last updated on Mar 02, 2021.
+        Last updated on May 08, 2021.
       </span>
 
     </p>

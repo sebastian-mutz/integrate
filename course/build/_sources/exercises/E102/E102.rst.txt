@@ -1,11 +1,49 @@
 P2-E002
 =======
 
-In the accompanying lecture to this exercise, you learned about classic statistical hypothesis testing. This exercise is designed to give you some practice with this topic, as well as with data handling and processing.
+You are encouraged to familiarise yourself with a few topics prior to the exercise. The background section will provide you with some basic information and pointers. The exercise itself is designed to give you some practice in working with these concepts to give you a more intuitive grasp of them. The teacher will be able to supervise your during the exercise and explain the underlying theory if uncertainties remained during your preparation for the exercise.
+
+Background
+----------
+
+The following are topics you should try to familiarise yourself with prior to the exercise. Note that the serve as pointers and checks for your studies rather than as full instructional materials. It is expected that you internalised the theory of previous exercises.
+
+**Topic 1**: Familiarise yourself with **probability density functions** (PDFs), **cumulatve distribution functions** (CDFs) and the **quantile (or percent point function)**. The figure shows the same data displayed as a PDF (\ :math:`P (X=x)` \) and CDF (\ :math:`P (X=\bar{x})` \). After your studies of the topics, you should understand what is displayed and labelled here.
+
+.. figure:: img/ppf.jpg
+   :align: center
+   :figwidth: 600px
+
+**Topic 2**: The next topics you should tacke are **basic set notation**, **classic statistical hypothesis testing** and **one and two tailed testing**. See if you can understand the following example after your studies:
+
+"The DLR is investigating differences in albedo as clouds gain in thickness. Stratus clouds have an albedo of ca. 0.5, the observed albedo increase as they thicken up is 0.05, as picked up by 100 measurements. The sample standard deviation (s) is 0.4. Does thickness truly affect albedo?"
+
+This scenario gives us:
+
+* Null hypothesis: Thickness has no effect; the mean is still 0.5 even after thickness increase. (\ :math:`H_0: \mu=0.5` \)
+* Alternative hypothesis: Thickness has an effect; the mean is no longer 0.5 after thickness increase.  (\ :math:`H_A: \mu \ne 0.5` \)
+
+If \ :math:`H_0: \mu=0.5` \ is true, we can calculate the probability of getting a signal as extreme or even more extreme than the observed (0.05).
+
+.. figure:: img/example1.jpg
+   :align: center
+   :figwidth: 600px
+
+Finally:
+
+.. figure:: img/example2.jpg
+   :align: center
+   :figwidth: 600px
+
+The probability (p) is too high for us to reject the null hypothesis \ :math:`H_0: \mu=0.5` \. With those specific sets of measurements and knowledge, we therefore cannot confidently say that thickness has an effect on albedo.
+   
+   
+Exercise
+-------- 
 
 
 Information
------------ 
+...........
 
 +----------------------+--------------------------------------------------------+
 | Learning goals                                                                |
@@ -18,16 +56,18 @@ Information
 
 .. topic:: What to Submit
 
-      Submit your script(s) and 1-2 sentence answers to the questions for the tasks of this exercise via ILIAS. You may include the answers as comments in your script(s). Make sure to also comment each of your calculations (using the terminology you were introduced to). The script should be named *[your surname]_e102.[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for Matlab it is *.m*, etc.
-
-.. note:: For this exercise, we'll take a frequentist approach to probability and uncertainty.      
-      
-.. figure:: santagracia.jpg  
+      Submit your script(s) and 1-2 sentence answers to the questions for the tasks of this exercise. You may include the answers as comments in your script(s). Make sure to also comment each of your calculations (using the terminology you were introduced to). The script should be named *[your surname]_e102.[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for Matlab it is *.m*, etc.      
       
 Hypothesis Testing: Temperatures near Antofagasta      
--------------------------------------------------
+.................................................
 
-You are provided with a time series of a weather station near Antofagasta (South America): 
+.. figure:: img/PanDeAzucar_ccby_KirstinUebernickel.jpg
+   :align: center
+
+   Weather station in Pan de Azucar National Park, ca. 200km south of Antofagasta. Records from different measurement systems flow into the interpolated observation-based datasets of re-analysis products. [photo: cc-by Kirstin Übernickel]     
+
+
+You are provided with an ERA-Interim re-analysis time series extracted for Antofagasta (Chile): 
 
 :download:`Antofagasta.cvs <Antofagasta.csv>`   
 

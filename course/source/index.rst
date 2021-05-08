@@ -1,4 +1,4 @@
-.. climstat documentation master file, created by
+.. integrate documentation master file, created by
    sphinx-quickstart on Mon Jan 21 20:21:55 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -8,13 +8,15 @@
 INTEGRATE Lecture and Exercise Series
 =====================================
 
-The INTEGRATE (Integrated Teaching of Atmospheric Science, Technical/Computer Skills and Empirical Methods) teaching package covers the theory and hands-on approach of collecting atmospheric data and working with readily available climatological records on real problems using modern empirical methods. Resources produced will include slides and notes, a repository with instructions and materials for practical and projects, and short videos to assist instructors deliver the course.
+The INTEGRATE (Integrated Teaching of Atmospheric Science, Technical/Computer Skills and Empirical Methods) teaching package covers the topics of physical climatology, empirical (statistical) methods and a hands-on approach of collecting atmospheric data and working with readily available climatological records. The development of this teaching package was supported by the EGU Higher Education Teaching Grant 2020 awarded to the primary author Sebastian G. Mutz.
 
-Welcome to **ClimStat**, the exercise series of the **Climate Dynamics, Probability and Statistics** course offered at the University of Tübingen. The course teaches the basics of (Python) programming, statistics, and the application of machine learning techniques (to problems in climatology). The **course is open to everyone** interested in learning about these topics and techniques. To see if you are eligible for supervision and ECTS credits, consult our information on :doc:`eligibility criteria<general/info>`.
+For Teachers
+------------
+Teachers of the course are advised to :doc:`start here with our teacher guide <guide/guide>`. We support the use and further development of our materials by other teachers and thus release the course source code under a very permissive license on this `GitHub page <https://github.com/sebastian-mutz/integrate>`_. Please consult :doc:`our licensing and terms of use<general/license>` to make sure you are aware of all the possibilities you have with this package.
 
-.. note:: For teachers
-
-    We support the use and further development of our materials by other teachers and thus release the course source code under a very permissive license on our `GitHub page <https://github.com/climstat/climstat.github.io>`_. Please consult :doc:`our licensing and terms of use<general/license>`.
+For Students
+------------
+Students can get an overview of the course in the :doc:`general information section<general/info>` and a more detailed overview of the learning goals and course contents in the :doc:`syllabus section<general/syllabus>`. 
 
     
 Table of Contents
@@ -26,7 +28,6 @@ Table of Contents
    
    general/info
    general/syllabus
-   general/grading 
    general/license      
    general/credits         
   
@@ -58,6 +59,8 @@ Table of Contents
    exercises/E102/E102
    exercises/E103/E103
    exercises/E104/E104   
+   exercises/E105/E105      
+   exercises/E201/E201         
    
 .. toctree::
    :maxdepth: 2
@@ -70,7 +73,8 @@ Table of Contents
    projects/P005/P005_info
    projects/P006/P006_info
    projects/P007/P007_info   
-   
+   projects/P008/P008_info   
+   projects/P009/P009_info       
 
 .. toctree::
    :maxdepth: 2
@@ -78,3 +82,10 @@ Table of Contents
    
    resources/dictionary
    resources/reading   
+   
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Teacher Guide:
+   
+   guide/guide 

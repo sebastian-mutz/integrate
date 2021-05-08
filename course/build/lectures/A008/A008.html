@@ -95,7 +95,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
 </ul>
@@ -114,7 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#atmospheric-water">Atmospheric Water</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#measuring-the-amount-of-water">Measuring the Amount of Water</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#clausius-clapeyron-ratio">Clausius-Clapeyron Ratio</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#clausius-clapeyron-equation">Clausius-Clapeyron Equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clausius-clapeyron-equation-approximation-for-low-temperature">Clausius-Clapeyron Equation - Approximation for Low Temperature</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#saturation-vapour-pressure">Saturation Vapour Pressure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#dew-point-temperature">Dew Point Temperature</a></li>
 </ul>
@@ -122,6 +121,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#precipitation-formation">Precipitation Formation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#terminology">Terminology</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reaching-saturation">Reaching Saturation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clouds">Clouds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#formation-mechanisms">Formation Mechanisms</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#precipitation-types">Precipitation Types</a></li>
 </ul>
@@ -141,6 +141,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">P2-E002</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E105/E105.html">P2-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E201/E201.html">P3-E201</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Projects:</span></p>
 <ul>
@@ -151,11 +153,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P008/P008_info.html">Project P008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P009/P009_info.html">Project P009</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Resources:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/guide.html">Guide</a></li>
 </ul>
 
             
@@ -249,74 +257,92 @@
 <h2>Atmospheric Water<a class="headerlink" href="#atmospheric-water" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="measuring-the-amount-of-water">
 <h3>Measuring the Amount of Water<a class="headerlink" href="#measuring-the-amount-of-water" title="Permalink to this headline">¶</a></h3>
+<p>For people outside atmospheric or hydrological sciences, the different ways to measure water in the atmosphere can be confusing, so we will start this lecture with some terminology:</p>
+<ul class="simple">
+<li><p><strong>Partial pressure of water vapour</strong> - the contribution of <span class="math notranslate nohighlight">\(H_2O\)</span> molecules to the pressure of air.</p></li>
+<li><p><strong>Saturation vapour pressure</strong> - the maximum possible pressure air can have before water condenses. This is a function of temperature.</p></li>
+<li><p><strong>Specific humidity</strong> - the ratio of water vapour mass to air mass. It is a mixing ratio.</p></li>
+<li><p><strong>Relative Humidity</strong> - the ratio of partial pressure of water vapour to saturation vapour pressure. This is arguably one of the most useful measure for water content in the air, since the ratio tells you how close you are to condensation.</p></li>
+<li><p><strong>Dewpoint (Temperature)</strong> - the temperature at which water vapour condenses.</p></li>
+</ul>
 </div>
 <div class="section" id="clausius-clapeyron-ratio">
 <h3>Clausius-Clapeyron Ratio<a class="headerlink" href="#clausius-clapeyron-ratio" title="Permalink to this headline">¶</a></h3>
+<p>The Clausius-Clapeyron Relationship describes the slope of tangents to the curve separating the two phases on a pressure-temperature diagram. It is therefore a way to characterise the phase transition between two phases. We can write it was:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   \frac {dP}{dT} = \frac {L}{T · \Delta v} = \frac {\Delta s}{\Delta v}
 \end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> - pressure</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> - temperature</p></li>
+<li><p><span class="math notranslate nohighlight">\(L\)</span> - specific latent heat (the amount of energy required in form of heat (Q) to completely effect a phase change of a unit of mass)</p></li>
+<li><p><span class="math notranslate nohighlight">\(v\)</span> - specific volume (the volume to mass ratio for specific substance)</p></li>
+<li><p><span class="math notranslate nohighlight">\(s\)</span> - specific entropy (the entropy [“energy of substance no longer available to perform work”] per unit mass)</p></li>
+</ul>
 </div>
-<div class="section" id="clausius-clapeyron-equation">
-<h3>Clausius-Clapeyron Equation<a class="headerlink" href="#clausius-clapeyron-equation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="clausius-clapeyron-equation-approximation-for-low-temperature">
+<h3>Clausius-Clapeyron Equation - Approximation for Low Temperature<a class="headerlink" href="#clausius-clapeyron-equation-approximation-for-low-temperature" title="Permalink to this headline">¶</a></h3>
+<p>For low temperature (well below the critical point) and condition in which the specific volume of the gas phase (<span class="math notranslate nohighlight">\(v_g\)</span> ) greatly exceeds specific volume of the condensed phase (<span class="math notranslate nohighlight">\(v_c\)</span> ), we can write:  <span class="math notranslate nohighlight">\(\Delta v \approx v_g\)</span> . (The temperature at which vapour and liquid can coexist is referred to as the <strong>critical point</strong>)</p>
+<p>If we change the ideal gas law (<span class="math notranslate nohighlight">\(P · V = n · \bar{R} · T\)</span> ) to make it “specific”, we get:</p>
 <div class="math notranslate nohighlight">
-\[\Delta v \approx v_g\]</div>
+\[P · v = R · T\]</div>
+<p>We can thus write:</p>
 <div class="math notranslate nohighlight">
-\[\begin{equation}
-  P · V = n · \bar{R} · T
-\end{equation}\]</div>
+\[v_g = \frac {R · T} {P}\]</div>
+<p>From this and the ratio of the previous section, we can derive the Clausius-Clapeyron equation for low temperatures and pressure:</p>
 <div class="math notranslate nohighlight">
-\[\begin{equation}
-  P · v = \bar{R} · T
-\end{equation}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  v_g = \frac {R · T} {P}
-\end{equation}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  \frac {dP}{dT} = \frac {L}{T · \Delta v}
-\end{equation}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  \frac {dP}{dT} = \frac {L}{T^2 · R}
-\end{equation}\]</div>
+\[\frac {dP}{dT} = \frac {L}{T^2 · R}\]</div>
+<p>This is useful, because it lets you calculate saturation vapour pressure as a function of temperature and without information about volume.</p>
 </div>
 <div class="section" id="saturation-vapour-pressure">
 <h3>Saturation Vapour Pressure<a class="headerlink" href="#saturation-vapour-pressure" title="Permalink to this headline">¶</a></h3>
+<p>Saturation vapour pressure  (<span class="math notranslate nohighlight">\(P_s\)</span> in this section’s equations) is a function of temperature (<span class="math notranslate nohighlight">\(t\)</span> in this section’s equations) and there are several (semi-empirical) approximations for it.</p>
+<ol class="arabic simple">
+<li><p>The Tetens equation (Tetens, 1930):</p></li>
+</ol>
 <div class="math notranslate nohighlight">
-\[\begin{equation}
-  P_s = 610.78 · e^{ \frac {17.2684 · t} {t + 238.3}}
-\end{equation}\]</div>
+\[P_s = 610.78 · e^{ \frac {17.2684 · t} {t + 238.3}}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>The Magnus Formula (Alduchov and Eskridge, 1996) using °C is the most commonly used equation for it:</p></li>
+</ol>
 <div class="math notranslate nohighlight">
-\[\begin{equation}
-  P_s = c · e^{ \frac {a · t} {t + b}}
-\end{equation}\]</div>
+\[P_s = c · e^{ \frac {a · t} {t + b}}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p>a = 17.625</p></li>
+<li><p>b = 233.04</p></li>
+<li><p>c = 610.94</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>More recent forms, e.g. Huang (2018):</p></li>
+</ol>
 <div class="math notranslate nohighlight">
-\[a = 17.625\]</div>
-<div class="math notranslate nohighlight">
-\[b = 233.04\]</div>
-<div class="math notranslate nohighlight">
-\[c = 610.94\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  P_s = \frac {exp(43.494-\frac{6545.8}{t+237.1}) } {(t+105)^{1.57}}
-\end{equation}\]</div>
+\[P_s = \frac {exp(43.494-\frac{6545.8}{t+237.1}) } {(t+105)^{1.57}}\]</div>
+<ol class="arabic simple" start="4">
+<li><p>Many more …</p></li>
+</ol>
+<p>Note that this is a property of water and air plays no role in it.</p>
 </div>
 <div class="section" id="dew-point-temperature">
 <h3>Dew Point Temperature<a class="headerlink" href="#dew-point-temperature" title="Permalink to this headline">¶</a></h3>
+<p>For calculating dew point temperature, let us first consider the computation of relative humidity (RH) at a specific temperature:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   RH = \frac {P_v}{P_s(t)} · 100
 \end{equation}\]</div>
+<p>and recall our equation for saturation pressure:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   P_s = c · e^{ \frac {a · t} {t + b}}
 \end{equation}\]</div>
+<p>From those, we can derive our equation for dewpoint temperature:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   t_d = \frac {b · [ln( \frac {RH}{100} ) + \frac {a · t}{b + t} ]} {a - ln ( \frac {RH}{100} ) - \frac {a · t}{b + t}}
 \end{equation}\]</div>
+<p>A simplified approximation of it is possible with the equation below:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   t_d = t - ( \frac {100 - RH} {5} )
@@ -327,18 +353,92 @@
 <h2>Precipitation Formation<a class="headerlink" href="#precipitation-formation" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="terminology">
 <h3>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
+<p>Let us first dive into some more terminology we will need to talk about rain formation.</p>
+<ul class="simple">
+<li><p><strong>Latent heat of condensation</strong> - the heat taken or released when changing the phase of water.</p></li>
+<li><p><strong>Cloud droplet</strong> - ca. 10 microns droplets.</p></li>
+<li><p><strong>Raindrops</strong> - ca. 1 mm drops.</p></li>
+<li><p><strong>Supercooled liquid water</strong> - liquid water below freezing point. We often find liquid water in the atmosphere that is -20°C and unable to turn into ice, because it needs a trigger to start the freezing process.</p></li>
+<li><p><strong>Riming</strong> - supercooled liquid meets an object and starts freezing process.</p></li>
+</ul>
 </div>
 <div class="section" id="reaching-saturation">
 <h3>Reaching Saturation<a class="headerlink" href="#reaching-saturation" title="Permalink to this headline">¶</a></h3>
+<p>There are different ways in which air can reach saturation. Roughly, they can be categorised into 3 ways:</p>
+<p><strong>1. Adding moisture to air:</strong></p>
+<p>Examples of this include <strong>steam fog</strong>. This phenomenon can be observed when cold air is above relatively warm water. The water evaporates and moisture is added to cool air, which then condensates immediately. This can happen over different bodies of water, including rivers and the sea. In the latter case, the same is often referred to as <strong>sea smoke</strong>.</p>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/steamFog_ccby_GerhardMutz.jpg" src="../../_images/steamFog_ccby_GerhardMutz.jpg" />
+<p class="caption"><span class="caption-text">Steam fog over a river (in national park ca. 100km east of Vientiane, Laos). [photo: cc-by Gerhard Mutz]</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Other examples of adding moisture to relatively cold air include breathing out in cold weather, condensation trails, water vapour from cooling towers of power plants and more.</p>
+<p><strong>2. Removing heat from air:</strong></p>
+<div class="figure align-right" id="id2" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/radiationFog_ccby_GerhardMutz.jpg"><img alt="../../_images/radiationFog_ccby_GerhardMutz.jpg" src="../../_images/radiationFog_ccby_GerhardMutz.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Radiation fog over Vientiane (Laos). [photo: cc-by Gerhard Mutz]</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Examples of this include <strong>radiation fog</strong>. Heat is radiating from the surface at night (esp. on cloudless nights when infrared radiation can easily espace). This cools bottom air until it reaches saturation. Fog forms at the surface first and then thickens as cooling continues.</p>
+<p><strong>Valley fog</strong> is a special type of radiation fog. As for regular radiation fog, heat is radiated from the surface during (clear-sky) nights, cooling the air just above the surface. In hilly terrain, the less buoyant cold air can then sink into valleys, much like water flowing down a hill. The fog therefore preferentially forms in the valleys of cool air. This pooling also means that valley fog can persist over longer times than over even ground.</p>
+<p>Another example of removing heat to reach saturation is <strong>advection fog</strong>. In this case, the surface started out cold. Warmer winds then move in moisture, the warm incoming air loses heat by conduction and saturation vapour pressure drops. This can happen, for example, when warm air from land moves over a colder ocean. In a sense, it is the opposite of sea smoke.</p>
+<p><strong>3. Adiabatic expansion of air:</strong></p>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/saturationVapourPressure.jpg"><img alt="../../_images/saturationVapourPressure.jpg" src="../../_images/saturationVapourPressure.jpg" style="width: 400px;" /></a>
+</div>
+<p>In the atmospheric sciences, this is arguably the most important way to reach saturation and condensation as it leads to cloud formation. As an air parcel (containing water vapour) rises, it cools adiabatically, which lowers saturation pressure and leads to condensation. Next, we will examine different categories of clouds and their properties.</p>
+</div>
+<div class="section" id="clouds">
+<h3>Clouds<a class="headerlink" href="#clouds" title="Permalink to this headline">¶</a></h3>
+<p>Cloud categorisation is more systematic than it may appear at first. We will have a look at a few common types. Pay attention to the recurring compounds in cloud names.</p>
+<div class="figure align-left" id="id3" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/cumulus_ccby_GerhardMutz.jpg"><img alt="../../_images/cumulus_ccby_GerhardMutz.jpg" src="../../_images/cumulus_ccby_GerhardMutz.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">A single “puffy” cumulus cloud. [photo: cc-by Gerhard Mutz]</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Cumulus</strong> clouds (from latin for “pile”) are characterised by a puffy appearance and greater thickness.
+Simple cumulus clouds are typically found in the lower troposphere. <strong>Altocumulus</strong> clouds, on the other hand, are found in the mid-troposphere. (Alto can be translated as “mid”). They sometimes form rippled patterns, which is created from rising (leading to condensation) and sinking (preventing condensation) air masses. A general rule of thumb is that subsidence prevents clouds (and thus condensation and precipitation) from forming. The ripple pattern lines up in the wind direction.
+<strong>Cirrocumulus</strong> clouds are typically found in the upper troposphere. (Cirro translates as “ringlet” and refers to high altitude clouds of ice crystals and supercooled droplets quickly turning to ice).</p>
+<div class="figure align-left" id="id4" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/cumulonimbus_ccby_GerhardMutz.jpg"><img alt="../../_images/cumulonimbus_ccby_GerhardMutz.jpg" src="../../_images/cumulonimbus_ccby_GerhardMutz.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Cumulonimbus clouds, ca. 100km northeast of Vientiane (Laos). [photo: cc-by Gerhard Mutz]</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Cumulonimbus</strong> clouds “pile up” even more than simple cumulus clouds and can reach tropopause, where they start spreading laterally underneath the stable stratosphere. They consist of droplets in its lower parts and ice crystals in upper parts. They are associated with atmospheric instability, heavy rainfall, thunderstorms  and cold fronts.</p>
+<div class="figure align-left" id="id5" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/stratus_ccby_GerhardMutz.jpg"><img alt="../../_images/stratus_ccby_GerhardMutz.jpg" src="../../_images/stratus_ccby_GerhardMutz.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Stratus clouds over Thiersheim (Bavaria, Germany). [photo: cc-by Gerhard Mutz]</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Stratus</strong> clouds (translating from the latin “strato-” meaning “layer”) are low-level clouds forming blanket-like covers. <strong>Altostratus</strong> refer to mid-level stratus type clouds, and <strong>Cirrostratus</strong> clouds are high-level stratiform clouds consisting of ice crystals. They tend o be brigther than other status clouds and create a milky shimmer in the sky.</p>
+<div class="figure align-left" id="id6" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/stratocumulus_ccby_GerhardMutz.jpg"><img alt="../../_images/stratocumulus_ccby_GerhardMutz.jpg" src="../../_images/stratocumulus_ccby_GerhardMutz.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Stratocumulus clouds, ca. 100km northeast of Vientiane (Laos). [photo: cc-by Gerhard Mutz]</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Stratocumulus</strong> or <strong>cumulostratus</strong> are a dark “puffy” clouds cover. They can have a similar appearance to altocumulus clouds and can also create ripple patterns. However, the individual clouds/compontents are larger in stratocumulus clouds.</p>
+<p><strong>Nimbostratus</strong> clouds, like cumulunimbus, are amorphous, multi-layer clouds that are dark and very uniform in appearance and associated with wide-spread continuous precipitation without thunder.</p>
+<p><strong>Orographic clouds</strong> are produced by air being forced/advected over mountains. As air is lifted, it expands, cools, reaches saturation and water starts to condense. As air decends on the lee side of mountains, the process is reversed: Air condenses and warms adiabatically and excess water evaporates, resulting in warm, dry air. If air lost moisture to precipitation on its way, it warms to higher temperatures on the lee side than it was on the other side at the same altitude. The resulting dry, warm down-slope wind is referred to as <strong>föhn</strong> or <strong>foehn</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Have you picked up on the general naming scheme for clouds? See if you can apply this to clouds you see in the coming weeks and put it in context of what you learned about adiabatic expansion.</p>
+</div>
 </div>
 <div class="section" id="formation-mechanisms">
 <h3>Formation Mechanisms<a class="headerlink" href="#formation-mechanisms" title="Permalink to this headline">¶</a></h3>
-<p>Coalescence:</p>
-<p>Wegener - Bergeron - Findeisen Process:</p>
-<p>Overview:</p>
+<p>Rain forms either by coalescence, i.e. the merging of drop(let)s into larger drops, or by the Wegener - Gergeron - Findeisen process. The former is important in the lower latitudes, while the latter is more important in the higher latitudes.</p>
+<div class="figure align-center" id="id7">
+<img alt="../../_images/Wassertropfen-3_ccby_GerhardMutz.jpg" src="../../_images/Wassertropfen-3_ccby_GerhardMutz.jpg" />
+<p class="caption"><span class="caption-text">Water droplets that formed by condensation on a window surface begin to merge into larger drops through coalescence and then sink. [photo: cc-by Gerhard Mutz]</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>The <strong>Wegener - Bergeron - Findeisen process</strong> can be summarised by the following steps:</p>
+<div class="figure align-left" style="width: 300px">
+<a class="reference internal image-reference" href="../../_images/raindropFormation.jpg"><img alt="../../_images/raindropFormation.jpg" src="../../_images/raindropFormation.jpg" style="width: 300px;" /></a>
+</div>
+<p>Supercooled water droplets in the atmosphere find a freezing nucleus (e.g. dust particles) and riming starts. The ice formed by riming can serve as a nucleus to more supercooled water droplets and it draws them in. As more droplets are drawn in and freeze, the surrounding humidity decreases, resulting in surrounding droplets evaporating/shrinking. Eventually, the ice begins to fall as a snowflake, which can pick up more droplets on its way through riming.</p>
+<p>As snow begins to fall through warmer layers in the lower troposphere, it begins to melt and turns into rain. Rain formed by this process is therefore often referred to as <strong>cold rain</strong>, which is the most common type of train in extratropical latitudes.</p>
 </div>
 <div class="section" id="precipitation-types">
 <h3>Precipitation Types<a class="headerlink" href="#precipitation-types" title="Permalink to this headline">¶</a></h3>
+<p>To a large degree, the atmosphere’s thermal layering determines the precipitation type. If the top of clouds are above 0°C, <strong>warm rain</strong> is formed by coalescence. If the top of the cloud is below 0°C and enough of the atmosphere below is above 0°C, we observe the ice phase process at the top and melting at the bottom. This results in <strong>cold rain</strong>. If the entire cloud is below 0°, the ice phase process is observed at the top and there is no melting at the bottom, resulting in snow.</p>
+<div class="figure align-center" id="id8">
+<img alt="../../_images/rain_ccby_LisaRauschenbach.jpg" src="../../_images/rain_ccby_LisaRauschenbach.jpg" />
+<p class="caption"><span class="caption-text">Different types of (extratropical) precipitation caused by different vertical temperature layering in the atmosphere. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 </div>
@@ -366,7 +466,7 @@
         
         &copy; Copyright 2021, Sebastian G. Mutz
       <span class="lastupdated">
-        Last updated on Mar 02, 2021.
+        Last updated on May 08, 2021.
       </span>
 
     </p>

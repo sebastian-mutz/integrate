@@ -95,7 +95,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
 </ul>
@@ -108,20 +107,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../A004/A004.html">Building a Climate IV</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Building a Climate V</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#differential-heating-and-heat-transport">Differential Heating and Heat Transport</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#the-global-situation">The Global Situation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#earth-s-energy-balance">Earth’s Energy Balance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#atmospheric-and-oceanic-heat-transport">Atmospheric and Oceanic Heat Transport</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#atmospheric-heat-flow">Atmospheric Heat Flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coriolis-force">Coriolis Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#geostrophic-balance-and-wind-speeds">Geostrophic Balance and Wind Speeds</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#geostrophic-balance-example-problem">Geostrophic Balance: Example Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rossby-waves">Rossby Waves</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cyclones-anti-cyclones-and-geostrophic-winds">Cyclones, Anti-Cyclones and Geostrophic Winds</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#atmospheric-circulation">Atmospheric Circulation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#hadley-cell">Hadley Cell</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cell-model">1-Cell Model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">3-Cell Model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#exploring-complexities-through-climate-models">Exploring Complexities through Climate Models</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#small-excursion-example-advection-schemes">Small Excursion: Example Advection Schemes</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../A006/A006.html">Building a Climate VI</a></li>
@@ -140,6 +133,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">P2-E002</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E105/E105.html">P2-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E201/E201.html">P3-E201</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Projects:</span></p>
 <ul>
@@ -150,11 +145,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P008/P008_info.html">Project P008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P009/P009_info.html">Project P009</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Resources:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/guide.html">Guide</a></li>
 </ul>
 
             
@@ -222,8 +223,8 @@
             
   <div class="section" id="building-a-climate-v">
 <h1>Building a Climate V<a class="headerlink" href="#building-a-climate-v" title="Permalink to this headline">¶</a></h1>
-<p><strong>Atmospheric Circulation</strong></p>
-<p>We have previously looked at vertical transport and radiative fluxes. Here, we will explore horizontal transport and how differential heating and heat transport control atmospheric circulation.</p>
+<p><strong>Coriolis Force</strong></p>
+<p>This lecture introduces the Coriolis force, the geostrophic balance and their implications for climate.</p>
 <div class="section" id="information">
 <h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
@@ -236,52 +237,162 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><ul class="simple">
-<li><p>Understand drivers of atmospheric circulation</p></li>
-<li><p>Gain an overview of Earth’s circulation structure</p></li>
+<li><p>Understand the Coriolis force and how to calculate it</p></li>
+<li><p>Understand the geostrophic balance and how it relates to wind speeds</p></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="differential-heating-and-heat-transport">
-<h2>Differential Heating and Heat Transport<a class="headerlink" href="#differential-heating-and-heat-transport" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="coriolis-force">
+<h2>Coriolis Force<a class="headerlink" href="#coriolis-force" title="Permalink to this headline">¶</a></h2>
+<p>The Coriolis force is an inertial force acting in a rotating frame of reference. It manifests itself when a body moves in a rotating reference frame and the body’s movement is not parallel to the angular velocity vector. The force acts on bodies that are already in motion. Therefore, it does not cause any winds, but does deflect winds. It acts perpendicular to the direction of motion (90° to the right in the northern hemisphere and 90° to the left in the southern hemisphere). Note that the Coriolis force also acts on objects not related to the atmosphere, so if you had a train travelling across latitudes in the northern hemisphere, you would theoretically expect to see greater wear on on side of the tracks, since the Coriolis force would act on the moving train to deflect it to the right. However, for Earth’s climate, those moving bodies are winds that get deflected. This deflection is sometimes referred to as the <strong>Coriolis effect</strong>. The Coriolis force can be calculated as follows:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
-  \Phi_m = \rho · u · A
+  F_c = 2 · m · u · \Omega · sin(\phi)
 \end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F_c\)</span> - coriolis force</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> - mass of the moving object</p></li>
+<li><p><span class="math notranslate nohighlight">\(u\)</span> - velocity of the moving object</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Omega\)</span> - rotational rate</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Phi\)</span> - latitude</p></li>
+</ul>
+<p>The rotational rate is planet-specific. Earth completes 1 rotation around its axis in a day. In other words, it travels its full circumference per day. If we convert days into seconds (1 d = 24 · 60 · 60 s), we can calculate Earth’s rotational rate in SI units:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
-  \Phi_h = \rho · u · A · C_p · T
+  \Omega = \frac {2 · \pi (rad)} {60 · 60 · 24 (s)}
+  = 2.27 · 10^{-5}s^{-1}
 \end{equation}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A train with a mass of 10000 ton travels S-N at a speed of 120km/h. It is currently at 56.2°N. What is the Coriolis force acting on it? What would the Coriolis force be for the same train travelling on Mars?</p>
+</div>
+</div>
+<div class="section" id="geostrophic-balance-and-wind-speeds">
+<h2>Geostrophic Balance and Wind Speeds<a class="headerlink" href="#geostrophic-balance-and-wind-speeds" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>geostrophic balance</strong> (also known as <strong>geostrophic equilibrium</strong>) is a vector balance between the <strong>pressure gradient force</strong> and the <strong>Coriolis force</strong>. It is an important concept in atmospheric and oceanic sciences and helps us compute the speed of <strong>geostrophic currents</strong>. <strong>Geotrophic winds</strong> are theoretical wind currents that result from this balance.</p>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/coriolis001.jpg" src="../../_images/coriolis001.jpg" />
+<p class="caption"><span class="caption-text">Geostrophic currents result from the geostrophic balance between the pressure gradient force an the Coriolis force.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>For an air parcel moving across isobars, the pressure gradient force can be computed as:</p>
 <div class="math notranslate nohighlight">
-\[C_{air} = 1006 Jkg^{-1}K^{-1}\]</div>
-<div class="section" id="the-global-situation">
-<h3>The Global Situation<a class="headerlink" href="#the-global-situation" title="Permalink to this headline">¶</a></h3>
+\[\begin{equation}
+  F_p = \frac {\Delta P}{\Delta} · V
+  = \nabla P · V
+\end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F_p\)</span> - pressure gradient force</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta_P\)</span> - change in pressure</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta_D\)</span> - distance covered</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> - volume</p></li>
+</ul>
+<p>Recall the equation for the Coriolis force:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  F_c = 2 · m · u · \Omega · sin(\phi)
+\end{equation}\]</div>
+<p>We can write the m term (mass) as density times volume:</p>
+<div class="math notranslate nohighlight">
+\[m =  \rho · V\]</div>
+<p>We can expand the geostrophic vector balance (<span class="math notranslate nohighlight">\(F_p = F_c\)</span> ) as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \nabla P · V = 2 · \rho · V · u · \Omega · sin(\phi)
+\end{equation}\]</div>
+<p>Finally, we can rearrange the above to solve for velocity (<span class="math notranslate nohighlight">\(u_g\)</span> ), i.e. geostrophic current/wind speeds:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  u_g = \frac {\nabla P} {2 · \rho · \Omega · sin(\phi) }
+\end{equation}\]</div>
+<p>In reality, ideal geostrophic winds are rare, since they are modified further by frictional forces (esp. where winds move close to the ground). However, they are good first approximations for extratropical regions.</p>
+<div class="section" id="geostrophic-balance-example-problem">
+<h3>Geostrophic Balance: Example Problem<a class="headerlink" href="#geostrophic-balance-example-problem" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/coriolis002.jpg" src="../../_images/coriolis002.jpg" />
+<p class="caption"><span class="caption-text">Geostrophic currents result from the geostrophic balance between the pressure gradient force an the Coriolis force.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="earth-s-energy-balance">
-<h3>Earth’s Energy Balance<a class="headerlink" href="#earth-s-energy-balance" title="Permalink to this headline">¶</a></h3>
+<p>Consider an air parcel in atmospheric pressure conditions that change by 1 hPa per 100km at 28°N. We can calculate the rate of change in pressure:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \nabla P = \frac {1 · 10^2 Pa}{1 · 10^5m}
+  = 1 · 10^{-3} Pa m^{-1}
+\end{equation}\]</div>
+<p>We have already established the rotational rate and density of air (in a previous lecture). Using those values, we can calculate geostrophic wind speeds for our example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  u_g = \frac {1 · 10^{-3} Pa m^{-1}} {2 · 1.2 kgm^{-3} · 2.27 · 10^{-5}s{-1} · sin(28.5) }
+  \approx 18.7 ms^{-1}
+\end{equation}\]</div>
 </div>
-<div class="section" id="atmospheric-and-oceanic-heat-transport">
-<h3>Atmospheric and Oceanic Heat Transport<a class="headerlink" href="#atmospheric-and-oceanic-heat-transport" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="rossby-waves">
+<h3>Rossby Waves<a class="headerlink" href="#rossby-waves" title="Permalink to this headline">¶</a></h3>
+<p>Rossby waves, also known as <strong>planetary waves</strong>, are synoptic-scale atmospheric waves associated with the polar front and polar jet stream that separates cold polar air from warmer mid-latitude air [see “Building a climate VI”]. They result from the rotation of the planet, create fairly stable large-scale weather conditions in mid-high latitudes, and help transport heat from the tropics to the poles to solve the energy imbalance [see “Building a climate VI”].</p>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/rossby_ccby_LisaRauschenbach.jpg" src="../../_images/rossby_ccby_LisaRauschenbach.jpg" />
+<p class="caption"><span class="caption-text">The evolution of Rossby waves, characterised by wave-like motions of the jet stream, and creation of high  pressure cells (anti-cyclones) and low pressure cells (cyclones). [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="atmospheric-heat-flow">
-<h3>Atmospheric Heat Flow<a class="headerlink" href="#atmospheric-heat-flow" title="Permalink to this headline">¶</a></h3>
+<p>This heat transport is enhanced when the amplitude increases and reduced when the amplitude is dampened. The wave amplitude can significantly vary, resulting in cold polar air penetrating far into the mid latitudes and creating anomalously cold weather. The protrusions created by increases in amplitude are “pinched off” to form high pressure cells (anti-cyclones) and low pressure cells (cyclones).</p>
+</div>
+<div class="section" id="cyclones-anti-cyclones-and-geostrophic-winds">
+<h3>Cyclones, Anti-Cyclones and Geostrophic Winds<a class="headerlink" href="#cyclones-anti-cyclones-and-geostrophic-winds" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/coriolis003.jpg" src="../../_images/coriolis003.jpg" />
+<p class="caption"><span class="caption-text">Left: Geostrophic winds follow a a counterclockwise path in the Northern Hemisphere (and a clockwise path in the Southern Hemisphere) along the isobars of low pressure cells (cyclones).</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<div class="legend">
+<p>Right: Geostrophic winds follow a a clockwise path in the Northern Hemisphere (and a counterclockwise path in the Southern Hemisphere) along the isobars of high pressure cells (anti-cyclones).</p>
 </div>
 </div>
-<div class="section" id="atmospheric-circulation">
-<h2>Atmospheric Circulation<a class="headerlink" href="#atmospheric-circulation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="hadley-cell">
-<h3>Hadley Cell<a class="headerlink" href="#hadley-cell" title="Permalink to this headline">¶</a></h3>
+<p><strong>Cyclones</strong> are low pressure cells (usually denoted with an “L”) with high pressure around them.</p>
+<p><strong>Anti-Cyclones</strong> are high pressure cells (usually denoted with an “H”) with low pressure around them.</p>
+<p>Recall our previous examples of an air parcel in atmospheric conditions with parallel isobars. In case of pressure cells, isobars are circular. This means that the pressure gradient force always acts towards the centre in case of a low pressure cell (cyclone) and away from the centre in case of a high pressure cell (anti-cyclone). We previously established that the Coriolis force acts in the opposite direction and the geostrophic wind vector is perpendicular to it. This remains the case with pressure cells. However, the direction of the pressure force, Coriolis force and wind vector changes as the air parcel’s position on the circular isobars changes, resulting in a circular motion of winds along the circular isobars.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Place an air parcel onto different positions along one of the circular isobars and check this statement.</p>
 </div>
-<div class="section" id="cell-model">
-<h3>1-Cell Model<a class="headerlink" href="#cell-model" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="id1">
-<h3>3-Cell Model<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="exploring-complexities-through-climate-models">
-<h3>Exploring Complexities through Climate Models<a class="headerlink" href="#exploring-complexities-through-climate-models" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="small-excursion-example-advection-schemes">
+<h2>Small Excursion: Example Advection Schemes<a class="headerlink" href="#small-excursion-example-advection-schemes" title="Permalink to this headline">¶</a></h2>
+<p>So far, we have not written much of what we learned in differential form. Why? Because it is easier to understand this way. However, for most modelling applications, we cannot get around differential equations. This is a good time to introduce them.</p>
+<p>Weather and climate models use <strong>Euler equations</strong>, the inviscid counterparts of Navier-Stokes equations, because frictional forces do not matter much for atmospheric flow.</p>
+<p>These include an advection term to track the concentration of specific constituents of the atmosphere, such as water vapour or pollutants of concentration <span class="math notranslate nohighlight">\(\Phi\)</span> in a wind field <span class="math notranslate nohighlight">\(u\)</span> .</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \frac {\delta \Phi} {\delta t} + u · \nabla \Phi = source - sink
+\end{equation}\]</div>
+<p>where t is time. Assuming that source = sink, we can write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \frac {\delta \Phi} {\delta t} + u · \frac {\delta \Phi} {\delta x} = 0
+\end{equation}\]</div>
+<p>where x is distance. Using a simple linear finite difference scheme (forward in time, backwards in space), we can write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \frac {\Phi_j^{n+1} - \Phi_j^{n}} {\Delta t} + u · \frac {\Phi_j^{n} - \Phi_{j-1}^{n}} {\Delta x} = 0
+\end{equation}\]</div>
+<p>Solving for concentration at the next time step and substituting the Courant number <span class="math notranslate nohighlight">\(c = \frac {\Delta t}{\Delta x}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \Phi_j^{n+1} = \Phi_j^{n} - c · (\Phi_j^{n} - \Phi_{j-1}^{n})
+\end{equation}\]</div>
+<p>This allows us to compute concentration of the next time step in a FTBS (Forward Time Backward Space) advection scheme. We can also use an FTFS scheme:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \Phi_j^{n+1} = \Phi_j^{n} - c · (\Phi_{j+1}^{n} - \Phi_{j}^{n})
+\end{equation}\]</div>
+<p>or an FTCS (Forward Time Centred Space) scheme:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \Phi_j^{n+1} = \Phi_j^{n} - \frac {c}{2} · (\Phi_{j+1}^{n} - \Phi_{j-1}^{n})
+\end{equation}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While a real introduction to numerical modelling, differential equations and phase space is beyond the scope of this course, you should be aware that these topics are important for modelling atmospheric processes.</p>
 </div>
 </div>
 </div>
@@ -309,7 +420,7 @@
         
         &copy; Copyright 2021, Sebastian G. Mutz
       <span class="lastupdated">
-        Last updated on Mar 02, 2021.
+        Last updated on May 08, 2021.
       </span>
 
     </p>

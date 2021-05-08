@@ -95,7 +95,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
 </ul>
@@ -112,7 +111,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#temperature-lapse-rate">Temperature Lapse Rate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#adiabatic-lapse-rate">Adiabatic Lapse Rate</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#adiabatic-lapse-rate-dry">Adiabatic Lapse Rate (Dry)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dry-adiabatic-lapse-rate">Dry Adiabatic Lapse Rate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adiabatic-lapse-rate-dry-example">Adiabatic Lapse Rate (Dry): Example</a></li>
 </ul>
 </li>
@@ -121,6 +120,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#very-stable-atmosphere-temperature-inversion">Very Stable Atmosphere (Temperature Inversion)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#unstable-atmosphere">Unstable Atmosphere</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#stability-and-vertical-mixing">Stability and Vertical Mixing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#troposphere-temperature-inversions">Troposphere Temperature Inversions</a></li>
 </ul>
 </li>
 </ul>
@@ -139,6 +139,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">P2-E002</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E105/E105.html">P2-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E201/E201.html">P3-E201</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Projects:</span></p>
 <ul>
@@ -149,11 +151,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P008/P008_info.html">Project P008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P009/P009_info.html">Project P009</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Resources:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/guide.html">Guide</a></li>
 </ul>
 
             
@@ -245,47 +253,122 @@
 </div>
 <div class="section" id="temperature-lapse-rate">
 <h2>Temperature Lapse Rate<a class="headerlink" href="#temperature-lapse-rate" title="Permalink to this headline">¶</a></h2>
+<p>We have previously looked at the temperature lapse rates in the atmosphere and already came across a (stable) temperature inversion related to Ozone production: The stratospheric thermal inversion. We also see frequent, albeit very temporary, temperature inversions in the troposphere. Inversion is characterised by a reversed temperature gradient in the atmosphere, i.e. an increase in temperature with increased altitude. What are the implications of this for atmospheric movement?</p>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/inversion_ccby_LisaRauschenbach.jpg" src="../../_images/inversion_ccby_LisaRauschenbach.jpg" />
+<p class="caption"><span class="caption-text">A temperature inversion will inhibit vertical movement. The inversion base, i.e. the lower boundary of an inversion layer, marks the altitude limit for the typical vertical mixing occuring below. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Think back to the lecture on buyancy: Assuming we have no change in chemistry and pressure equalises quickly, an increase in temperature aloft will prevent an air parcel to become positively buoyant and thus inhibit vertical movement, so that the <strong>inversion base</strong>, i.e. the lower boundary of an <strong>inversion layer</strong>, marks the altitude limit for the typical vertical mixing occuring under normal temperature lapse rate conditions below.</p>
 </div>
 <div class="section" id="adiabatic-lapse-rate">
 <h2>Adiabatic Lapse Rate<a class="headerlink" href="#adiabatic-lapse-rate" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="adiabatic-lapse-rate-dry">
-<h3>Adiabatic Lapse Rate (Dry)<a class="headerlink" href="#adiabatic-lapse-rate-dry" title="Permalink to this headline">¶</a></h3>
+<p>As a warm (and positively buoyant) air parcel rises, it moves into altitudes characterised by lower pressure. As a result, the air parcel expands. In more physical terms, it does work on the environment. This decreases the energy stored in the parcel and the air parcel begins to cool. This is a reversible process: As the cold air parcel sinks, it is compressed, the energy stored in it is increased and its temperature increases.</p>
+<div class="figure align-left" style="width: 300px">
+<a class="reference internal image-reference" href="../../_images/lapseRate01.jpg"><img alt="../../_images/lapseRate01.jpg" src="../../_images/lapseRate01.jpg" style="width: 300px;" /></a>
+</div>
+<p>This can happen, because temperature does not equalise quickly (though diffusion or mixing). In other words, there is no (or little) transfer of heat or mass between the system (the air parcel) and its surroundings (the environment/atmosphere). Energy transfer to and from surrounds only happens in form of <strong>work</strong> in a physical sense. In thermodynamics, a process with these characteristics is described as <strong>adiabatic</strong>. The temperature lapse rate of an air parcel as it rises and sinks in the atmosphere is therefore referred to as its <strong>adiabatic lapse rate</strong>.</p>
+<div class="section" id="dry-adiabatic-lapse-rate">
+<h3>Dry Adiabatic Lapse Rate<a class="headerlink" href="#dry-adiabatic-lapse-rate" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>dry adiabatic lapse rate</strong> is the rate at which an unsaturated (“dry”) air parcel warms or cools when moving vertically through the atmosphere. It is easier to calculate than the <strong>moist/wet adiabatic lapse rate</strong>, which is the rate at which a saturated (“wet”) air parcel warms or cools when moving vertically through the atmosphere.</p>
+<p>The dry adiabatic lapse rate can be derived from the first law of thermodynamics:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   \Delta U = Q - W
 \end{equation}\]</div>
+<p>where:
+* <span class="math notranslate nohighlight">\(\Delta U\)</span> - change in energy of a closed system
+* <span class="math notranslate nohighlight">\(Q\)</span> - heat/energy supplied to the system
+* <span class="math notranslate nohighlight">\(W\)</span> - work done by the system</p>
+<p>and from the hydrostatic equation:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   \Delta P = -\rho · \Delta z · g
 \end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta P\)</span> - change in pressure (pressure at the top - pressure at the ground)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> - density</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta z\)</span> - change in height</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> - gravitational acceleration</p></li>
+</ul>
+<p>The dry adiabatic lapse rate is calculated as follows:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   \Gamma = \frac {g}{C_p}
 \end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Gamma\)</span> - dry adiabatic lapse rate</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> - density</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_p\)</span> - specific heat capacity</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Can you derive the equation for the dry adiabatic lapse rate from the first law of thermodynamics and the hydrostatic equation?</p>
+</div>
 </div>
 <div class="section" id="adiabatic-lapse-rate-dry-example">
 <h3>Adiabatic Lapse Rate (Dry): Example<a class="headerlink" href="#adiabatic-lapse-rate-dry-example" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-right" style="width: 300px">
+<a class="reference internal image-reference" href="../../_images/lapseRate02.jpg"><img alt="../../_images/lapseRate02.jpg" src="../../_images/lapseRate02.jpg" style="width: 300px;" /></a>
+</div>
+<p>An unsaturated (dry) air parcel starts at a temperature of 288K and rises 500m. What would be its final temperature 500m above its starting height? We have previously established that the specific heat capacity of air is ~ <span class="math notranslate nohighlight">\(1006 Jkg^{-1}K^{-1}\)</span> . We can thus calculate the dry adiabatic lapse rate:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   \Gamma = \frac {g}{C_p}
   = \frac { 9.81 ms^{-2} }{ 1006 Jkg^{-1}K^{-1} }
   = 9.75 Km^{-1}
 \end{equation}\]</div>
+<p>and subtract ~4.9K (for 0.5km) from 288K. This gives us ~283K.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Theoretically, how much would an isolated parcel of helium cool over 500m vertical distance?</p>
+</div>
 </div>
 </div>
 <div class="section" id="atmospheric-stability">
 <h2>Atmospheric Stability<a class="headerlink" href="#atmospheric-stability" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="stable-atmosphere">
 <h3>Stable Atmosphere<a class="headerlink" href="#stable-atmosphere" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/atmoStable01.jpg"><img alt="../../_images/atmoStable01.jpg" src="../../_images/atmoStable01.jpg" style="width: 400px;" /></a>
+</div>
+<p>Stable atmospheric condidtions are created when both the environmental temperature gradient and adiabatic lapse rate are negative, but the adiabatic lapse rate is steeper, i.e. the temperature of the parcel changes more rapidly than the environmental temperature. Imagine the following scenario (and figure): An air parcel is slightly warmer than its surroundings (T(p) = air parcel temperature; T(e) = environmental temperature). It becomes buoyant and begins to rise (in the z direction). As it rises, it cools along its adiabatic lapse rate, which is different from the environmental temperature lapse rate (figure: top). More specifically (for stable atmospheric conditions), it cools at a higher rate than its surroundings. Eventually it reaches a temperature that is cooler than its surroundings (figure: middle). It sinks and warms along the adiabatic lapse rate until it is warmer than its surroundings (figure: bottom) and can rise again. These conditions limit vertical movement, prevent runaway effects and are thus considered stable. However, note that stable atmospheric conditions still allow for some vertical mixing and do not limit vertical movement as severely as temperature inversions.</p>
 </div>
 <div class="section" id="very-stable-atmosphere-temperature-inversion">
 <h3>Very Stable Atmosphere (Temperature Inversion)<a class="headerlink" href="#very-stable-atmosphere-temperature-inversion" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/atmoVeryStable01.jpg"><img alt="../../_images/atmoVeryStable01.jpg" src="../../_images/atmoVeryStable01.jpg" style="width: 400px;" /></a>
+</div>
+<p>In case of temperature inversion, the environmental temperature gradient is reversed while the adiabatic lapse rate remains unchanged. When an air parcel is heated and begins to rise, it does not simply cool at a faster rate than the environment, as is the case for stable atmospheric conditions. It cools while the environment becomes warmer with greater altitude. The point at which the parcel becomes cooler than the environment (and sinks) is reached more quickly. The same applies for a parcel that is cooler than the environment and sinks. Therefore, temperature inversions vertically lock air parcels in place and create very stable atmospheric conditions.</p>
 </div>
 <div class="section" id="unstable-atmosphere">
 <h3>Unstable Atmosphere<a class="headerlink" href="#unstable-atmosphere" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/atmoUnstable01.jpg"><img alt="../../_images/atmoUnstable01.jpg" src="../../_images/atmoUnstable01.jpg" style="width: 400px;" /></a>
+</div>
+<p>Unstable atmospheric conditions are created when environment and parcel cool with altitude, but the environmental temperature gradient is steeper than the adiabatic lapse rate. As a warm air parcel rises, it cools more slowly than the environment, thus increasing the positive temperature difference between parcel and environment and causing the parcel to rise even further. We often observe these conditions in the tropics, where an unstable atmosphere causes this positive feedback loop and results in giant piled-up cumulunimbus clouds and thunderstorms.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>What limits the rise of an air parcel in unstable atmospheric conditions? Think back to the temperature structure of the atmosphere.</p>
+</div>
 </div>
 <div class="section" id="stability-and-vertical-mixing">
 <h3>Stability and Vertical Mixing<a class="headerlink" href="#stability-and-vertical-mixing" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" id="id2" style="width: 450px">
+<a class="reference internal image-reference" href="../../_images/atmoStability01_ccby_LisaRauschenbach.jpg"><img alt="../../_images/atmoStability01_ccby_LisaRauschenbach.jpg" src="../../_images/atmoStability01_ccby_LisaRauschenbach.jpg" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-text">Smoke stack in different atmospheric stability conditions. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now that we covered the theory, let us examine a more tangible example if the implications of atmospheric stability. Imagine a smoke stack and its plume in a strong wind field. The 3 different scenarios in the figure differ only in the environmental temperature gradient or lapse rate. A very steep environmental lapse rate (steeper than the adiabatic lapse rate indicated by the dashed line) results in most vertical mixing and <strong>looping</strong> (figure: top). A weaker lapse rate (shallow environmental temperature gradient) still allows for some vertical mixing, but limits it much more (figure: middle). It results in <strong>coning</strong>. A temperature inversion severaly inhibits vertical mixing (figure: bottom) and results in <strong>fanning</strong>.</p>
+<div class="figure align-right" id="id3" style="width: 450px">
+<a class="reference internal image-reference" href="../../_images/atmoStability02_ccby_LisaRauschenbach.jpg"><img alt="../../_images/atmoStability02_ccby_LisaRauschenbach.jpg" src="../../_images/atmoStability02_ccby_LisaRauschenbach.jpg" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-text">Smoke stack in different, multi-layered atmospheric stability conditions. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Let us consider 2 additional examples now. With an inversion near the surface and lapse aloft, vertical movement is severaly inbibited below while it is allowed aloft, resulting in a very assymetrical plume and <strong>lofting</strong> (figure: top). With inversion aloft and lapse below, vertical movement is severely inhibited aloft and permitted below (figure: bottom). This results in <strong>fumigation</strong>. For residents in the vicinity, this is a potentially dangerous situation. The height of smoke stacks is chosen to prevent such dangers. But how common (and long lived) are temperature inversions in the lower troposphere? This takes us to the last part of the lecture.</p>
+</div>
+<div class="section" id="troposphere-temperature-inversions">
+<h3>Troposphere Temperature Inversions<a class="headerlink" href="#troposphere-temperature-inversions" title="Permalink to this headline">¶</a></h3>
+<p>Finally, let us look at one (common) example of how temperature inversions are created in the toposphere and may be related to day-night cycles. A cloudless night will allow the ground to lose more heat to the surroundings and results in especially cool grounds in the mornings. As the ground and atmosphere are exposed to more solar radiation again in the morning, the air aloft warms at a quicker rate than the very cold ground and the air just above the cold ground stays colder for longer. The result is a temporary temperature inversion in the mornings following cloudless nights. As the day progresses, the ground and air immediately above it warms up and the inversion dissipates.</p>
 </div>
 </div>
 </div>
@@ -313,7 +396,7 @@
         
         &copy; Copyright 2021, Sebastian G. Mutz
       <span class="lastupdated">
-        Last updated on Mar 02, 2021.
+        Last updated on May 08, 2021.
       </span>
 
     </p>

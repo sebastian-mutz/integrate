@@ -38,7 +38,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Grading" href="grading.html" />
+    <link rel="next" title="License" href="license.html" />
     <link rel="prev" title="General" href="info.html" /> 
 </head>
 
@@ -95,12 +95,20 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="info.html">General</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Syllabus</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#didactics">Didactics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#exercises-phase-1">Exercises: Phase 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mixed-topic-concept">Mixed-Topic Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lectures">Lectures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#learning-goals">Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-learning-goals">Detailed Learning Goals</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="grading.html">Grading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exercises-and-projects">Exercises and Projects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#approach-and-structure">Approach and Structure</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#grading">Grading</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
 </ul>
@@ -128,6 +136,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../exercises/E102/E102.html">P2-E002</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exercises/E103/E103.html">P2-E003</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exercises/E104/E104.html">P2-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E105/E105.html">P2-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E201/E201.html">P3-E201</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Projects:</span></p>
 <ul>
@@ -138,11 +148,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../projects/P005/P005_info.html">Project P005</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/P006/P006_info.html">Project P006</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projects/P007/P007_info.html">Project P007</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/P008/P008_info.html">Project P008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/P009/P009_info.html">Project P009</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Resources:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../resources/dictionary.html">Dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide/guide.html">Guide</a></li>
 </ul>
 
             
@@ -210,9 +226,10 @@
             
   <div class="section" id="syllabus">
 <h1>Syllabus<a class="headerlink" href="#syllabus" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="didactics">
-<h2>Didactics<a class="headerlink" href="#didactics" title="Permalink to this headline">¶</a></h2>
-<p><strong>Why co-teaching climatology, probability theory, statistics and programming is a good idea … probably</strong></p>
+<p>The course is designed for completion within 14 weeks. It includes a lecture series about fundamentals in climatology, and an exercise series teaching the basics of programming, applied statistics and the assembling of a basic measurement system.</p>
+<div class="section" id="mixed-topic-concept">
+<h2>Mixed-Topic Concept<a class="headerlink" href="#mixed-topic-concept" title="Permalink to this headline">¶</a></h2>
+<p><strong>Why co-teaching climatology, probability, statistics and programming is a good idea … probably</strong></p>
 <p><strong>Climatology</strong>:
 The teaching for this theme block focuses on atmospheric physics and the more quantitative aspects of climate change through time to complement other climate related modules. Due to the nature of climate-related data, climatology offers an excellent set of very real problems to demonstrate commonly used and transferrable methods from statistics and machine learning. It thus provides an excellent platform for case studies of the second theme block.</p>
 <p><strong>Statistics and Probability</strong>:
@@ -220,186 +237,171 @@ Practical statistics can be regarded as mathematical modelling under uncertainty
 <p><strong>Programming</strong>:
 Instructing others in a topic or method requires that you have a solid understanding of it. Computers will do exactly what you tell it and punish any vague instruction with an error message (if you’re lucky) or with broken code. Consequently, instructing computers (through writing code) requires this understanding even more. They are a useful mirror for your level of knowledge and competence. Therefore, this course does not make excessive use of pre-written code, but instead teaches the basics of programming and how to implement even more advanced techniques with basic tools.</p>
 </div>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>The module is divided into a lecture and exercise series. The contents is split up into three phases.</p>
+<div class="section" id="lectures">
+<h2>Lectures<a class="headerlink" href="#lectures" title="Permalink to this headline">¶</a></h2>
+<p>The lectures, listed as “Building a Climate” chapters here, follow the format of a classic interactive lecture.</p>
+<div class="section" id="learning-goals">
+<h3>Learning Goals<a class="headerlink" href="#learning-goals" title="Permalink to this headline">¶</a></h3>
+<p>The lectures are designed for students (BSc or MSc level) with no (or minimal) prior knowledge of climatology. Prior knowledge of basic (secondary school level) mathematics, physics, chemistry and geography are a requirement. The overarching learning goals of the “Building a Climate” lecture series are to introduce you to the most important processes of the climate sytem in a top-down approach. The order of the lectures serve to successively add layers of complexity to your understanding of the climate system, starting from topics like clestial mechanics (large scale) down to precipitation formation (small scale). Each lecture has very specific learning goals:</p>
+</div>
+<div class="section" id="detailed-learning-goals">
+<h3>Detailed Learning Goals<a class="headerlink" href="#detailed-learning-goals" title="Permalink to this headline">¶</a></h3>
+<p>Note that all lectures should ideally be completed prior to the Phase 3 exercise.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
-<col style="width: 34%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Lecture</p></th>
+<th class="head"><p>Topics and Learning Goals</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Building a Climate I</strong></p></td>
+<td><ul class="simple">
+<li><p>Important definitions in climate science</p></li>
+<li><p>How to retain an atmosphere?</p></li>
+<li><p>The vertical structure of the atmosphere</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Building a Climate II</strong></p></td>
+<td><ul class="simple">
+<li><p>Understand orbital forcing of climate</p></li>
+<li><p>How can we analyse ka-scale climate variability?</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Building a Climate III</strong></p></td>
+<td><ul class="simple">
+<li><p>Gain quantitative understanding of radiative fluxes in the atmosphere</p></li>
+<li><p>Understand influence of insolation and greenhouse gases on mean temperature</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Building a Climate IV</strong></p></td>
+<td><ul class="simple">
+<li><p>Understand partial pressure and the ideal gas law</p></li>
+<li><p>Understand drivers of vertical transport in the atmosphere</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Building a Climate V</strong></p></td>
+<td><ul class="simple">
+<li><p>Understand the Coriolis force and how to calculate it</p></li>
+<li><p>Understand the geostrophic balance and how it relates to wind speeds</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Building a Climate VI</strong></p></td>
+<td><ul class="simple">
+<li><p>Understand drivers of atmospheric circulation</p></li>
+<li><p>Gain an overview of Earth’s circulation structure</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Building a Climate VII</strong></p></td>
+<td><ul class="simple">
+<li><p>Understand atmospheric stability and how it relates to lapse rates</p></li>
+<li><p>Understand implications of thermal inversions and instability</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Building a Climate VIII</strong></p></td>
+<td><ul class="simple">
+<li><p>Important hydrometeorological terminology</p></li>
+<li><p>Understand different precipitation formation processes</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="exercises-and-projects">
+<h2>Exercises and Projects<a class="headerlink" href="#exercises-and-projects" title="Permalink to this headline">¶</a></h2>
+<p>The exercises require students to have access to computers and basic software tools (see <a class="reference internal" href="../exercises/info.html"><span class="doc">exercises info</span></a>). Only free, open-source software is used for the exercises, thus allowing students to work on the exercises remotely. There are 4 phases to the exercise series. They successively build on each other and therefore should be completed in order.</p>
+<table class="docutils align-default">
+<colgroup>
 <col style="width: 39%" />
+<col style="width: 61%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Phase</p></th>
-<th class="head"><p>Lectures</p></th>
-<th class="head"><p>Exercises</p></th>
+<th class="head"><p>Topics</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><dl class="simple">
-<dt><strong>Phase 1</strong></dt><dd><p>weeks 1-5</p>
-</dd>
-</dl>
+<tr class="row-even"><td><p><strong>Phase 1</strong></p>
+<blockquote>
+<div><p>weeks 1-5</p>
+</div></blockquote>
 </td>
-<td><p>Atmospheric physics;
-basics of
-probability and statistics</p></td>
-<td><dl class="simple">
-<dt><strong>Introduction to Programming</strong></dt><dd><p>IDE’s, coding, Python</p>
-</dd>
-</dl>
+<td><p><strong>Introduction to Programming</strong></p>
+<p>IDE’s, coding, Python</p>
 </td>
 </tr>
-<tr class="row-odd"><td><dl class="simple">
-<dt><strong>Phase 2</strong></dt><dd><p>weeks 6-10</p>
-</dd>
-</dl>
+<tr class="row-odd"><td><p><strong>Phase 2</strong></p>
+<blockquote>
+<div><p>weeks 6-10</p>
+</div></blockquote>
 </td>
-<td><p>Atmospheric physics;
-applied probability
-and statistics</p></td>
-<td><dl class="simple">
-<dt><strong>Practical Statistics</strong></dt><dd><p>Implementing of basic
-methods</p>
-</dd>
-</dl>
+<td><p><strong>Problem-Based Learning</strong></p>
+<p>Applying statistics and basic
+concepts from lectures</p>
 </td>
 </tr>
-<tr class="row-even"><td><dl class="simple">
-<dt><strong>Phase 3</strong></dt><dd><p>weeks 11-14</p>
-</dd>
-</dl>
+<tr class="row-even"><td><p><strong>Phase 3</strong></p>
+<blockquote>
+<div><p>weeks 11-12</p>
+</div></blockquote>
 </td>
-<td><p>Climate change (past -
-future);
-advanced statistics</p></td>
-<td><dl class="simple">
-<dt><strong>Projects</strong></dt><dd><p>Application of
-advanced method</p>
-</dd>
-</dl>
+<td><p><strong>Environmental Sensing Systems</strong></p>
+<p>Creating a measurement system
+and analysing collected data</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Phase 4</strong></p>
+<blockquote>
+<div><p>weeks 11-14</p>
+</div></blockquote>
+</td>
+<td><p><strong>Projects</strong></p>
+<p>Application of advanced method
+(statistics &amp; machine learning)</p>
 </td>
 </tr>
 </tbody>
 </table>
-<p>The learning goals of exercises for each phase are explained below. After each exercise, you should be able to understand and explain the listed concepts and have the ability to do everything listed under skills. Note that the programming in phase 1 is still very guided to make sure you cover important basics. In phase 2 and 3, you will be faced with problems that require your creativity (and skills from phase 1) to solve them.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Your knowledge and skills build up progressively in the exercise series. You use concepts and script written in previous exercises. You should therefore make sure you do not miss any exercise, or catch up before the subsequent exercise.</p>
+<div class="section" id="id1">
+<h3>Learning Goals<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><strong>Phase 1</strong>: These exercises serve to introduce students to basic paradigms of programming. While the exercises use Python, the concepts of programming covered are not very language specific.</p>
+<p><strong>Phase 2</strong>: These exercises serve to introduce the students to basic and important concepts of statistics and how to apply them to real problems. Note that problems and solutions in exercises are simplified to allow this hands-on approach for students within the time frame of a 1-2h practical.</p>
+<p><strong>Phase 3</strong>: Students will learn to build their own measurement system using a Raspberry Pi, then collect and analyse their own data using the skills they have previously learned.</p>
+<p><strong>Phase 4 (projects)</strong>: Students will independently work in small groups on different projects, applying more advanced methods from statistics and classic machine learning. They will learn the theory and application of <strong>one</strong> advanced method.</p>
+<p>The detailed learning goals of exercises for each phase are listed in tabular form below (and at the top of each exercise page). After each exercise, students should be able to understand and explain the listed concepts and have the ability to do everything listed under skills. Note that the programming in phase 1 is still very guided to make sure students cover important basics. In phase 2-4, students will be faced with problems that require some creativity (and skills from phase 1) to solve them.</p>
+</div>
+<div class="section" id="approach-and-structure">
+<h3>Approach and Structure<a class="headerlink" href="#approach-and-structure" title="Permalink to this headline">¶</a></h3>
+<p>The exercises are designed with a <strong>flipped classroom</strong> style pedagogical approach in mind. Students are encouraged to read up on relevant statistical and technological topics on their own prior to each exercise. The exercises then give students the opporunity to apply learned knowledge under the supervision of the teacher.</p>
 </div>
 </div>
-<div class="section" id="exercises-phase-1">
-<h2>Exercises: Phase 1<a class="headerlink" href="#exercises-phase-1" title="Permalink to this headline">¶</a></h2>
-<p><strong>Overarching Goals</strong>: In phase 1, you familiarise yourself with common programming tools, universal concepts in programming (loops, decisions, functions, classes, etc.), data input/output and visualisation.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 72%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Week/Exercise</p></th>
-<th class="head"><p>Learning goals</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>P1-E001</strong></p></td>
-<td><ul class="simple">
-<li><p>Concepts:</p>
-<ul>
-<li><p>programming language</p></li>
-<li><p>programme/script</p></li>
-<li><p>IDE, terminal emulator, console</p></li>
-<li><p>data types</p></li>
-<li><p>modules</p></li>
+<div class="section" id="grading">
+<h2>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">¶</a></h2>
+<p><strong>Grades will be based on an oral presentation of group projects</strong>, which involve the application of a machine-learning technique to a specific problem in science. Students will demonstrate their understanding of the scientific problem and the method by:</p>
+<ul class="simple">
+<li><p><strong>Rubric 1 - understanding science</strong>:
+Describing the scientific problem and its implication for science and society;</p></li>
+<li><p><strong>Rubric 2 - understanding method application</strong>:
+Justifying the application of the method to this particular problem;</p></li>
+<li><p><strong>Rubric 3 - understanding method and code</strong>:
+Explaining the method and its code implementation;</p></li>
+<li><p><strong>Rubric 4 - holistic and in-depth understanding</strong>:
+Adequately answering questions asked by the instructors and a guest scientist (examiner);</p></li>
+<li><p><strong>Rubric 5 - students’ learning goals</strong>:
+The fifth grading rubric is decided on with the students, and is based on the students’ learning goals. This may either be an adjustment of weighting of the rubrics above or an entirely new rubric (such as soft skills for presentation).</p></li>
 </ul>
-</li>
-<li><p>Skills:</p>
-<ul>
-<li><p>work with an IDE (basics)</p></li>
-<li><p>create and execute a (Python) script</p></li>
-<li><p>define variables</p></li>
-<li><p>using built-in functions</p></li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr class="row-odd"><td><p><strong>P1-E002</strong></p></td>
-<td><ul class="simple">
-<li><p>Concepts:</p>
-<ul>
-<li><p>index value</p></li>
-<li><p>array/vector</p></li>
-<li><p>for loops</p></li>
-<li><p>if statements (if, else if, else)</p></li>
-<li><p>comparison operators</p></li>
-</ul>
-</li>
-<li><p>Skills:</p>
-<ul>
-<li><p>work with arrays</p></li>
-<li><p>implement a for loop</p></li>
-<li><p>let your programme make a decision</p></li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr class="row-even"><td><p><strong>P1-E003</strong></p></td>
-<td><ul class="simple">
-<li><p>Concepts:</p>
-<ul>
-<li><p>functions</p></li>
-</ul>
-</li>
-<li><p>Skills:</p>
-<ul>
-<li><p>use functions from existing modules</p></li>
-<li><p>write your own function with specified i/o</p></li>
-<li><p>save functions in script</p></li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr class="row-odd"><td><p><strong>P1-E004</strong></p></td>
-<td><ul class="simple">
-<li><p>Concepts:</p>
-<ul>
-<li><p>classes</p></li>
-<li><p>object-oriented programming</p></li>
-</ul>
-</li>
-<li><p>Skills:</p>
-<ul>
-<li><p>define your own class</p></li>
-<li><p>create class instances</p></li>
-<li><p>save class declarations in script</p></li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr class="row-even"><td><p><strong>P1-E005</strong></p></td>
-<td><ul class="simple">
-<li><p>Concepts:</p>
-<ul>
-<li><p>reading and writing data</p></li>
-<li><p>data visualisation</p></li>
-</ul>
-</li>
-<li><p>Skills:</p>
-<ul>
-<li><p>do simple operations with <em>numpy</em></p></li>
-<li><p>read and write input/output</p></li>
-<li><p>create a simple plot with <em>matplotlib</em></p></li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 
@@ -411,7 +413,7 @@ advanced method</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="grading.html" class="btn btn-neutral float-right" title="Grading" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="info.html" class="btn btn-neutral float-left" title="General" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -426,7 +428,7 @@ advanced method</p>
         
         &copy; Copyright 2021, Sebastian G. Mutz
       <span class="lastupdated">
-        Last updated on Feb 25, 2021.
+        Last updated on May 08, 2021.
       </span>
 
     </p>

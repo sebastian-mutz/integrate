@@ -23,7 +23,7 @@ Information
 
 .. topic:: What to Submit
 
-      Submit your script(s), output file(s) and figure(s) for the final task of this exercise via ILIAS. These script should be named *[your surname]_e005.[ext]*, where *[ext]* is the file extension, the input/output file should be named *[your surname]_[input/output]_e005.asc*, and the figure should be named *[your surname]_e005.jpg*.
+      Submit your script(s), output file(s) and figure(s) for the final task of this exercise. These script should be named *[your surname]_e005.[ext]*, where *[ext]* is the file extension, the input/output file should be named *[your surname]_[input/output]_e005.asc*, and the figure should be named *[your surname]_e005.jpg*.
 
       
 NumPy and Matplotlib

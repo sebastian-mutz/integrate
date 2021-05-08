@@ -95,7 +95,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
 </ul>
@@ -109,17 +108,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../A005/A005.html">Building a Climate V</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Building a Climate VI</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#coriolis-force">Coriolis Force</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#geostrophic-balance-and-wind-speeds">Geostrophic Balance and Wind Speeds</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#geostrophic-balance-example-problem">Geostrophic Balance: Example Problem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#geostrophic-winds">Geostrophic Winds</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#isolating-pressure-cells">Isolating Pressure Cells</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#differential-heating-and-heat-transport">Differential Heating and Heat Transport</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#earth-s-energy-balance">Earth’s Energy Balance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#atmospheric-and-oceanic-heat-transport">Atmospheric and Oceanic Heat Transport</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#atmospheric-movement-so-far-summarised">Atmospheric Movement (So Far) Summarised</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#advection">Advection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#differential-equations-and-phase-space">Differential Equations and Phase Space</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#advection-example-schemes">Advection: Example Schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#atmospheric-circulation">Atmospheric Circulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hadley-cell">Hadley Cell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cell-model">1-Cell Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cell-model-example">1-Cell Model Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">3-Cell Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jet-streams">Jet Streams</a></li>
 </ul>
 </li>
 </ul>
@@ -139,6 +139,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">P2-E002</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E105/E105.html">P2-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E201/E201.html">P3-E201</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Projects:</span></p>
 <ul>
@@ -149,11 +151,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P008/P008_info.html">Project P008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P009/P009_info.html">Project P009</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Resources:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/guide.html">Guide</a></li>
 </ul>
 
             
@@ -221,8 +229,8 @@
             
   <div class="section" id="building-a-climate-vi">
 <h1>Building a Climate VI<a class="headerlink" href="#building-a-climate-vi" title="Permalink to this headline">¶</a></h1>
-<p><strong>Coriolis Force</strong></p>
-<p>This lecture introduces the Coriolis force, the geostrophic balance and their implications for climate.</p>
+<p><strong>Atmospheric Circulation</strong></p>
+<p>We have previously looked at vertical transport and radiative fluxes. Here, we will explore horizontal transport and how differential heating and heat transport control atmospheric circulation.</p>
 <div class="section" id="information">
 <h2>Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
@@ -235,80 +243,146 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><ul class="simple">
-<li><p>Understand the Coriolis force and how to calculate it</p></li>
-<li><p>Understand the geostrophic balance and how it relates to wind speeds</p></li>
+<li><p>Understand drivers of atmospheric circulation</p></li>
+<li><p>Gain an overview of Earth’s circulation structure</p></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="coriolis-force">
-<h2>Coriolis Force<a class="headerlink" href="#coriolis-force" title="Permalink to this headline">¶</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  F_c = 2 · m · u · \Omega · sin(\phi)
-\end{equation}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  \Omega = \frac {2 · \pi (rad)} {60 · 60 · 24 (s)}
-  = 2.27 · 10^{-5}s^{-1}
-\end{equation}\]</div>
+<div class="section" id="differential-heating-and-heat-transport">
+<h2>Differential Heating and Heat Transport<a class="headerlink" href="#differential-heating-and-heat-transport" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/transport01.jpg" src="../../_images/transport01.jpg" />
+<p class="caption"><span class="caption-text">The equatorial regions receive more radiation than the polar regions. The equatorial regionals are also emitted more than the polar regions, because they are warmer. This results in a net deficit in the polar regions, which is resolved by heat transport from the lower to the higher latitudes.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="geostrophic-balance-and-wind-speeds">
-<h2>Geostrophic Balance and Wind Speeds<a class="headerlink" href="#geostrophic-balance-and-wind-speeds" title="Permalink to this headline">¶</a></h2>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  F_p = \frac {\Delta P}{\Delta} · V
-  = \nabla P · V
-\end{equation}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  F_c = 2 · m · u · \Omega · sin(\phi)
-\end{equation}\]</div>
-<div class="math notranslate nohighlight">
-\[m =  \rho · V\]</div>
-<div class="math notranslate nohighlight">
-\[F_p = F_c\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  \nabla P · V = 2 · \rho · V · u · \Omega · sin(\phi)
-\end{equation}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  u_g = \frac {\nabla P} {2 · \rho · \Omega · sin(\phi) }
-\end{equation}\]</div>
-<div class="section" id="geostrophic-balance-example-problem">
-<h3>Geostrophic Balance: Example Problem<a class="headerlink" href="#geostrophic-balance-example-problem" title="Permalink to this headline">¶</a></h3>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  \nabla P = \frac {1 · 10^2 Pa}{1 · 10^5m}
-  = 1 · 10^{-3} Pa m^{-1}
-\end{equation}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{equation}
-  u_g = \frac {1 · 10^{-3} Pa m^{-1}} {2 · 1.2 kgm^{-3} · 2.27 · 10^{-5}s{-1} · sin(28.5) }
-  \approx 18.7 ms^{-1}
-\end{equation}\]</div>
+<p>We previously touched on the interplay between solar irradiation and the Earth’s geometry. This leads to differential heating of the planet. More specifically, the incoming solar radiation at the higher latitudes (near the poles) is spread over larger areas than at lower latutudes (near the equator). This results in lower latitudes receiving more radiation per area.
+Remember Stefan-Boltzman Law? It allows us to calculate emitted radiation based on the temperature of the object. We previously only considered the mean temperature of the whole planet. However, the temperature on Earth is not uniform. The poles are colder than the equator. This results in less radiation being emitted from the poles than from the equator. Note that more radiation at the poles is emitted than is incoming, whereas more radiation is incoming than is emitted at the equator.</p>
+<div class="section" id="earth-s-energy-balance">
+<h3>Earth’s Energy Balance<a class="headerlink" href="#earth-s-energy-balance" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" id="id3" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/balance_ccby_LisaRauschenbach.jpg"><img alt="../../_images/balance_ccby_LisaRauschenbach.jpg" src="../../_images/balance_ccby_LisaRauschenbach.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Conceptual model for the received and emitted radiation from equator to polar regions. The energy surplus at the lower latitudes and energy deficit at the higher latitudes drives the meridional (along longitude) heat transport. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="geostrophic-winds">
-<h3>Geostrophic Winds<a class="headerlink" href="#geostrophic-winds" title="Permalink to this headline">¶</a></h3>
+<p>The differential heating and emission results in a net energy deficit in the higher latitudes that is resolved by heat transport from the equatorial regions to the polar regions. Together with the previously covered buoyancy induced vertical forces, this differential heating and emission, and the resulting heat transport, can be regarded as the main “engine” for atmospheric mass movements.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Would preferential warming at the poles result in more or less meridional heat transport?</p>
 </div>
-<div class="section" id="isolating-pressure-cells">
-<h3>Isolating Pressure Cells<a class="headerlink" href="#isolating-pressure-cells" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="atmospheric-and-oceanic-heat-transport">
+<h3>Atmospheric and Oceanic Heat Transport<a class="headerlink" href="#atmospheric-and-oceanic-heat-transport" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" id="id4" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/transport_ccby_LisaRauschenbach.jpg"><img alt="../../_images/transport_ccby_LisaRauschenbach.jpg" src="../../_images/transport_ccby_LisaRauschenbach.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Oceanic and atmospheric heat transport from equator to poles. [data: Yang et al., 2015; image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Most heat is transported <em>with</em> (and <em>not through</em>) air (and water) masses. We can therefore approximate heat flux with mass flux. Consider mass flux first:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \Phi_m = \rho · u · A
+\end{equation}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Phi_m\)</span> - mass flux</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> - fluid density</p></li>
+<li><p><span class="math notranslate nohighlight">\(u\)</span> - velocity vector</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> - area</p></li>
+</ul>
+<div class="figure align-left" id="id5" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/transport03.jpg"><img alt="../../_images/transport03.jpg" src="../../_images/transport03.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Most heat is transported <em>with</em> (and <em>not through</em>) air (and water) masses. We can therefore approximate heat flux with mass flux.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Knowing the relationship between heat and mass, we can formulate:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \Phi_h = \rho · u · A · C_p · T
+\end{equation}\]</div>
+<p>where additional terms are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Phi_h\)</span> - heat flux</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_p\)</span> - specific heat capacity of fluid</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> - temperature</p></li>
+</ul>
+<p>The specific heat capacity of air is <span class="math notranslate nohighlight">\(C_{air} = 1006 Jkg^{-1}K^{-1}\)</span> </p>
 </div>
 </div>
 <div class="section" id="atmospheric-movement-so-far-summarised">
 <h2>Atmospheric Movement (So Far) Summarised<a class="headerlink" href="#atmospheric-movement-so-far-summarised" title="Permalink to this headline">¶</a></h2>
+<p>In the past lectures, we have looked at different aspects of atmospheric movement. Take a minute to study the flow chart and think about how previous lectures are connected by what is happening in the atmophere.</p>
+<div class="figure align-center" id="id6">
+<img alt="../../_images/atmosphericMovement.jpg" src="../../_images/atmosphericMovement.jpg" />
+<p class="caption"><span class="caption-text">A simplified “flow chart” summarising important parts of atmospheric movement.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="advection">
-<h2>Advection<a class="headerlink" href="#advection" title="Permalink to this headline">¶</a></h2>
-<p>So far, we have not written much of what we learned in differential form. Why? Because it is easier to understand. However, note that for most modelling applications, we cannot get around differential equations.</p>
 </div>
-<div class="section" id="differential-equations-and-phase-space">
-<h2>Differential Equations and Phase Space<a class="headerlink" href="#differential-equations-and-phase-space" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="advection-example-schemes">
-<h3>Advection: Example Schemes<a class="headerlink" href="#advection-example-schemes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="atmospheric-circulation">
+<h2>Atmospheric Circulation<a class="headerlink" href="#atmospheric-circulation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="hadley-cell">
+<h3>Hadley Cell<a class="headerlink" href="#hadley-cell" title="Permalink to this headline">¶</a></h3>
+<p>The surplus energy at the equator is transported poleward by buoyancy-driven rising warm air and cold sinking polar air moving toward the equator. The resulting convection cell is known as the Hadley cell.</p>
+</div>
+<div class="section" id="cell-model">
+<h3>1-Cell Model<a class="headerlink" href="#cell-model" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" id="id7" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/1cell_ccby_LisaRauschenbach.jpg"><img alt="../../_images/1cell_ccby_LisaRauschenbach.jpg" src="../../_images/1cell_ccby_LisaRauschenbach.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">The 1-cell atmospheric circulation model consists only of one large convection cell (Hadley cell) in the northern hemisphere and another in the southern hemisphere. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>The simplest atmospheric circulation model is a 1-cell modell consisting only of the Hadley Cell. This may be a good approximation of reality on a planet or moon if:</p>
+<ul class="simple">
+<li><p>If the planet is entirely covered in a fairly homogenous fluid. This is the case for an aquaplanet, where we can ignore land-sea interactions.</p></li>
+<li><p>There is no Coriolis force, allowing us to only be concerned with the pressure gradient force.</p></li>
+</ul>
+<p>With the assumptions above met, planets or moons may be similar to a perfect 1-cell atmospheric circulation model consisting only of 1 convection cell (Hadley Cell) in each hemisphere.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Consider the 1 cell model and recall information you have of Earth’s atmosphere, climates and weather. Can it explain any of Earth’s large scale climate features?</p>
+</div>
+</div>
+<div class="section" id="cell-model-example">
+<h3>1-Cell Model Example<a class="headerlink" href="#cell-model-example" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" id="id8" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/titan02_NASA-JPL-Caltech.jpg"><img alt="../../_images/titan02_NASA-JPL-Caltech.jpg" src="../../_images/titan02_NASA-JPL-Caltech.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Titan, the largest moon of Saturn. Red-blue lines indicate warm-cold temperatures respectively.
+[Image of Titan: Courtesy NASA/JPL-Caltech; please include this acknowledgement when using the figure.]</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>Before we have a look at Earth’s atmospheric circulation, let us consider a simpler example: Titan. Titan is the largest moon of Saturn, a little larger than Earth’s moon and smaller than Earth. It is a good example of single cell atmospheric circulation. Saturn has a slow spin - fast enough to evenly distribute heat zonally (along latitudes), but also slow enough for the Coriolis force to be weak. A slow sping prevents the breaking down of the atmospheric circulation into several cells and allows for a single cell atmospheric circulation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do you know the atmospheric structure of other planets in our solar system? How rare is the 1-cell model?</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>3-Cell Model<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-left" id="id9" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/3cell_ccby_LisaRauschenbach.jpg"><img alt="../../_images/3cell_ccby_LisaRauschenbach.jpg" src="../../_images/3cell_ccby_LisaRauschenbach.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">The 3-cell model is a good approximation for the large-scale features of Earth’s atmospheric circulation structure. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>Once we allow for the complexities induced by the Coriolis force, which is in turn the result of a fairly fast spin of the planet, we break atmospheric circulation down into several cells. The 3-cell model is a good approximation for Earth’s large scale atmospheric circulation features. More specifically, instead of one Hadley Cell transporting heat from the equatorial to the polar regions, we now have three convective cells from equator to poles: The Hadley Cell, the Ferrel Cell and the Polar Cell. The surface flow and regions of subsidence and convergence also becomes a little more complex. Understanding the 3 cell model will allow us to explain many of Earth’s climate features.</p>
+<p>Let us dissect this model in more detail:</p>
+<ul class="simple">
+<li><p>The equatorial region is still characterised by a warm low-pressure belt. Pressure gradients (and winds) lead to monotonous weather known as <strong>doldrums</strong>. Warm air rises and condenses into large cumulonimbus clouds leading to thunderstorms [see “Building a climate VII and VIII”]. Additional latent heat is released, causing the air to rise even more until stable atmospheric condictions are re-established at the tropopause, which prevent further rising of air masses [see “Building a climate VII - Atmospheric Stability”].</p></li>
+<li><p>At the equatorial tropopause, air stops to rise, <strong>diverges</strong> and starts to move poleward. The Coriolis force deflects this poleward flow to the right and left in the Northern and Southern Hemisphere respectively. On its way to higher latitudes, air emits infrared radiation and cools. This is referred to as <strong>radiational cooling</strong>. Air also starts to converge as it moves towards 30° N/S, causing an increase of the mass of air aloft and thus and increase in pressure at the surface. The result is a high pressure belt at ~30°N and ~30°S. The high pressure centres making up this belt are known as <strong>subtropical highs</strong>, and the corresponding latitudes are known as the <strong>horse latitudes</strong>. At these latitudes, air subsides, warms adiabatically by compression and results in generally dry atmospheric conditions and clear skies [see “Building a climate VIII”].</p></li>
+<li><p>Near the surface at ~30° N/S, pressure gradients cause light winds moving air masses back to the equator. These are deflected by the Coriolis Force and known as <strong>trade winds</strong>. They eventually converge again at the equator in what is known as the <strong>intertropical convergence zone</strong>.</p></li>
+<li><p>Near the surface at ~30° N/S, some winds also move poleward to ~60°N/S. These are also deflected by the Coriolis Force and known as <strong>westerlies</strong> in both hemispheres. As these air masses move into higher latitudes, they meet cold polar air moving toward the equator. The cold and relatively warm air masses do not mix easily. The boundary between them is known as the <strong>polar front</strong>. At this boundary, air converges, and some air rises (to the tropopause) and moves back to ~30°N/S. The resulting circulation cell between ~30° and ~50° is known as the <strong>Ferrel Cell</strong>.</p></li>
+<li><p>The cold polar surface air moving toward 60° (to meet poleward-moving surface winds from the south) is also deflected by the Coriolis force to create the so-called <strong>polar easterlies</strong>. The low-pressure centres making up the low-pressure belt of the ~60° convergence zome are called <strong>subpolar lows</strong>. Some of the rising air at the polar front moves back poleward and sinks to the ground, creating the norhernmose high-pressure zone. This last convection cell is called the <strong>polar cell</strong>.</p></li>
+</ul>
+<p>This idealised 3-cell model is a good, first approximation for the important features of Earth’s atmospheric circulation structure. More complexities are created by introducing continents and thus land-sea interactions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a lot to take in. See if you can re-create the simple 3-cell model with its important features on paper.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Re-examine the 3-cell model after the topic of atmospheric stability was covered. You will be equipped with knowledge allowing a more in depth understanding of the 3-cell circulation model and its implications for weather.</p>
+</div>
+</div>
+<div class="section" id="jet-streams">
+<h3>Jet Streams<a class="headerlink" href="#jet-streams" title="Permalink to this headline">¶</a></h3>
+<p>In the 3-cell model, we expect two <strong>jet streams</strong>, i.e. fast flowing, narrow, synoptic-scale air currents. They are located at ~30° and ~60° on both hemispheres just under the tropopause. The <strong>subtropical jet stream</strong> is located at ~30° above the subtropical high. The <strong>polar jet stream</strong> is located near the polar front at ~60°. They are located at different heights due to the latitudinally varying height of the troposphere [see “Building a climate VII and II - Dissecting the Atmosphere”]. The high wind speeds making up the jet streams are cause by strong pressure gradients like that across the polar front, where warm southern air meets cold polar air. Here, the temperature contrast in accentuated in winter, which in turn strengthens the polar jet stream and allows it to move further into subtropical regions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>How would preferential warming at the poles affect the wind speeds and position of the polar jet stream?</p>
+</div>
 </div>
 </div>
 </div>
@@ -336,7 +410,7 @@
         
         &copy; Copyright 2021, Sebastian G. Mutz
       <span class="lastupdated">
-        Last updated on Mar 02, 2021.
+        Last updated on May 08, 2021.
       </span>
 
     </p>

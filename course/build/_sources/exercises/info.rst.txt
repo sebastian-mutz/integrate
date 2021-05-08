@@ -7,6 +7,10 @@ Learning Goals
 --------------
 Each exercise has very specific learning goals. A complete list of those for the entire course can be found in the :doc:`SYLLABUS<../general/syllabus>` section. 
 
+
+.. warning:: 
+    Your knowledge and skills build up progressively in the exercise series. You use concepts and script written in previous exercises. You should therefore make sure you do not miss any exercise, or catch up before the subsequent exercise. 
+
 Exercise Materials
 ------------------
 You will not need much to do this course, and we will provide you with necessary hard- and software. If you prefer to work on your own computer, make sure you installed:
@@ -16,15 +20,10 @@ You will not need much to do this course, and we will provide you with necessary
 .. Note:: 
    
    While the language used in this course is Python, you are free to use a different language you feel more comfortable with.
-
   
 Terminology
 -----------
-In this exercise (and lecture) series, you will be introduced to some vocabulary you may not yet know. A complete list the terminology used in this course (incl. definitions and examples) can be found in the :doc:`DICTIONARY<../resources/dictionary>`. 
-
-Submissions
------------
-All submissions for this course will have to be handed in via `ILIAS <https://ovidius.uni-tuebingen.de/>`_.
+In this exercise series, you will be introduced to some vocabulary you may not yet know. A complete list the terminology used in this course (incl. definitions and examples) can be found in the :doc:`DICTIONARY<../resources/dictionary>`. 
 
 Feedback
 --------

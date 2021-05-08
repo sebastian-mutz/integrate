@@ -95,7 +95,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/grading.html">Grading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
 </ul>
@@ -151,6 +150,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">P2-E002</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E105/E105.html">P2-E005</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E201/E201.html">P3-E201</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Projects:</span></p>
 <ul>
@@ -161,11 +162,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P008/P008_info.html">Project P008</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/P009/P009_info.html">Project P009</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Resources:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/guide.html">Guide</a></li>
 </ul>
 
             
@@ -261,10 +268,6 @@
 <p>First, we will agree on the definitions of various terminology used in the course. This way, we ensure effective communication. In some cases, there is more than one valid definition, but the definitions used here do not significantly deviate (if at all) from other common definitions.</p>
 <div class="section" id="weather">
 <h3>Weather<a class="headerlink" href="#weather" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-right" id="id1" style="width: 300px">
-<a class="reference internal image-reference" href="../../_images/cirrus_noaa.jpg"><img alt="../../_images/cirrus_noaa.jpg" src="../../_images/cirrus_noaa.jpg" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Cirrus clouds. [image: noaa.gov]</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
 <p>Intuitively, weather can be described as the relatively short-lived, temporary mood of the atmosphere at a specific location. More formally, weather can be described as the condition of meteorological processes at a specific location over a short time span.</p>
 <p><strong>Informal definition</strong> (intuitive): “The temporary mood of the atmosphere at a specific location”</p>
 <p><strong>Formal defition</strong> (one of many): “Condition of meteorological processes at a specific location over a short time span (usually a day)” [Kuttler W., 2013]</p>
@@ -272,9 +275,9 @@
 <div class="section" id="climate">
 <h3>Climate<a class="headerlink" href="#climate" title="Permalink to this headline">¶</a></h3>
 <p>Extending the analogy above to climate, we can say the following: If weather is the temporary mood of the atmosphere, climate can be regarded as the character of the atmosphere. While the character can be seen as the average set of moods you can have, it does determine probabilities of certain moods.</p>
-<div class="figure align-left" id="id2" style="width: 400px">
-<a class="reference internal image-reference" href="../../_images/palaeoclimate.jpg"><img alt="../../_images/palaeoclimate.jpg" src="../../_images/palaeoclimate.jpg" style="width: 400px;" /></a>
-<p class="caption"><span class="caption-text">Temperature climatologies for a pre-industrial world (left), and temperature deviations from pre-industrial climatologies for the Last Glacial Maximum (middle) and mid_Pliocene (right) [data: Mutz et al., 2018].</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<div class="figure align-right" id="id1" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/palaeoclimate_ccby_SebastianMutz.jpg"><img alt="../../_images/palaeoclimate_ccby_SebastianMutz.jpg" src="../../_images/palaeoclimate_ccby_SebastianMutz.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">Temperature climatologies for a pre-industrial world (left), and temperature deviations from pre-industrial climatologies for the Last Glacial Maximum (middle) and mid_Pliocene (right). [image: cc-by Sebastian Mutz; data: Mutz et al., 2018]</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Informal definition</strong> (intuitive): “The character of the atmosphere (that determines probabilities for different moods)”</p>
 <p><strong>Formal defition</strong> (one of many): “Summary of weather of a specific region over longer time scales (typically at least 30 years)” [Kuttler W., 2013]</p>
@@ -292,9 +295,9 @@
 <li><p>An <strong>isolated system</strong> allows no mass or energy folw through the boundary.</p></li>
 <li><p>A <strong>closed system</strong> allows energy, but no mass flow through the bounday.</p></li>
 </ul>
-<div class="figure align-center" id="id3">
+<div class="figure align-center" id="id2">
 <img alt="../../_images/thermosAndCup.jpg" src="../../_images/thermosAndCup.jpg" />
-<p class="caption"><span class="caption-text">A thermos flask can be seen as an example of a closed, isolated or open system depending on its closeness to an idealised thermos flask and its current state (open or closed). How would you categorise a to-go cup?</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">A thermos flask can be seen as an example of a closed, isolated or open system depending on its closeness to an idealised thermos flask and its current state (open or closed). How would you categorise a to-go cup?</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>An idealised thermos flask with a closed lid can be taken as an example of closd system, because neither mass nor heat is allowed to escape. For real (non-idealised) thermos flasks, we experience that the latter is not entirely true of course, since a lot of heat is allowed to flow through the boundary quite easily over the course of a day. We could therefore argue that a real (non-idealised) thermos flask should be categorised as an isolated system instead. Once you open the flask, you turn it into an open system, allowing exchange of mass and energy.</p>
 <div class="admonition note">
@@ -326,9 +329,9 @@
 <div class="section" id="the-climate-system">
 <h3>The Climate System<a class="headerlink" href="#the-climate-system" title="Permalink to this headline">¶</a></h3>
 <p>Typically, the climate system on Earth includes the atmosphere, cryosphere, hydrosphere, biosphere and land surface. <strong>Climate elements</strong> are measurable meteorological quantities that can be statisticall processed with regard to the measurement period. They are the state variables of the climate system. <strong>Climate factors</strong> are influencing quantities that modify climate elements, and <strong>climate forcings</strong> are climate factors that drive/force/control climate elements from outside the climate system. Finally, we use the term <strong>climate dynamics</strong> to describe (1) effects of (external) forcings on the system or (2) forces and movements that characterise the system.</p>
-<div class="figure align-center" id="id4" style="width: 700px">
-<a class="reference internal image-reference" href="../../_images/_climateSystem.jpg"><img alt="../../_images/_climateSystem.jpg" src="../../_images/_climateSystem.jpg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-text">The different parts of the climate system and how they interact.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<div class="figure align-center" id="id3" style="width: 700px">
+<a class="reference internal image-reference" href="../../_images/climateSystem_ccby_LisaRauschenbach.jpg"><img alt="../../_images/climateSystem_ccby_LisaRauschenbach.jpg" src="../../_images/climateSystem_ccby_LisaRauschenbach.jpg" style="width: 700px;" /></a>
+<p class="caption"><span class="caption-text">The different parts of the climate system and how they interact. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -463,8 +466,9 @@
 <div class="section" id="layering">
 <h3>Layering<a class="headerlink" href="#layering" title="Permalink to this headline">¶</a></h3>
 <p>We use the following, common layering scheme for the atmosphere. It subdivides the atmosphere into Troposphere, Stratosphere, Mesosphere and Thermosphere.</p>
-<div class="figure align-center" style="width: 400px">
-<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+<div class="figure align-center" id="id4" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/atmProf0_ccby_LisaRauschenbach.jpg"><img alt="../../_images/atmProf0_ccby_LisaRauschenbach.jpg" src="../../_images/atmProf0_ccby_LisaRauschenbach.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">[image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -474,15 +478,17 @@
 <div class="section" id="temperature-defined-boundaries">
 <h3>Temperature-Defined Boundaries<a class="headerlink" href="#temperature-defined-boundaries" title="Permalink to this headline">¶</a></h3>
 <p>We subdivide the atmopheric profile by air temperature, because boundaries more easily tied to specific heights than compositional boundaries. The figure shows a (very conceptual) vertical temperature profile of the atmosphere.</p>
-<div class="figure align-center" style="width: 400px">
-<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+<div class="figure align-center" id="id5" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/atmProf1_ccby_LisaRauschenbach.jpg"><img alt="../../_images/atmProf1_ccby_LisaRauschenbach.jpg" src="../../_images/atmProf1_ccby_LisaRauschenbach.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">[image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <p>We will walk through the different layers and look at their attributes step-by-step.</p>
 </div>
 <div class="section" id="troposphere">
 <h3>Troposphere<a class="headerlink" href="#troposphere" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-left" style="width: 400px">
-<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+<div class="figure align-left" id="id6" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/atmProf2_ccby_LisaRauschenbach.jpg"><img alt="../../_images/atmProf2_ccby_LisaRauschenbach.jpg" src="../../_images/atmProf2_ccby_LisaRauschenbach.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">[image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Troposhpere fact sheet</strong>:</p>
 <ul class="simple">
@@ -504,8 +510,9 @@
 </div>
 <div class="section" id="stratosphere">
 <h3>Stratosphere<a class="headerlink" href="#stratosphere" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-left" style="width: 400px">
-<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+<div class="figure align-left" id="id7" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/atmProf3_ccby_LisaRauschenbach.jpg"><img alt="../../_images/atmProf3_ccby_LisaRauschenbach.jpg" src="../../_images/atmProf3_ccby_LisaRauschenbach.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">[image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Stratosphere fact sheet</strong>:</p>
 <ul class="simple">
@@ -536,8 +543,9 @@
 </div>
 <div class="section" id="mesosphere">
 <h3>Mesosphere<a class="headerlink" href="#mesosphere" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-left" style="width: 400px">
-<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+<div class="figure align-left" id="id8" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/atmProf4_ccby_LisaRauschenbach.jpg"><img alt="../../_images/atmProf4_ccby_LisaRauschenbach.jpg" src="../../_images/atmProf4_ccby_LisaRauschenbach.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">[image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Mesosphere fact sheet</strong>:</p>
 <ul class="simple">
@@ -557,8 +565,9 @@
 </div>
 <div class="section" id="thermosphere-and-exosphere">
 <h3>Thermosphere and Exosphere<a class="headerlink" href="#thermosphere-and-exosphere" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-left" style="width: 400px">
-<a class="reference internal image-reference" href="../../_images/_atmProf0.jpg"><img alt="../../_images/_atmProf0.jpg" src="../../_images/_atmProf0.jpg" style="width: 400px;" /></a>
+<div class="figure align-left" id="id9" style="width: 400px">
+<a class="reference internal image-reference" href="../../_images/atmProf5_ccby_LisaRauschenbach.jpg"><img alt="../../_images/atmProf5_ccby_LisaRauschenbach.jpg" src="../../_images/atmProf5_ccby_LisaRauschenbach.jpg" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text">[image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
 <p><strong>Thermosphere</strong></p>
 <ul class="simple">
@@ -598,7 +607,7 @@
         
         &copy; Copyright 2021, Sebastian G. Mutz
       <span class="lastupdated">
-        Last updated on Feb 25, 2021.
+        Last updated on May 08, 2021.
       </span>
 
     </p>
