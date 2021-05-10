@@ -18,9 +18,9 @@ For Students
 ------------
 Students can get an overview of the course in the :doc:`general information section<general/info>` and a more detailed overview of the learning goals and course contents in the :doc:`syllabus section<general/syllabus>`. 
 
-Get the Code
-------------
-The entire code for this course website (incl. all figures and code) is available from this `GitHub respository <https://github.com/sebastian-mutz/integrate>`_. 
+For Developers
+--------------
+The entire source material for this course website (incl. all figures and code) is available from this `GitHub respository <https://github.com/sebastian-mutz/integrate>`_. 
 
     
 Table of Contents
