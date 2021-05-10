@@ -21,15 +21,15 @@ Acknowledgements
 +--------------------------+----------------------------------------------------------------+
 | Version                  |   Acknowlegements                                              |
 +==========================+================================================================+
-|**0.9**                   | Sebastian G. Mutz (concept, organisation and implementation)   |
+|**0.9**                   | Sebastian G. Mutz (concept, organisation, implementation)      |
 |                          |                                                                |
 | ClimStat Exercise Series | Willi Kappler (feedback and edits)                             |
 +--------------------------+----------------------------------------------------------------+
-|**1.0**                   | Sebastian G. Mutz (concept, organisation and implementation)   |
+|**1.0**                   | Sebastian G. Mutz (concept, organisation, implementation)      |
 | INTEGRATE                |                                                                |
-|                          | Solmaz Mohadjer (feedback and edits)                           |
+|                          | Solmaz Mohadjer (organisational assistance, feedback)          |
 |                          |                                                                |
-|                          | Lisa Rauschenbach (additional art and graphical edits)         |
+|                          | Lisa Rauschenbach (additional graphics, feedback)              |
 |                          |                                                                |
 |                          | Daniel Boateng (assistant: implementation of phase 3 exercise) |
 |                          |                                                                |
