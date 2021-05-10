@@ -3,21 +3,6 @@ Syllabus
 
 The course is designed for completion within 14 weeks. It includes a lecture series about fundamentals in climatology, and an exercise series teaching the basics of programming, applied statistics and the assembling of a basic measurement system. 
 
-Mixed-Topic Concept
--------------------
-
-**Why co-teaching climatology, probability, statistics and programming is a good idea ... probably**
-
-**Climatology**:
-The teaching for this theme block focuses on atmospheric physics and the more quantitative aspects of climate change through time to complement other climate related modules. Due to the nature of climate-related data, climatology offers an excellent set of very real problems to demonstrate commonly used and transferrable methods from statistics and machine learning. It thus provides an excellent platform for case studies of the second theme block.
-
-**Statistics and Probability**:
-Practical statistics can be regarded as mathematical modelling under uncertainty, and probability is a measure for uncertainty. Ergo, a practical understanding of these topics is essential for every discipline in science and engineering. Furthermore, they provides the basis for machine learning, artificial intelligence and data science. Rather than teaching recipe-book type statistics, the focus of this course lies on teaching *statistical thinking* that allows you to understand and competently use basic mathematical models and statistical building blocks that also make up most advanced method in machine learning.
-
-**Programming**:
-Instructing others in a topic or method requires that you have a solid understanding of it. Computers will do exactly what you tell it and punish any vague instruction with an error message (if you're lucky) or with broken code. Consequently, instructing computers (through writing code) requires this understanding even more. They are a useful mirror for your level of knowledge and competence. Therefore, this course does not make excessive use of pre-written code, but instead teaches the basics of programming and how to implement even more advanced techniques with basic tools. 
-
-
 Lectures
 --------
 
