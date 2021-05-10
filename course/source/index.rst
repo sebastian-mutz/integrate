@@ -5,7 +5,7 @@
 
 .. figure:: img/banner001.jpg   
 
-INTEGRATE Learning Package
+INTEGRATE Teaching Package
 ==========================
 
 The INTEGRATE (Integrated Teaching of Atmospheric Science, Technical/Computer Skills and Empirical Methods) teaching package covers the topics of physical climatology, empirical (statistical) methods and a hands-on approach of collecting atmospheric data and working with readily available climatological records. The development of this teaching package was supported by the EGU Higher Education Teaching Grant 2020 awarded to the primary author Sebastian G. Mutz.
