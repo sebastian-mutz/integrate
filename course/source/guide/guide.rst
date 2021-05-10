@@ -2,6 +2,7 @@ Guide
 =====
 
 Welcome to the teacher's guide of this learning package. It will take you through:
+
 1. **Requirements** - a brief list of important background knowledge and materials needed to teach this course "as is".
 2. **How to Use this Resource** - a quick walk through course material, how to use it, and how to prepare for teaching it.
 3. **Structure of Source Material** - an introduction to the folder structure of the source material, so you know where's what.
