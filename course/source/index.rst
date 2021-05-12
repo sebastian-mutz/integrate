@@ -10,6 +10,13 @@ INTEGRATE Teaching Package
 
 INTEGRATE (*Integrated Teaching of Atmospheric Science, Technical Skills and Empirical Methods*) is an open-access, open-source teaching package covers the topics of physical climatology, empirical methods and a hands-on approach of collecting and analysing atmospheric data. It was forked from a University of Tübingen module developed and taught by Sebastian G. Mutz. Its further development was supported by the EGU Higher Education Teaching Grant 2020.
 
+A Video Introduction
+--------------------
+
+.. raw:: html
+
+    <iframe width="700" height="400" src="https://youtu.be/s2_M1NN2HH4" frameborder="0" allowfullscreen></iframe>
+
 For Teachers
 ------------
 Teachers of the course are advised to :doc:`start here with our teacher guide <guide/guide>`. We support the use and further development of our materials by other teachers and thus release the course source code under a very permissive license on this `GitHub page <https://github.com/sebastian-mutz/integrate>`_. Please consult :doc:`our licensing and terms of use<general/license>` to make sure you are aware of all the possibilities you have with this package.
@@ -26,7 +33,7 @@ Contact
 -------
 Did the teacher's guide or course material leave any unanswered questions? Do want to share your experiences with this course? Do you have other feedback or simply wish to get in touch about teaching and science? Feel free to e-mail me: **sebastian.mutz@uni-tuebingen.de**
 
-    
+
 Table of Contents
 -----------------    
     
