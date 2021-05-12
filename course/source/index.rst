@@ -15,7 +15,7 @@ A Video Introduction
 
 .. raw:: html
 
-    <iframe width="700" height="400" src="https://youtu.be/s2_M1NN2HH4" frameborder="0" allowfullscreen></iframe>
+    <iframe width="700" height="400" src="https://youtu.be/rJE1AHjZVCo" frameborder="0" allowfullscreen></iframe>
 
 For Teachers
 ------------
