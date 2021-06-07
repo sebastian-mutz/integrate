@@ -141,7 +141,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">P2-E003</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">P2-E004</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exercises/E105/E105.html">P2-E005</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../exercises/E201/E201.html">P3-E201</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E201/E201.html">P3-E001</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Projects:</span></p>
 <ul>
@@ -258,7 +258,7 @@
 <img alt="../../_images/radFlux001_ccby_SebastianMutz.jpg" src="../../_images/radFlux001_ccby_SebastianMutz.jpg" />
 <p class="caption"><span class="caption-text">The concept of black body radiation is essential in understanding radiative fluxes (the input and output) of Earth. Specifically, it lets us calculate the nature of incoming and outgoing radiation, as well as the mean global temperatures on Earth or any planet if the whole system is in equilibrium. [image: cc-by Sebastian Mutz]</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>A <strong>black body</strong> is an idealised opaque, non-reflective object or system that absorbs all incident radiation and re-radiates energy. <strong>Black body radiation</strong> is the electromagnetic radiation emitted by a black body (that is in thermodynamic equilibrium with its environment). Its spectrum of of wavelengths depends only on the body’s temperature. The characteristics of black body radiation are therefore only dependent on the system’s attributes (temperature) rather than the nature of previously absorbed radiation. The concept of black body radiation is central in understanding the important radiative fluxes of the climate system and global mean temperatures on Earth.</p>
+<p>A <strong>black body</strong> is an idealised opaque, non-reflective object or system that absorbs all incident radiation and re-radiates energy. <strong>Black body radiation</strong> is the electromagnetic radiation emitted by a black body (that is in thermodynamic equilibrium with its environment). Its spectrum of wavelengths depends only on the body’s temperature. The characteristics of black body radiation are therefore only dependent on the system’s attributes (temperature) rather than the nature of previously absorbed radiation. The concept of black body radiation is central in understanding the important radiative fluxes of the climate system and global mean temperatures on Earth.</p>
 <div class="section" id="wien-s-law">
 <h3>Wien’s Law<a class="headerlink" href="#wien-s-law" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-right" id="id2" style="width: 300px">
@@ -280,14 +280,14 @@
 <div class="math notranslate nohighlight">
 \[\lambda_{max(sun)} \approx 0.49 \mu m\]</div>
 <div class="math notranslate nohighlight">
-\[\lambda_{max(earth)} \approx 0.49 \mu m\]</div>
+\[\lambda_{max(earth)} \approx 0.96 \mu m\]</div>
 </div>
 <div class="section" id="revisiting-the-electromagnetic-spectrum">
 <h3>Revisiting the Electromagnetic Spectrum<a class="headerlink" href="#revisiting-the-electromagnetic-spectrum" title="Permalink to this headline">¶</a></h3>
 <p>Before we move on, let us remind ourselves of the electromagnetic spectrum, the visible spectrum and where the energy in Earth’s climate system fits. Examine the figure below.</p>
 <div class="figure align-center" id="id3">
 <img alt="../../_images/spectrum_ccby_LisaRauschenbach.jpg" src="../../_images/spectrum_ccby_LisaRauschenbach.jpg" />
-<p class="caption"><span class="caption-text">The elextromagnetic spectrum, visible light and where the energy in Earth’s climate system fits. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">The electromagnetic spectrum, visible light and where the energy in Earth’s climate system fits. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -325,7 +325,7 @@
 \[\begin{equation}
   E_0 = \frac { \Phi_{sol} }{ 4·\pi·R^2 }
   = \frac { 3.9·10^{26} W }{ 4·\pi·(1.5·10^{11} m)^2 }
-  \approx 1380 Wm^2
+  \approx 1380 Wm^{-2}
 \end{equation}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -342,7 +342,7 @@
 \[\begin{equation}
   radiation_{intercepted} = E_0 · \pi · r^2_{earth}
 \end{equation}\]</div>
-<p>Note how we went from units of <span class="math notranslate nohighlight">\(Wm^2\)</span> to <span class="math notranslate nohighlight">\(W\)</span> by multiplication of <span class="math notranslate nohighlight">\(E_0\)</span> with an area.</p>
+<p>Note how we went from units of <span class="math notranslate nohighlight">\(Wm^{-2}\)</span> to <span class="math notranslate nohighlight">\(W\)</span> by multiplication of <span class="math notranslate nohighlight">\(E_0\)</span> with an area.</p>
 <div class="figure align-center" id="id6">
 <img alt="../../_images/radFlux003_ccby_SebastianMutz.jpg" src="../../_images/radFlux003_ccby_SebastianMutz.jpg" />
 <p class="caption"><span class="caption-text">The surface area of the circular shade that is hypothetically cast by the Earth as the sun shines onto it from the other side represents the intercepted radiation. [image: cc-by Sebastian Mutz]</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
@@ -355,7 +355,7 @@
 </div>
 <div class="section" id="earth-s-mean-global-temperature">
 <h3>Earth’s Mean Global Temperature<a class="headerlink" href="#earth-s-mean-global-temperature" title="Permalink to this headline">¶</a></h3>
-<p>Since our system is in euilibrium, the total amount of radiation absorbed by Earth equals the total amount of radiation emitted Earth. We have previously established that we can calculate the total amount of emitted radiation (per area) using the Stefan-Boltzman equation and the temperature of an object (or planet). In this case, the temperature of the object is the mean global temperature on Earth, i.e. the element we want to calculate! Note that we previously calculated the total absorbed radiation, but the Stephan-Boltzman equation gives us power per area. We therefore have to correct for area before equating the two. To calculate the absorbed radiation per unit area, we can simply multiply by the area ( <span class="math notranslate nohighlight">\(\pi·r^2\)</span> ) again and get:</p>
+<p>Since our system is in euilibrium, the total amount of radiation absorbed by Earth equals the total amount of radiation emitted Earth. We have previously established that we can calculate the total amount of emitted radiation (per area) using the Stefan-Boltzman equation and the temperature of an object (or planet). In this case, the temperature of the object is the mean global temperature on Earth, i.e. the element we want to calculate! Note that we previously calculated the total absorbed radiation, but the Stephan-Boltzman equation gives us power per area. We therefore have to correct for area before equating the two. To calculate the absorbed radiation per unit area, we can simply divide by the area ( <span class="math notranslate nohighlight">\(\pi·r^2\)</span> ) again and get:</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   \frac {radiation_{absorbed}}{area} = E_0 · (1-\alpha)
@@ -443,7 +443,7 @@
         
         &copy; Copyright 2021, Sebastian G. Mutz
       <span class="lastupdated">
-        Last updated on May 10, 2021.
+        Last updated on Jun 07, 2021.
       </span>
 
     </p>

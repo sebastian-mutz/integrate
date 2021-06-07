@@ -31,7 +31,7 @@ Acknowledgements
 |                          |                                                                |
 |                          | Lisa Rauschenbach (additional graphics, feedback)              |
 |                          |                                                                |
-|                          | Daniel Boateng (assistant: implementation of phase 3 exercise) |
+|                          | Daniel Boateng (assistant: phase 3 exercise, edits)            |
 |                          |                                                                |
 |                          | Noam Poremba (tester for phase 3 exercise)                     |
 |                          |                                                                |

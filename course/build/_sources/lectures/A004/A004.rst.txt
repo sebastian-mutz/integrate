@@ -115,7 +115,7 @@ Air is a mixture of gases. It is well mixed and does not change with latitude, s
 | Ar           |          0.9%          |            1.3%        |
 +--------------+------------------------+------------------------+
 
-These are the major contributors to volume and mass. Additionally, there are everal important trace gases that do vary in concentration much more (in time and space):
+These are the major contributors to volume and mass. Additionally, there are several important trace gases that do vary in concentration much more (in time and space):
 
 +----------------+------------------------+
 | trace gas      | contribution to volume |
@@ -124,7 +124,8 @@ These are the major contributors to volume and mass. Additionally, there are eve
 +----------------+------------------------+
 | CO\ :sub:`2`\  | 400 ppm +/- 5%*        |
 +----------------+------------------------+
-*CO\ :sub:`2`\  concentrations are rapidly changing due to human activity.
+
+Note: CO\ :sub:`2`\  concentrations are rapidly changing due to human activity.
 
 The composition of "air" leads to its commonly used attributes:
 
@@ -323,7 +324,7 @@ where:
 * \ :math:`P_h` \ - pressure at height h
 * \ :math:`P_0` \ - pressure at sea level
 * \ :math:`m` \ - molecular mass (of air)
-* \ :math:`P_h` \ - acceleration due to gravity
+* \ :math:`g` \ - acceleration due to gravity
 * \ :math:`\bar{R}` \ - universal gas constant
 * \ :math:`T` \ - temperature
     

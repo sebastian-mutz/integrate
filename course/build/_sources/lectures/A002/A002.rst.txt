@@ -19,7 +19,7 @@ Information
 Celestial Mechanics and Orbital Forcing
 ---------------------------------------
 
-Broadly speaking, **celestial mechanics** is concerned with the movements of objects in outer space. This includes the way planets orbit the stars like Earth is orbiting our sun. This is of particular interest to climatologists, because the nature and rhythms of the ways in which Earth orbits the sun changes the **solar radiation** that different regions on Earth receive in particular seasons. In turn, this redistribution of solar radiation creates very different climates. When climate is changed as a result of changing orbital parameters, we speak of **orbital forcing** of our climate. Note that these changes are slow and take place on **orbital time scales** of 10s to 100s ka. These changes happen at a higher frequency than changes on the **geological/tectonic timr scale**, and at a lower frequency than changes on the **historical time scale** and **millenial/deglacial time scale**.
+Broadly speaking, **celestial mechanics** is concerned with the movements of objects in outer space. This includes the way planets orbit the stars like Earth is orbiting our sun. This is of particular interest to climatologists, because the nature and rhythms of the ways in which Earth orbits the sun changes the **solar radiation** that different regions on Earth receive in particular seasons. In turn, this redistribution of solar radiation creates very different climates. When climate is changed as a result of changing orbital parameters, we speak of **orbital forcing** of our climate. Note that these changes are slow and take place on **orbital time scales** of 10s to 100s ka. These changes happen at a higher frequency than changes on the **geological/tectonic time scale**, and at a lower frequency than changes on the **historical time scale** and **millenial/deglacial time scale**.
 
 .. note:: Can you think of well known climate change events? On which time scales did they take place and how were they forced?
 
@@ -60,7 +60,7 @@ Eccentricity is determined by distance between foci and describes amount by whic
 .. math::
 
     \begin{equation}
-      e=\frac {r_a-r_b}{r_a+r_b}
+      e=\frac {r_a-r_p}{r_a+r_p}
     \end{equation}
 
 In the above equation, e is the eccentricity, r\ :sub:`a`\ is the radius at apoapsis and r\ :sub:`p`\ is the radius at periapsis. The value for e describes the amount by which an object’s orbit deviates from a perfect circle, where 0 denotes a circular orbit and 1 would be a parabolic escape orbit.
@@ -100,7 +100,7 @@ This law can also be described as:
       \frac {r_1^3}{t_1^2} = \frac {r_2^3}{t_2^2} = constant for planets
     \end{equation}
 
-In the equation above, r\ :sub:`1`\ and t\ :sub:`1`\ represent the semi-major axis and orbital period of planet 1 (e.g. Mars) and  r\ :sub:`1`\ and t\ :sub:`1`\ represent the semi-major axis and orbital period of planet 2 (e.g. Earth).
+In the equation above, r\ :sub:`1`\ and t\ :sub:`1`\ represent the semi-major axis and orbital period of planet 1 (e.g. Mars) and  r\ :sub:`2`\ and t\ :sub:`2`\ represent the semi-major axis and orbital period of planet 2 (e.g. Earth).
 
 
 .. note:: Look up the distances and orbital periods of Earth and Mars. Can you confirm this law? Can you imagine how this could be related to Newton's Law of gravitation?

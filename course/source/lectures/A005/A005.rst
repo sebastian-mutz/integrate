@@ -62,7 +62,7 @@ For an air parcel moving across isobars, the pressure gradient force can be comp
 .. math:: 
 
     \begin{equation}
-      F_p = \frac {\Delta P}{\Delta} · V
+      F_p = \frac {\Delta P}{\Delta D} · V
       = \nabla P · V
     \end{equation}   
 
@@ -150,7 +150,7 @@ Cyclones, Anti-Cyclones and Geostrophic Winds
 .. figure:: img/coriolis003.jpg  
    :align: center
    
-   Left: Geostrophic winds follow a a counterclockwise path in the Northern Hemisphere (and a clockwise path in the Southern Hemisphere) along the isobars of low pressure cells (cyclones). 
+   Left: Geostrophic winds follow a counterclockwise path in the Northern Hemisphere (and a clockwise path in the Southern Hemisphere) along the isobars of low pressure cells (cyclones). 
    
    Right: Geostrophic winds follow a a clockwise path in the Northern Hemisphere (and a counterclockwise path in the Southern Hemisphere) along the isobars of high pressure cells (anti-cyclones).
 

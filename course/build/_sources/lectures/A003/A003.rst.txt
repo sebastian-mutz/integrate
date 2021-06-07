@@ -25,7 +25,7 @@ Black Body Radiation
    
    The concept of black body radiation is essential in understanding radiative fluxes (the input and output) of Earth. Specifically, it lets us calculate the nature of incoming and outgoing radiation, as well as the mean global temperatures on Earth or any planet if the whole system is in equilibrium. [image: cc-by Sebastian Mutz]
 
-A **black body** is an idealised opaque, non-reflective object or system that absorbs all incident radiation and re-radiates energy. **Black body radiation** is the electromagnetic radiation emitted by a black body (that is in thermodynamic equilibrium with its environment). Its spectrum of of wavelengths depends only on the body's temperature. The characteristics of black body radiation are therefore only dependent on the system's attributes (temperature) rather than the nature of previously absorbed radiation. The concept of black body radiation is central in understanding the important radiative fluxes of the climate system and global mean temperatures on Earth. 
+A **black body** is an idealised opaque, non-reflective object or system that absorbs all incident radiation and re-radiates energy. **Black body radiation** is the electromagnetic radiation emitted by a black body (that is in thermodynamic equilibrium with its environment). Its spectrum of wavelengths depends only on the body's temperature. The characteristics of black body radiation are therefore only dependent on the system's attributes (temperature) rather than the nature of previously absorbed radiation. The concept of black body radiation is central in understanding the important radiative fluxes of the climate system and global mean temperatures on Earth. 
 
 
 Wien's Law
@@ -56,7 +56,7 @@ Two important peaks to remember for the climate system on Earth are:
 
 .. math:: \lambda_{max(sun)} \approx 0.49 \mu m
    
-.. math:: \lambda_{max(earth)} \approx 0.49 \mu m
+.. math:: \lambda_{max(earth)} \approx 0.96 \mu m
 
 
 Revisiting the Electromagnetic Spectrum
@@ -67,7 +67,7 @@ Before we move on, let us remind ourselves of the electromagnetic spectrum, the 
 .. figure:: img/spectrum_ccby_LisaRauschenbach.jpg  
    :align: center
    
-   The elextromagnetic spectrum, visible light and where the energy in Earth's climate system fits. [image: cc-by Lisa Rauschenbach]
+   The electromagnetic spectrum, visible light and where the energy in Earth's climate system fits. [image: cc-by Lisa Rauschenbach]
 
 .. note:: Determine the peak radiation for different temperature black bodies. Repeat this for the sun and Earth. Do your results match the previous figure? Why do you think we are able to see this particular range in the electromagnetic spectrum?
 
@@ -114,7 +114,7 @@ Sun rays "spread out" into space and radiation becomes less as an inverse square
     \begin{equation}
       E_0 = \frac { \Phi_{sol} }{ 4·\pi·R^2 }
       = \frac { 3.9·10^{26} W }{ 4·\pi·(1.5·10^{11} m)^2 }    
-      \approx 1380 Wm^2
+      \approx 1380 Wm^{-2}
     \end{equation}          
 
 .. note:: What would the solar constant be for Mars?    
@@ -136,7 +136,7 @@ Let's first look at how much radiation is actually intercepted by Earth. Imagine
       radiation_{intercepted} = E_0 · \pi · r^2_{earth}
     \end{equation}          
  
-Note how we went from units of \ :math:`Wm^2` \ to \ :math:`W` \ by multiplication of \ :math:`E_0` \ with an area.
+Note how we went from units of \ :math:`Wm^{-2}` \ to \ :math:`W` \ by multiplication of \ :math:`E_0` \ with an area.
 
 .. figure:: img/radFlux003_ccby_SebastianMutz.jpg  
    :align: center
@@ -154,7 +154,7 @@ Next, we need to take into account that the **Earth is not a perfect black body*
 Earth's Mean Global Temperature
 ...............................
 
-Since our system is in euilibrium, the total amount of radiation absorbed by Earth equals the total amount of radiation emitted Earth. We have previously established that we can calculate the total amount of emitted radiation (per area) using the Stefan-Boltzman equation and the temperature of an object (or planet). In this case, the temperature of the object is the mean global temperature on Earth, i.e. the element we want to calculate! Note that we previously calculated the total absorbed radiation, but the Stephan-Boltzman equation gives us power per area. We therefore have to correct for area before equating the two. To calculate the absorbed radiation per unit area, we can simply multiply by the area ( \ :math:`\pi·r^2` \) again and get:
+Since our system is in euilibrium, the total amount of radiation absorbed by Earth equals the total amount of radiation emitted Earth. We have previously established that we can calculate the total amount of emitted radiation (per area) using the Stefan-Boltzman equation and the temperature of an object (or planet). In this case, the temperature of the object is the mean global temperature on Earth, i.e. the element we want to calculate! Note that we previously calculated the total absorbed radiation, but the Stephan-Boltzman equation gives us power per area. We therefore have to correct for area before equating the two. To calculate the absorbed radiation per unit area, we can simply divide by the area ( \ :math:`\pi·r^2` \) again and get:
 
 .. math::
 
