@@ -197,11 +197,11 @@ The speed of molecules can be calculated as follows:
 .. math::
 
     \begin{equation}
-      v_m = \sqrt {\frac {3·k_b·T}{m}}
+      v_m = \sqrt {\frac {3·R·T}{m}}
     \end{equation}
 
 * v\ :sub:`m`\ - molecular speed
-* k\ :sub:`b`\  - gas constant (8.314 kg·m\ :sub:`2`\/s\ :sub:`2`\·mol·K)
+* R  - gas constant (8.314 kg·m\ :sup:`2`\s\ :sup:`-2`\·K\ :sup:`-1`\·mol\ :sup:`-1`)
 * T   - temperature 
 * m   - mass (molecular)
 
