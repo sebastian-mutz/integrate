@@ -13,7 +13,7 @@ This is the credits section for the course material. We encourage people who con
 Version History
 ---------------
 
-Note that the exercises in the P1 and P2 series are based on the ClimStat exercise series developed as part of the University of Tübingen geoscience module "Climate Dynamics, Probability and Statistics", which is still available `here <https://esdynamics.geo.uni-tuebingen.de/climstat/index.html>`_. It is therefore credited as version 0.9 in the INTEGRATE learning package. 
+Note that the exercises in the P1 and P2 series are based on the ClimStat exercise series developed as part of the University of Tübingen geoscience module "Climate Dynamics, Probability and Statistics". It is therefore credited as version 0.9 of the INTEGRATE learning package.
 
 Acknowledgements
 ----------------
@@ -38,6 +38,9 @@ Acknowledgements
 |                          | Julia Hellmig (tester for phase 3 exercise)                    |
 |                          |                                                                |
 |                          | Gerhard Mutz (photographer)                                    |
++--------------------------+----------------------------------------------------------------+
+|**1.1**                   | Sebastian G. Mutz                                              |
+| INTEGRATE                |                                                                |
 +--------------------------+----------------------------------------------------------------+
 
 

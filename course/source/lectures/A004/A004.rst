@@ -235,11 +235,11 @@ The buoyancy ("upward") force is related to the density of the environment:
 
 The "downward" force is related to the density of the parcel:      
 
-\ :math:`g = V · \rho_p · g` \
+\ :math:`F_g = V · \rho_p · g` \
   
 Once this parcel of air has equilibrates pressure with its environment, which happens very rapidly, the parcel density will be lower, buoyancy will be greater, a net "upward" force is the result and the air parcel rises. If the air parcel were cooler, the opposit would happen.
 
-Consider our version of the ideal gas constant:
+Consider our version of the ideal gas law:
 
 .. math:: 
 

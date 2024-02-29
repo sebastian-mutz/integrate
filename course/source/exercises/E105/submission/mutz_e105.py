@@ -107,7 +107,7 @@ remember dT (change in temperature) = dQ (change in heat/energy) / C (heat capac
 radiation is measured in W/m^2 (J/(s*m^2)) and heat capacity is given in J/(K*m^2) here.
 
 Note: When calculating the radiation emitted by Earth, a multiplication by the factor of 0.95 is
-necessary to take into consideration the emissive propertiesof the Earth's surface.
+necessary to take into consideration the emissive properties of the Earth's surface.
 
 4-a: Initialise temperature at 300K and let it evolve using a heat capacity of the atmosphere only.
 4-b: Change the initial temperature, run your code again and see what happens. Does this make sense?

@@ -5,7 +5,7 @@ This page contains general information for the course "INTEGRATE".
 
 Short Description
 -----------------
-The INTEGRATE (Integrated Teaching of Atmospheric Science, Technical/Computer Skills and Empirical Methods) teaching package covers the theory and hands-on approach of collecting atmospheric data and working with readily available climatological records on real problems using modern empirical methods. 
+The INTEGRATE (*INTEGRation of Atmospheric science, Technical and Empirical methods*) teaching package covers the theory and hands-on approach of collecting atmospheric data and working with readily available climatological records on real problems using modern empirical methods.
 
 Instructors
 -----------

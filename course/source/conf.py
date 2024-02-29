@@ -31,14 +31,14 @@ source_suffix = '.rst'
 master_doc = 'index'
 # General information about the project.
 project = 'INTEGRATE'
-year = '2021'
+year = '2024'
 author = 'Sebastian G. Mutz'
 copyright = '{0}, {1}'.format(year, author)
 
 # The short X.Y version.
-version = '2021'
+version = '2024'
 # The full version, including alpha/beta/rc tags.
-release = '1.0'
+release = '1.1'
 
 # The name of the Pygments (syntax highlighting) style to use.
 #pygments_style = 'sphinx'
