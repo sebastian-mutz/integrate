@@ -9,7 +9,7 @@ Information
 ----------- 
 
 +------------------------------------------------------+
-| Learning goals                                       |
+| Topics                                               |
 +======================================================+
 | * Important definitions in climate science           |
 | * How to retain an atmosphere?                       |

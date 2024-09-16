@@ -1,12 +1,12 @@
-Syllabus
-========
+Course Specifics
+================
 
-The course is designed for completion within 14 weeks. It includes a lecture series about fundamentals in climatology, and an exercise series teaching the basics of programming, applied statistics and the assembling of a basic measurement system. 
+The course is designed for completion within 10-14 weeks. It includes a lecture series about fundamentals in climatology, and an exercise series teaching the basics of programming, applied statistics and the assembling of a basic measurement system.
 
 Lectures
 --------
 
-The lectures, listed as "Building a Climate" chapters here, follow the format of a classic interactive lecture. The lectures are designed for students (BSc or MSc level) with no (or minimal) prior knowledge of climatology. Prior knowledge of basic (secondary school level) mathematics, physics, chemistry and geography are a requirement. The "Building a Climate" lecture series introduces you to the most important processes of the climate sytem in a bottom-up approach. The order of the lectures serve to successively add layers of complexity to your understanding of the climate system, starting from topics like clestial mechanics (large scale) down to precipitation formation (small scale).
+The lectures, listed as "Building a Climate" chapters here, follow the format of a classic interactive lecture. The lectures are designed for students (BSc or MSc level) with no (or minimal) prior knowledge of climatology. Prior knowledge of basic (secondary school level) mathematics, physics, chemistry and geography are a requirement. The "Building a Climate" lecture series introduces you to the most important processes of the climate sytem in a bottom-up world-building approach. The order of the lectures serve to successively add layers of complexity to your understanding of the climate system, starting from topics like clestial mechanics (large scale) down to precipitation formation (small scale).
 
 Lecture Topics
 ..............

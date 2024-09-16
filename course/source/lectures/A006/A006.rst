@@ -9,7 +9,7 @@ Information
 ----------- 
 
 +------------------------------------------------------+
-| Learning goals                                       |
+| Topics                                               |
 +======================================================+
 | * Understand drivers of atmospheric circulation      |
 | * Gain an overview of Earth's circulation structure  |

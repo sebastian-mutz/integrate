@@ -9,7 +9,7 @@ Information
 ----------- 
 
 +---------------------------------------------------------+
-| Learning goals                                          |
+| Topics                                                  |
 +=========================================================+
 | * Important hydrometeorological terminology             |
 | * Understand different precipitation formation processes|

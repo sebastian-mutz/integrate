@@ -27,7 +27,7 @@ In order to effectively teach this course, the instructors are required to have 
 
 * **Raspberry Pi**: Basic knowledge of Raspberry Pis, electronics (experience with breadboards, soldering, sensors, jumper cables) is required for phase 3.
 
-Teachers are advised to carefully study the :doc:`syllabus section<../general/syllabus>` to determine if the course contents matches their qualifications. 
+Teachers are advised to carefully study the :doc:`course specifics section<../general/syllabus>` to determine if the course contents matches their qualifications.
 
 
 Hardware and Software
@@ -66,11 +66,11 @@ The starting page comes with a short description of the course, information for 
 
 **Course Information** 
 
-General information about the course ("General"), detailed syllabus ("Syllabus"), licenes and terms of use for course materials ("License") and acknowledgements to contributors of the course ("Credits) can be found in the "Course Information" supersection. We recommend that the instructor takes the following actions before they start teaching:
+General information about the course ("General"), detailed syllabus ("Course Specifics"), licenes and terms of use for course materials and acknowledgements to contributors of the course (("License and Credits")) can be found in the "Course Information" supersection. We recommend that the instructor takes the following actions before they start teaching:
 
 * Edit the "general information" section for students to get an overview. This should include information such as module credits awarded, eligibility, contact details of the instructors, online platforms used for student submission and any other vital information. If the instructor is unfamiliar with sphinx and therefore unable to update the appropriate document and recompile the website, this information can be provided to students directly in class instead.
-* Study the "Syllabus" section carefully to ensure you are familiar with the course structure and learning goals of the course. This will also give the instructor an idea of how qualified you are to teach the course. If the taught contents only partially overlaps with the expertise of the instructor, the course may be taught by multiple instructors. Alternatively, the instructor may decide to only teach part of the course and integrate those into their own course.
-* Adjust the information on grading in the "Syllabus" section if you intend to deviate from the suggested (and tested) grading scheme. 
+* Study the "Course Specifics" section carefully to ensure you are familiar with the course structure and learning goals of the course. This will also give the instructor an idea of how qualified you are to teach the course. If the taught contents only partially overlaps with the expertise of the instructor, the course may be taught by multiple instructors. Alternatively, the instructor may decide to only teach part of the course and integrate those into their own course.
+* Adjust the information on grading in the "Course Specifics" section if you intend to deviate from the suggested (and tested) grading scheme.
 * Consult the license section carefully to make sure you give appropriate credit when using this learning resource. 
 
 **Lectures**
@@ -131,7 +131,7 @@ Due to the modular nature of the course, it is relatively easy to decouple (most
 
 Individual images for the lectures can be found in the respective lecture's folder. Latex code for all equations are part of the text (.rst) file for the lecture.
 
-Teachers are invited to deviate from the proposed format and grading to suit their specific academic environment, course programmes and expertise. Individual elements may also be incorporated into existing courses. Please consult the :doc:`license <../general/license>` and :doc:`credits <../general/credits>` sections before doing so. 
+Teachers are invited to deviate from the proposed format and grading to suit their specific academic environment, course programmes and expertise. Individual elements may also be incorporated into existing courses. Please consult the :doc:`license and credits <../general/license>` section before doing so.
 
 
 Structure of Source Material

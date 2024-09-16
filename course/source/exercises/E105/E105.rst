@@ -1,5 +1,5 @@
-P2-E005
-=======
+P2-E005 - A Simple Climate Model
+================================
 
 This exercise will not be related to statistics. Instread, you get the chance to write your very own, simple "climate model" that calculates the temporal evolution of the mean temperature of Earth for different simplified, idealised Earths. 
 
@@ -18,7 +18,7 @@ Information
 ...........
 
 +----------------------+--------------------------------------------------------+
-| Learning goals                                                                |
+| Topic                                                                         |
 +======================+========================================================+
 |**Skills**            |                                                        |    
 |                      |   * implementation of a very simple energy balance     |

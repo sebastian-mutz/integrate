@@ -1,5 +1,5 @@
-P1-E001
-=======
+P1-E001 - Getting Started
+=========================
 
 In this exercise, you learn about some basic concepts of programming, commonly used tools, and how to write and execute a script. You may come across some important vocabulary that you are not yet familiar with. 
 
@@ -7,7 +7,7 @@ Information
 ----------- 
 
 +----------------------+--------------------------------------------------------+
-| Learning goals                                                                |
+| Topic                                                                         |
 +======================+========================================================+
 |**Concepts**          |                                                        |
 |                      |   * programming language                               |

@@ -1,5 +1,5 @@
-P2-E002
-=======
+P2-E002 - Hypothesis Testing
+============================
 
 You are encouraged to familiarise yourself with a few topics prior to the exercise. The background section will provide you with some basic information and pointers. The exercise itself is designed to give you some practice in working with these concepts to give you a more intuitive grasp of them. The teacher will be able to supervise your during the exercise and explain the underlying theory if uncertainties remained during your preparation for the exercise.
 
@@ -46,7 +46,7 @@ Information
 ...........
 
 +----------------------+--------------------------------------------------------+
-| Learning goals                                                                |
+| Topic                                                                         |
 +======================+========================================================+
 |**Skills**            |                                                        |    
 |                      |   * data processing                                    |

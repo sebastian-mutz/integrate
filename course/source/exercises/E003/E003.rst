@@ -1,5 +1,5 @@
-P1-E003
-=======
+P1-E003 - Functions
+===================
 
 In this exercise, you will learn about writing your own functions and using them in an efficient way.
 
@@ -8,14 +8,14 @@ Information
 ----------- 
 
 +----------------------+--------------------------------------------------------+
-| Learning goals                                                                |
+| Topic                                                                         |
 +======================+========================================================+
 |**Concepts**          |                                                        |
 |                      |   * functions                                          |
 +----------------------+--------------------------------------------------------+
 |**Skills**            |                                                        |    
 |                      |   * use functions from existing modules                |
-|                      |   * write your own function with specified i/o         |
+|                      |   * write your own functions                           |
 |                      |   * save functions in script                           |
 +----------------------+--------------------------------------------------------+
 

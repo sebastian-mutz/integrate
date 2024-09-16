@@ -1,5 +1,5 @@
-P1-E002
-=======
+P1-E002 - Arrays and Constructs
+===============================
 
 In this exercise, you learn about some more basic concepts of programming, incl. arrays and ways to let your programme automate calculations and make decisions.
 
@@ -7,7 +7,7 @@ Information
 ----------- 
 
 +----------------------+--------------------------------------------------------+
-| Learning goals                                                                |
+| Topic                                                                         |
 +======================+========================================================+
 |**Concepts**          |                                                        |
 |                      |   * index value                                        |

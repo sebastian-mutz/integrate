@@ -9,7 +9,7 @@ Information
 ----------- 
 
 +--------------------------------------------------------------+
-| Learning goals                                               |
+| Topics                                                       |
 +==============================================================+
 | * Understand partial pressure and the ideal gas law          |
 | * Understand drivers of vertical transport in the atmosphere |

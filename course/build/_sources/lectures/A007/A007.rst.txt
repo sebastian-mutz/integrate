@@ -9,7 +9,7 @@ Information
 ----------- 
 
 +----------------------------------------------------------------------+
-| Learning goals                                                       |
+| Topics                                                               |
 +======================================================================+
 | * Understand atmospheric stability and how it relates to lapse rates |
 | * Understand implications of thermal inversions and instability      |

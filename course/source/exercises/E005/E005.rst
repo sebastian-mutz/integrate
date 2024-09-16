@@ -1,5 +1,5 @@
-P1-E005
-=======
+P1-E005 - R/W and Visualisation
+================================
 
 In this exercise, you will learn about reading from files, writing into files, operations with the *numpy* library and visualising data with the *matplotlib* library.
 
@@ -8,10 +8,10 @@ Information
 ----------- 
 
 +----------------------+--------------------------------------------------------+
-| Learning goals                                                                |
+| Topic                                                                         |
 +======================+========================================================+
 |**Concepts**          |                                                        |
-|                      |   * reading and writing data                           |
+|                      |   * reading/writing (r/w) data                         |
 |                      |   * data visualisation                                 |
 +----------------------+--------------------------------------------------------+
 |**Skills**            |                                                        |    

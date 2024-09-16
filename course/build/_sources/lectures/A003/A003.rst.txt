@@ -9,7 +9,7 @@ Information
 ----------- 
 
 +-------------------------------------------------------------------------------+
-| Learning goals                                                                |
+| Topics                                                                        |
 +===============================================================================+
 | * Gain quantitative understanding of radiative fluxes in the atmosphere       |
 | * Understand influence of insolation and greenhouse gases on mean temperature |

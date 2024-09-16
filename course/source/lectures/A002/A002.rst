@@ -9,7 +9,7 @@ Information
 ----------- 
 
 +------------------------------------------------------+
-| Learning goals                                       |
+| Topics                                               |
 +======================================================+
 | * Understand orbital forcing of climate              |
 | * How can we analyse ka-scale climate variability?   |

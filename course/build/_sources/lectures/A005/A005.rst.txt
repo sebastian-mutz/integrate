@@ -9,7 +9,7 @@ Information
 ----------- 
 
 +------------------------------------------------------------------------+
-| Learning goals                                                         |
+| Topics                                                                 |
 +========================================================================+
 | * Understand the Coriolis force and how to calculate it                |
 | * Understand the geostrophic balance and how it relates to wind speeds |

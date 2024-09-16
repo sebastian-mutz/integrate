@@ -4,25 +4,27 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>P2-E001 &mdash; INTEGRATE 1.1 documentation</title>
+  <title>P2-E001 - Confidence Intervals &mdash; INTEGRATE 1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d10597a4" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/style.css?v=76a80441" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/style.css?v=f511e541" />
 
   
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=56dcb7b8"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="P2-E002" href="../E102/E102.html" />
-    <link rel="prev" title="P1-E005" href="../E005/E005.html" /> 
+    <link rel="next" title="P2-E002 - Hypothesis Testing" href="../E102/E102.html" />
+    <link rel="prev" title="P1-E005 - R/W and Visualisation" href="../E005/E005.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,10 +52,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Course Information:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Syllabus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../general/credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Course Specifics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License and Credits</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
 <ul>
@@ -67,15 +68,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/A007/A007.html">Building a Climate VII</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../lectures/A008/A008.html">Building a Climate VIII</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Exercises:</span></p>
-<ul class="current">
+<p class="caption" role="heading"><span class="caption-text">Intro to Coding (Python):</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../info.html">Intro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../E001/E001.html">P1-E001</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../E002/E002.html">P1-E002</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../E003/E003.html">P1-E003</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../E004/E004.html">P1-E004</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../E005/E005.html">P1-E005</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">P2-E001</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../E001/E001.html">P1-E001 - Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E002/E002.html">P1-E002 - Arrays and Constructs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E003/E003.html">P1-E003 - Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E004/E004.html">P1-E004 - Classes and Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E005/E005.html">P1-E005 - R/W and Visualisation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Exercises:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">P2-E001 - Confidence Intervals</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#exercise">Exercise</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#information">Information</a></li>
@@ -85,23 +89,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../E102/E102.html">P2-E002</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../E103/E103.html">P2-E003</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../E104/E104.html">P2-E004</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../E105/E105.html">P2-E005</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../E201/E201.html">P3-E001</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Projects:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/P001/P001_info.html">Project P001</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/P002/P002_info.html">Project P002</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/P003/P003_info.html">Project P003</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/P004/P004_info.html">Project P004</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/P005/P005_info.html">Project P005</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/P006/P006_info.html">Project P006</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/P007/P007_info.html">Project P007</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/P008/P008_info.html">Project P008</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../projects/P009/P009_info.html">Project P009</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E102/E102.html">P2-E002 - Hypothesis Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E103/E103.html">P2-E003 - Bayesian Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E104/E104.html">P2-E004 - Correlation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E105/E105.html">P2-E005 - A Simple Climate Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E201/E201.html">P3-E001 - Building a Weather Station</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Resources:</span></p>
 <ul>
@@ -127,7 +119,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">P2-E001</li>
+      <li class="breadcrumb-item active">P2-E001 - Confidence Intervals</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/exercises/E101/E101.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -137,8 +129,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="p2-e001">
-<h1>P2-E001<a class="headerlink" href="#p2-e001" title="Link to this heading">¶</a></h1>
+  <section id="p2-e001-confidence-intervals">
+<h1>P2-E001 - Confidence Intervals<a class="headerlink" href="#p2-e001-confidence-intervals" title="Link to this heading">¶</a></h1>
 <p>You are encouraged to familiarise yourself with a few topics prior to the exercise. The background section will provide you with some basic information and pointers. The exercise itself is designed to give you some practice in working with these concepts to give you a more intuitive grasp of them. The teacher will be able to supervise your during the exercise and explain the underlying theory if uncertainties remained during your preparation for the exercise.</p>
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Link to this heading">¶</a></h2>
@@ -231,15 +223,15 @@ central limit, standard error, confidence intervals</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../E005/E005.html" class="btn btn-neutral float-left" title="P1-E005" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../E102/E102.html" class="btn btn-neutral float-right" title="P2-E002" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../E005/E005.html" class="btn btn-neutral float-left" title="P1-E005 - R/W and Visualisation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../E102/E102.html" class="btn btn-neutral float-right" title="P2-E002 - Hypothesis Testing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2024, Sebastian G. Mutz.
-      <span class="lastupdated">Last updated on Feb 29, 2024.
+      <span class="lastupdated">Last updated on Sep 16, 2024.
       </span></p>
   </div>
 

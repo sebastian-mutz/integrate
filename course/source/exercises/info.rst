@@ -3,19 +3,12 @@ Intro
 
 Before you start your first exercise, here are a few things you may want to look at first.
 
-Learning Goals
---------------
-Each exercise has very specific learning goals. A complete list of those for the entire course can be found in the :doc:`SYLLABUS<../general/syllabus>` section. 
-
-
 .. warning:: 
     Your knowledge and skills build up progressively in the exercise series. You use concepts and script written in previous exercises. You should therefore make sure you do not miss any exercise, or catch up before the subsequent exercise. 
 
 Exercise Materials
 ------------------
-You will not need much to do this course, and we will provide you with necessary hard- and software. If you prefer to work on your own computer, make sure you installed:
-
-* Anaconda (Python 3.7 distribution, including Spyder IDE, numpy and matplotlib): `<https://www.anaconda.com/download/>`_
+If you prefer to work on your own computer, make sure you installed all required software, as listed in the :doc:`General Information<../general/info>` section.
 
 .. Note:: 
    

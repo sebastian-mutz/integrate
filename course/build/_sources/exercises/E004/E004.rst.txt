@@ -1,5 +1,5 @@
-P1-E004
-=======
+P1-E004 - Classes and Objects
+=============================
 
 In this exercise, you will learn about creating your own classes and objects.
 
@@ -8,7 +8,7 @@ Information
 ----------- 
 
 +----------------------+--------------------------------------------------------+
-| Learning goals                                                                |
+| Topic                                                                         |
 +======================+========================================================+
 |**Concepts**          |                                                        |
 |                      |   * classes, object-oriented programming               |

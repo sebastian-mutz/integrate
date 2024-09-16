@@ -15,7 +15,7 @@ PI = 3.141592653589793
 """
 Sun's Parameters
 ----------------
-F_SOL - Temperature of the sun (K)
+T_SOL - Temperature of the sun (K)
 R_SOL - Radius of the sun (m)
 """
 T_SOL = 5800
