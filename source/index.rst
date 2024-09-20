@@ -63,9 +63,9 @@ Table of Contents
    exercises/E004/E004
    exercises/E005/E005
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Coding Intro (Fortran):
+.. .. toctree::
+..    :maxdepth: 2
+..    :caption: Coding Intro (Fortran):
 
    exercises/E001/E001_fortran
 
