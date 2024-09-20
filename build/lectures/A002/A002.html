@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building a Climate II &mdash; INTEGRATE 1.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=c824535d" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/style.css?v=f511e541" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=56dcb7b8"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Building a Climate III" href="../A003/A003.html" />
+    <link rel="prev" title="Building a Climate I" href="../A001/A001.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            INTEGRATE
+              <img src="../../_static/integrateLogo256x256_ccby_SebastianMutz.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2024
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Course Specifics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License and Credits</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A001/A001.html">Building a Climate I</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building a Climate II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#celestial-mechanics-and-orbital-forcing">Celestial Mechanics and Orbital Forcing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kepler-s-laws-of-planetary-motion">Kepler’s Laws of Planetary Motion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#first-law-of-planetary-motion">First Law of Planetary Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#second-law-of-planetary-motion">Second Law of Planetary Motion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#third-law-of-planetary-motion">Third Law of Planetary Motion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#milankovich-cycles">Milankovich Cycles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#terminology">Terminology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eccentricity">Eccentricity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#obliquity">Obliquity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#axial-precession-wobble">Axial Precession (“Wobble”)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#milakovich-cycles-summary">Milakovich Cycles Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#detecting-orbital-forcing">Detecting Orbital Forcing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../A003/A003.html">Building a Climate III</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A004/A004.html">Building a Climate IV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A005/A005.html">Building a Climate V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A006/A006.html">Building a Climate VI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A007/A007.html">Building a Climate VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../A008/A008.html">Building a Climate VIII</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Intro (Python):</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E001/E001.html">E001 - Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E002/E002.html">E002 - Arrays and Constructs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E003/E003.html">E003 - Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E004/E004.html">E004 - Classes and Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E005/E005.html">E005 - R/W and Visualisation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Intro (Fortran):</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E001/E001_fortran.html">E001F - Getting Started</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Exercises:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E101/E101.html">E101 - Confidence Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E102/E102.html">E102 - Hypothesis Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E103/E103.html">E103 - Bayesian Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E104/E104.html">E104 - Correlation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E105/E105.html">E105 - A Simple Climate Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exercises/E201/E201.html">E201 - Building a Weather Station</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/guide.html">Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">INTEGRATE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Building a Climate II</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/lectures/A002/A002.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="building-a-climate-ii">
+<h1>Building a Climate II<a class="headerlink" href="#building-a-climate-ii" title="Link to this heading">¶</a></h1>
+<p><strong>Orbital Forcing</strong></p>
+<p>This lecture introduces celestial mechanics, orbital forcing and climate variability on the ka (kiloyear) scale.</p>
+<section id="information">
+<h2>Information<a class="headerlink" href="#information" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Topics</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ul class="simple">
+<li><p>Understand orbital forcing of climate</p></li>
+<li><p>How can we analyse ka-scale climate variability?</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="celestial-mechanics-and-orbital-forcing">
+<h2>Celestial Mechanics and Orbital Forcing<a class="headerlink" href="#celestial-mechanics-and-orbital-forcing" title="Link to this heading">¶</a></h2>
+<p>Broadly speaking, <strong>celestial mechanics</strong> is concerned with the movements of objects in outer space. This includes the way planets orbit the stars like Earth is orbiting our sun. This is of particular interest to climatologists, because the nature and rhythms of the ways in which Earth orbits the sun changes the <strong>solar radiation</strong> that different regions on Earth receive in particular seasons. In turn, this redistribution of solar radiation creates very different climates. When climate is changed as a result of changing orbital parameters, we speak of <strong>orbital forcing</strong> of our climate. Note that these changes are slow and take place on <strong>orbital time scales</strong> of 10s to 100s ka. These changes happen at a higher frequency than changes on the <strong>geological/tectonic time scale</strong>, and at a lower frequency than changes on the <strong>historical time scale</strong> and <strong>millenial/deglacial time scale</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Can you think of well known climate change events? On which time scales did they take place and how were they forced?</p>
+</div>
+</section>
+<section id="kepler-s-laws-of-planetary-motion">
+<h2>Kepler’s Laws of Planetary Motion<a class="headerlink" href="#kepler-s-laws-of-planetary-motion" title="Link to this heading">¶</a></h2>
+<p>Kepler’s Laws of Planetary Motion, published by Johannes Kepler in the 1600s, describe how planets orbit the sun. Before we get into any details, let’s recall the general set-up of Earth’s orbit around the sun.</p>
+<figure class="align-right" id="id1" style="width: 500px">
+<a class="reference internal image-reference" href="../../_images/orbit001_ccby_LisaRauschenbach.jpg"><img alt="../../_images/orbit001_ccby_LisaRauschenbach.jpg" src="../../_images/orbit001_ccby_LisaRauschenbach.jpg" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text">The Earth’s orbital path around the sun. Its current tilt is ~23.5°, the 2 equinoxes occur on March 21-22 and September 22-23, and the 2 solstices occur on June 21-22 and December 21-22. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The current tilt of the Earth’s axis (the angle between its rotational axis and orbital axis) is ~23.5°. The equinox, roughly translating from latin as “equal night”, marks the date(s) when nighttime and daytime duration are approximately equal. The solstice marks the date(s) when the sun appears to reach its most northern/southern position and the longest day (in case of the summer solstice) or shortest day (in case of the winter solstice) in the year is experienced at a particulat location that does not lie on the equator. The term roughly translates from latin as “the sun stands still”, because it appears to stop migrating north/south before it reverses its direction.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Can you explain why the sun appears to migrate north/south at a particular location during the course of a year?</p>
+</div>
+<section id="first-law-of-planetary-motion">
+<h3>First Law of Planetary Motion<a class="headerlink" href="#first-law-of-planetary-motion" title="Link to this heading">¶</a></h3>
+<figure class="align-left" id="id2" style="width: 200px">
+<a class="reference internal image-reference" href="../../_images/kepler01.jpg"><img alt="../../_images/kepler01.jpg" src="../../_images/kepler01.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">Earth’s (very exaggerated) elliptical path around the sun with perihelion and aphelion marked on it.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p><strong>Orbits are ellipses with the sun at one of its two foci.</strong></p>
+<p>Elliptical orbits come with a few additional properties that are relevant to <strong>eccentricity</strong>, i.e. the measure of how elliptical the planet’s path is. <strong>Apoapsis</strong> and <strong>periapsis</strong> are the points in the path of the orbiting body that are (respectively) farthest away and nearest to the centre of mass of the system. On the other hand, <strong>aphelion</strong> and <strong>perihelion</strong> are the points in the path of the orbiting body that are (respectively) farthest away and nearest to the body (sun) they orbit.</p>
+<p>Eccentricity is determined by distance between foci and describes amount by which an object’s orbit deviates from a perfect circle. It can be described as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  e=\frac {r_a-r_p}{r_a+r_p}
+\end{equation}\]</div>
+<p>In the above equation, e is the eccentricity, r<sub>a</sub>is the radius at apoapsis and r<sub>p</sub>is the radius at periapsis. The value for e describes the amount by which an object’s orbit deviates from a perfect circle, where 0 denotes a circular orbit and 1 would be a parabolic escape orbit.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Earth’s averade distance to the sun is ~155.5e6 km. Do you know its extremes (perihelion and aphelion)? Can you calculate the Earth’s current eccentricity? Is its path around the sun highly elliptical or closer to a circle? Does this evaluation match what you found out about the minimum and maximum (perihelion and aphelion) distances between Earth and sun?</p>
+</div>
+</section>
+<section id="second-law-of-planetary-motion">
+<h3>Second Law of Planetary Motion<a class="headerlink" href="#second-law-of-planetary-motion" title="Link to this heading">¶</a></h3>
+<figure class="align-right" style="width: 200px">
+<a class="reference internal image-reference" href="../../_images/kepler02.jpg"><img alt="../../_images/kepler02.jpg" src="../../_images/kepler02.jpg" style="width: 200px;" /></a>
+</figure>
+<p><strong>A line joining planet and sun sweeps out equal areas during equal time intervals.</strong></p>
+<p>If you imagine a line joining the planet and the sun as the planet orbits around the sun, the area it sweeps up on the orbital plane remains constant per unit of time. Consider the implications of the above when we have an elliptical path around the sun: Rotational speed near sun must be greater than farther away from the sun. Since Earth is closest to the sun (in perihelion) in northern hemisphere winter/southern hemisphere summer (January), it means that northern hemisphere winter/southern hemisphere summer is shorter than northern hemisphere summer/southern hemisphere winter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>What would happen to northern hemisphere winter/southern hemisphere summer if we made Earth’s path more elliptical?</p>
+</div>
+</section>
+<section id="third-law-of-planetary-motion">
+<h3>Third Law of Planetary Motion<a class="headerlink" href="#third-law-of-planetary-motion" title="Link to this heading">¶</a></h3>
+<figure class="align-left" style="width: 200px">
+<a class="reference internal image-reference" href="../../_images/kepler03.jpg"><img alt="../../_images/kepler03.jpg" src="../../_images/kepler03.jpg" style="width: 200px;" /></a>
+</figure>
+<p><strong>The square of orbital period of a planet is proportional to cube of semi-major axis of its orbit.</strong></p>
+<p>This law can also be described as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  \frac {r_1^3}{t_1^2} = \frac {r_2^3}{t_2^2} = constant for planets
+\end{equation}\]</div>
+<p>In the equation above, r<sub>1</sub>and t<sub>1</sub>represent the semi-major axis and orbital period of planet 1 (e.g. Mars) and  r<sub>2</sub>and t<sub>2</sub>represent the semi-major axis and orbital period of planet 2 (e.g. Earth).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Look up the distances and orbital periods of Earth and Mars. Can you confirm this law? Can you imagine how this could be related to Newton’s Law of gravitation?</p>
+</div>
+</section>
+</section>
+<section id="milankovich-cycles">
+<h2>Milankovich Cycles<a class="headerlink" href="#milankovich-cycles" title="Link to this heading">¶</a></h2>
+<p>The cyclical variations in orbital parameters, namely eccentricity, obliquity/axial tilt and precession result in cyclical variations in solar radiation reaching the Earth. These have significant influences on climate over geological time scales. We refer to those cycles as Milankovich Cycles. The term <strong>orbital forcing</strong> in climate science usually refers to forcing by variation in these 3 parameters.</p>
+<section id="terminology">
+<h3>Terminology<a class="headerlink" href="#terminology" title="Link to this heading">¶</a></h3>
+<p>It is important to familiarise ourselves with some terminology and concepts so we can understand the interplay between orbital parameters and how Milankovich cycles can result in very different climates. These include:</p>
+<ul class="simple">
+<li><p>Cycle - return of signal with consistent amplitude and period.</p></li>
+<li><p>Period - wavelength, SI unit: s.</p></li>
+<li><p>Amplitude -  amount by which cycles deviate from long term mean.</p></li>
+<li><p>Modulation - varying the properties (e.g. amplitude) of cycles.</p></li>
+</ul>
+<figure class="align-center" id="id3">
+<img alt="../../_images/am_cc0.jpg" src="../../_images/am_cc0.jpg" />
+<figcaption>
+<p><span class="caption-text">Example of amplitude modulation: The modulating wave (left) modulates the carrier wave (middle) to produce the modulated result (right).</span><a class="headerlink" href="#id3" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Amplitide and frequency modulation are commonly used in radio and audio technology, music production and engineering. It is the concept of amplitude modulation that helps us understand said interplay, because <strong>precession</strong> is modulated by <strong>eccentricity</strong> in the same manner. We will have a look at these parameters in more detail now.</p>
+</section>
+<section id="eccentricity">
+<h3>Eccentricity<a class="headerlink" href="#eccentricity" title="Link to this heading">¶</a></h3>
+<p>Eccentricity describes the degree to which the orbital elliptical path of a planet deviates from a perfect circle (see Kepler’s First Law of Planetary Motion).</p>
+<p>Earth’s eccentricity has <strong>2 cycles at 100 ka and 413 ka</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>What does a highly elliptical path mean for solar radiation received by a particulat region in the northern or southern hemisphere? Think back to the general set-up of Earth’s orbit around the sun.</p>
+</div>
+</section>
+<section id="obliquity">
+<h3>Obliquity<a class="headerlink" href="#obliquity" title="Link to this heading">¶</a></h3>
+<p>Obliquity or <strong>axial tilt</strong> describes the angle between a planetary object’s rotational axis and orbital axis, which also the angle between the equatorial plane and orbital plane. Earth’s current axial tilt is ~23.5°, but it <strong>oscillates between 22.2° and 24.5° with a very regular cycle of 41 ka</strong>.</p>
+<figure class="align-center" id="id4">
+<img alt="../../_images/tilt_ccby_SebastianMutz.jpg" src="../../_images/tilt_ccby_SebastianMutz.jpg" />
+<figcaption>
+<p><span class="caption-text">The thick white line (orbital axis) is perpendicular to the orbital plane of Earth. (In this 2D figure, the orbital plane could be represented by a line joining the centre of Earth and sun). The thin white line represents the rotational axis of Earth and the dashed line the equatorial plane (here in in 2D). The axial tilt is the difference between the thick and thin white line, or the difference between the equatorial and orbital plane. [image: cc-by Sebastian Mutz]</span><a class="headerlink" href="#id4" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Consider the figure. What implications would a change in axial tilt have on northern/southern hemisphere winter/summer?</p>
+</div>
+</section>
+<section id="axial-precession-wobble">
+<h3>Axial Precession (“Wobble”)<a class="headerlink" href="#axial-precession-wobble" title="Link to this heading">¶</a></h3>
+<figure class="align-left" id="id5" style="width: 300px">
+<a class="reference internal image-reference" href="../../_images/spinningTop_cc0.jpg"><img alt="../../_images/spinningTop_cc0.jpg" src="../../_images/spinningTop_cc0.jpg" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">Axial precession or “wobble” can best be visualised by the change in direction of the spinning axis of a spinning top when it begins to wobble as it slows down.</span><a class="headerlink" href="#id5" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Imagine turning a spinning top (toy). If you give it a good spin, its rotational axis remains upright and shows little or no changes in inclination. As it begins to slow down, the spinning top begins to wobble. In other words, it changes its axial tilt as well as the direction of the rotational axis. For planetary bodies, the latter parameter is called <strong>axial precession</strong> - it is the change in direction of axial tilt, but not the change in tilt itself. Earth’s precessesion has <strong>1 strong cycle at 23 ka and 1 weaker cycle at 19 ka</strong>.</p>
+<p><strong>How do we quantify this?</strong>
+If we transfer this concept into the setup of our solar system, the results are changes in the positions of solstices and equinoxes in Earth’s elliptical path. This is represented by sin ω (values from +1 to -1), where ω is the angle between vernal equinox (20. March) and perihelion.  11 ka from now (half a precession cycle), December will be in aphelion.</p>
+<figure class="align-center" id="id6">
+<img alt="../../_images/orbit002_ccby_LisaRauschenbach.jpg" src="../../_images/orbit002_ccby_LisaRauschenbach.jpg" />
+<figcaption>
+<p><span class="caption-text">Axial precession (“wobble”) is represented by sin ω, where ω is the angle between vernal equinox (20. March) and perihelion. [image: cc-by Lisa Rauschenbach]</span><a class="headerlink" href="#id6" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Consider the interplay between precession and changes in the elliptical nature of Earth’s orbital path. Can you see why precession would be <strong>modulated</strong> by eccentricity?</p>
+</div>
+</section>
+<section id="milakovich-cycles-summary">
+<h3>Milakovich Cycles Summary<a class="headerlink" href="#milakovich-cycles-summary" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Eccentricity</strong> is the deviation from perfectly circular orbital path of of astronomical body around another. Earth has cycles of 413ka - 100ka.</p></li>
+<li><p><strong>Obliquity</strong> is the axial tilt (angle between rotaional and orbtial axis). It causes in phase changes in polar regions in both hemispheres. Higher tilt amplifies seasons at poles and expressions of tilt changes are more pronounced at the poles. Earth has a very regular 41 ka cycle.</p></li>
+<li><p><strong>Axial precession</strong> (“wobble”) is the orientation change of the rotational axis. It causes out of phase changes between hemispheres for their seasons. It is modulated by eccentricity and the expressions of precession and eccentricity changes are more pronounced in lower latitudes. Earth has a strong cycle of 23 ka and a weaker cycle of 19 ka.</p></li>
+</ul>
+</section>
+</section>
+<section id="detecting-orbital-forcing">
+<h2>Detecting Orbital Forcing<a class="headerlink" href="#detecting-orbital-forcing" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The article “Trends, Rhythms, and Abberations in Global Climate 65 Ma to present” by Zachos et al. (2001) investigate different time periods in the geological past with respect to orbital forcing. It makes a good case study for topics covered in this lecture and demonstrates how to detect orbital forcing in a palaeoclimate time series. It allows for good discussion of the topic in class.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../A001/A001.html" class="btn btn-neutral float-left" title="Building a Climate I" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../A003/A003.html" class="btn btn-neutral float-right" title="Building a Climate III" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Sebastian G. Mutz.
+      <span class="lastupdated">Last updated on Sep 20, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

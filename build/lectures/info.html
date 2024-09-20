@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro &mdash; INTEGRATE 1.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=c824535d" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/style.css?v=f511e541" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=56dcb7b8"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Building a Climate I" href="A001/A001.html" />
+    <link rel="prev" title="License and Credits" href="../general/license.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            INTEGRATE
+              <img src="../_static/integrateLogo256x256_ccby_SebastianMutz.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2024
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/info.html">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/syllabus.html">Course Specifics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/license.html">License and Credits</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Intro</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#learning-goals">Learning Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#feedback">Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ask-questions-and-be-interactive">Ask Questions and be Interactive!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="A001/A001.html">Building a Climate I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A002/A002.html">Building a Climate II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A003/A003.html">Building a Climate III</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A004/A004.html">Building a Climate IV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A005/A005.html">Building a Climate V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A006/A006.html">Building a Climate VI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A007/A007.html">Building a Climate VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A008/A008.html">Building a Climate VIII</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Intro (Python):</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E001/E001.html">E001 - Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E002/E002.html">E002 - Arrays and Constructs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E003/E003.html">E003 - Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E004/E004.html">E004 - Classes and Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E005/E005.html">E005 - R/W and Visualisation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Intro (Fortran):</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E001/E001_fortran.html">E001F - Getting Started</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Exercises:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E101/E101.html">E101 - Confidence Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E102/E102.html">E102 - Hypothesis Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E103/E103.html">E103 - Bayesian Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E104/E104.html">E104 - Correlation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E105/E105.html">E105 - A Simple Climate Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercises/E201/E201.html">E201 - Building a Weather Station</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../resources/dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../guide/guide.html">Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">INTEGRATE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Intro</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/lectures/info.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="intro">
+<h1>Intro<a class="headerlink" href="#intro" title="Link to this heading">¶</a></h1>
+<p>Before you start your first lecture, here are a few things you may want to look at first.</p>
+<section id="learning-goals">
+<h2>Learning Goals<a class="headerlink" href="#learning-goals" title="Link to this heading">¶</a></h2>
+<p>The lectures are designed for people with no (or minimal) prior knowledge of climatology. Prior knowledge of basic (secondary school level) mathematics, physics, chemistry and geography are a requirement. The overarching learning goals of the “Building a Climate” lecture series are to introduce the student to the most important processes of the climate sytem in a top-down approach. The order of the lectures serve to successively add layers of complexity to your understanding of the climate system, starting from topics like clestial mechanics (large scale) down to precipitation formation (small scale). It is therefore recommended to go through them in the order presented here. Additionally, each lecture has very specific learning goals. A complete list of those for the entire course can be found in the <a class="reference internal" href="../general/syllabus.html"><span class="doc">SYLLABUS</span></a> section.</p>
+</section>
+<section id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Link to this heading">¶</a></h2>
+<p>We are very happy to get feedback for this lecutre series during and after class, and we will adapt to maximise learning efficiency and fun! :)</p>
+</section>
+<section id="ask-questions-and-be-interactive">
+<h2>Ask Questions and be Interactive!<a class="headerlink" href="#ask-questions-and-be-interactive" title="Link to this heading">¶</a></h2>
+<p>Lectures are designed in a way to allow plenty of interaction between teacher and students. You will frequently encounter thought experiments or questions like this:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you encounter a note like this in the lecture series, it is an invitation for interaction. This can be in the form of students thinking through comments carefully, conduct calculations (or even do online research) to discuss and answer the question with the teacher. Alternatively, it can be seen as an invitation for the teacher to explain the comment in more detail and solve questions on the board with the help of students. It is left up to the teaching environment, teacher and students which form of interaction is the most appropriate.</p>
+</div>
+<p><strong>… now that this is out of the way, you’re good to go!</strong></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../general/license.html" class="btn btn-neutral float-left" title="License and Credits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="A001/A001.html" class="btn btn-neutral float-right" title="Building a Climate I" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Sebastian G. Mutz.
+      <span class="lastupdated">Last updated on Sep 20, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

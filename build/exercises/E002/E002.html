@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E002 - Arrays and Constructs &mdash; INTEGRATE 1.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=c824535d" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/style.css?v=f511e541" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=56dcb7b8"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="E003 - Functions" href="../E003/E003.html" />
+    <link rel="prev" title="E001 - Getting Started" href="../E001/E001.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            INTEGRATE
+              <img src="../../_static/integrateLogo256x256_ccby_SebastianMutz.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2024
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../general/info.html">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/syllabus.html">Course Specifics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../general/license.html">License and Credits</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A001/A001.html">Building a Climate I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A002/A002.html">Building a Climate II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A003/A003.html">Building a Climate III</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A004/A004.html">Building a Climate IV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A005/A005.html">Building a Climate V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A006/A006.html">Building a Climate VI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A007/A007.html">Building a Climate VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lectures/A008/A008.html">Building a Climate VIII</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Intro (Python):</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E001/E001.html">E001 - Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">E002 - Arrays and Constructs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#array-like-collections">Array like collections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#index-values">Index Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#useful-list-functions">Useful List Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparison-operators">Comparison Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-statements">If Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#for-loops">For Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#your-task">Your Task</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../E003/E003.html">E003 - Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E004/E004.html">E004 - Classes and Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E005/E005.html">E005 - R/W and Visualisation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Intro (Fortran):</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../E001/E001_fortran.html">E001F - Getting Started</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Exercises:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../E101/E101.html">E101 - Confidence Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E102/E102.html">E102 - Hypothesis Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E103/E103.html">E103 - Bayesian Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E104/E104.html">E104 - Correlation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E105/E105.html">E105 - A Simple Climate Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../E201/E201.html">E201 - Building a Weather Station</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/guide.html">Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">INTEGRATE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">E002 - Arrays and Constructs</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/exercises/E002/E002.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="e002-arrays-and-constructs">
+<h1>E002 - Arrays and Constructs<a class="headerlink" href="#e002-arrays-and-constructs" title="Link to this heading">¶</a></h1>
+<p>In this exercise, you learn about some more basic concepts of programming, incl. arrays and ways to let your programme automate calculations and make decisions. <strong>We will explore this with the Python programming language.</strong></p>
+<section id="information">
+<h2>Information<a class="headerlink" href="#information" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Topic</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Concepts</strong></p></td>
+<td><ul class="simple">
+<li><p>index value</p></li>
+<li><p>array/vector</p></li>
+<li><p>for loops</p></li>
+<li><p>if statements (if, else if, else)</p></li>
+<li><p>comparison operators</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Skills</strong></p></td>
+<td><ul class="simple">
+<li><p>work with arrays</p></li>
+<li><p>implement a for loop</p></li>
+<li><p>let your programme make a decision</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<aside class="topic">
+<p class="topic-title">What to Submit</p>
+<p>Submit your script for the final task of this exercise. The script should be named <em>[your student number]_e001.[ext]</em>, where <em>[ext]</em> is the file extension. In case of Python, this would be <em>.py</em>, for modern Fortran it is <em>.f90</em>, etc.</p>
+</aside>
+</section>
+<section id="array-like-collections">
+<h2>Array like collections<a class="headerlink" href="#array-like-collections" title="Link to this heading">¶</a></h2>
+<p>Collections can hold multiple values and working with them saves a lot of time, effort and memory. We will explore this a little more in today’s lesson.
+In Python, we will use 3 types of array like collections: <strong>Tuples</strong>, <strong>Lists</strong> and <strong>Dictionaries</strong>. Let’s have a look at the properties of each and experiment with them.</p>
+<p>A <strong>tuple</strong> is an <em>ordered, unchangeable</em> collection that can store any type of data values (integers, strings, etc.). You can define a tuple using rounded brackets.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;EARTH&#39;</span><span class="p">,</span> <span class="mi">2140</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A <strong>list</strong> is an <em>ordered, changeable</em> collection that can store any type of data values (integers, strings, etc.); You can define a list using square brackets, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;EARTH&#39;</span><span class="p">,</span> <span class="mi">2150</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>A <strong>dictionary</strong> - an <em>unordered, indexed, changeable</em> collection that can store any type of data values (integers, strings, etc.); You can define a dictionary using curly brackets, specifying a <em>key</em> and a <em>value</em> e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">myDict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;place&#39;</span><span class="p">:</span><span class="s1">&#39;EARTH&#39;</span><span class="p">,</span><span class="s1">&#39;year&#39;</span><span class="p">:</span><span class="mi">2160</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Start your IDE (e.g. Spyder) and create a tuple, a list and a dictionary in your console, as described above. For each of the array types, we created a <em>1 dimensional</em> array with a <em>length of 2</em>. In each array, we store 2 values of different data types: 1 string (<em>‘EARTH’</em>) and 1 integer (year). Next, we will explore the properties of each of the Python arrays. Before we can do that, we need to first familiarise ourselves with the concept of an <strong>index value</strong>.</p>
+</section>
+<section id="index-values">
+<h2>Index Values<a class="headerlink" href="#index-values" title="Link to this heading">¶</a></h2>
+<p>If you type:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">myTuple</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>the print function will return to you the full list:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;EARTH&#39;</span><span class="p">,</span> <span class="mi">2140</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>However, often you will only want to use one of the values stored in an array. This is where index values come in handy. From mathematical notation, we are already familiar with index values. Think about the notation for a simple sum of all elements in a vector <strong>x</strong> (= 4,1,3,9,2):</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  sum={\sum_{i=1}^{5} }x_i = x_1 + x_2 + x_3 + x_4 + x_5 = 4 + 1 + 3 + 9 + 2
+\end{equation}\]</div>
+<p>Here, the index value ranges from 1 to 5, and <span class="math notranslate nohighlight">\(x_1 = 4, x_2 = 3\)</span>, etc. Index values in programming work in the same way. The index value allows you to access a specific value in your array. If the array is ordered, the index value (an integer), corresponds to the a specific position in the ordered array. Depending on your programming language, the first number may either be 1 or 0. In Python, it is 0.</p>
+<p>A good analogy for indexing are elevator controls that take you to floors with different contents. Python would be a German elevator control panel, on which 0 marks the ground floor.</p>
+<figure class="align-default">
+<img alt="../../_images/elevator_cc0.jpg" src="../../_images/elevator_cc0.jpg" />
+</figure>
+<p>The first value in your defined tuple (<em>EARTH</em>) can therefore be accessed by referencing <em>myTuple[0]</em>. Try this by typing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">myTuple</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>We can perform calculations on specific values in an array by referencing it with the index value. Try adding 20 years to the year stored in the second position in the array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">myTuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now let’s try to update the year with the same calculation and overwrite the old year with the new year:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myTuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">myTuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">20</span>
+</pre></div>
+</div>
+<p>Did this work? It shouldn’t, because tuples are unchangable and thus don’t allow item assignment. Now try the same with your list and display the updated value using the <em>print</em> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myList</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Unlike tuples, lists allow items in the array to be updated as you just did. Finally, let’s explore the properties of dictionaries a little. Try accessing and displaying the year value of the dictionary by typing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">myDict</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>You should get an error message at this point, because dictionaries are not ordered. However, dictionaries are indexed via their <em>keys</em>, and we can access a specific value in dictionaries by using the pre-defined <em>key</em> values. In case of our dictionary, those keys are <em>‘place’</em> and <em>‘year’</em>. Try accessing and displaying the year value by typing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">myDict</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>This should display to you the year <em>2160</em>. Since dictionaries are not ordered, the order in which you define its entries doesn’t matter. Try this out by defining a new dictionary just as we did before, but swap the place and year, then repeat the <em>print</em> command above. It will yield the same result.</p>
+</section>
+<section id="useful-list-functions">
+<h2>Useful List Functions<a class="headerlink" href="#useful-list-functions" title="Link to this heading">¶</a></h2>
+<p>Assume we are managing and maintaining weather station data using Python scripts. Somewhere in the scripts, we would probably want to store the names of different weather stations in a list. Let’s create this list quickly:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stationNames</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Pan de Azucar&#39;</span><span class="p">,</span> <span class="s1">&#39;Santa Gracia&#39;</span><span class="p">,</span> <span class="s1">&#39;La Campana&#39;</span><span class="p">,</span> <span class="s1">&#39;Reserva Nacional Paposo&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>It is possible, that we set up a new weather station in Nahuelbuta and now want to include its name in our list. We can do this ussing the <em>append()</em> function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stationNames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Nahuelbuta&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Check with the <em>print()</em> function if it has been included in the list. You will noticed that it has been appended at the end of the list. Unfortunately, our weather station at ‘Reserva Nacional Paposo’ will no longer be maintained and has to be removed from our list. We can remove it by using <em>del</em> and accessing the entry using an index value to point at the correct position in the list. The station to be removed is in 4th position, which corresponds to the index value 3 in the Python numbering system. Try deleting it by typing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">stationNames</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Check the list again with the <em>print()</em> function. It should be back to a length of 4, include <em>Nahuelbuta</em> at the end, and no longer include <em>Reserva Nacional Paposo</em>.</p>
+<p>Finally, here are a few more functions before we move on. Check what they do by <em>printing</em> the results.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">stationNames</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>              <span class="c1"># This will reverse the order in your list</span>
+<span class="n">stationNames</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>                 <span class="c1"># This will sort your values in your list</span>
+<span class="n">stationNames</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;Pan de Azucar&#39;</span><span class="p">)</span> <span class="c1"># This will count the number of times &#39;Pan de Azucar&#39; occurs in your list</span>
+<span class="n">stationNames</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Pan de Azucar&#39;</span><span class="p">)</span> <span class="c1"># This will return the index value for &#39;Pan de Azucar&#39; (0 before and 3 after list reversal)</span>
+</pre></div>
+</div>
+</section>
+<section id="comparison-operators">
+<h2>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Link to this heading">¶</a></h2>
+<p>Most decisions are based on examining a value, comparing it to a reference value, and using their relation as a basis for decision. These comparisons are made possible in programming by using comparison operators. Here’s a list of those operators:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operator</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>==</cite></p></td>
+<td><p>equal to</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>!=</cite></p></td>
+<td><p>not equal to</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>&lt;</cite></p></td>
+<td><p>less than</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>&lt;=</cite></p></td>
+<td><p>less than or equal to</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>&gt;</cite></p></td>
+<td><p>greater than</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>&gt;=</cite></p></td>
+<td><p>greater than or equal to</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The general <em>syntax</em> for comparing two values with these operators is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">value</span><span class="p">]</span> <span class="p">[</span><span class="n">comparison</span> <span class="n">operator</span><span class="p">]</span> <span class="p">[</span><span class="n">reference</span> <span class="n">value</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>We will examine how this is used in practical decision making below.</p>
+</section>
+<section id="if-statements">
+<h2>If Statements<a class="headerlink" href="#if-statements" title="Link to this heading">¶</a></h2>
+<p>We let our programmes make decisions using <em>If Statements</em>. Let’s look at an example of that. Type the following into your console and make sure the print statement is indented as below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">exercise</span><span class="o">=</span><span class="s1">&#39;boring&#39;</span>
+<span class="k">if</span> <span class="n">exercise</span> <span class="o">==</span> <span class="s1">&#39;boring&#39;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;deal with it&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now that you have dealt with this, let’s examine what happened. First, you assigned the value ‘boring’ to the variable <em>exercise</em>. In the next line, you used the comparison operator <em>==</em> to check if the value for <em>exercise</em> is indeed boring. It is so, because we defined it in the line above. Since the comparison statement is true, the print function was used to display ‘deal with it’.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Python Syntax</p>
+<p>Note the line that started with <strong>if</strong> ended with a colon. This is important if you use Python. Also important is the the indentation for the next line. It tells Python that the <em>print</em> command is still part of your <em>if statement</em>. In other programming languages, you explicitly state the end of an if statement with something like <em>end if</em>. An unindented code block (in this case the second print statement) following the indented code block tells Python that the end of the if statement is reached.</p>
+</div>
+<p>Try the same again, but assign the value ‘exciting’ to the variable <em>exercise</em>. This should result only in the displaying of the word <em>done</em>, because the programme ignored the indented <em>print</em> statement following a negative result of the value comparisons in the first line.</p>
+<p>Decisions can be more complex than that. If one condition is not met, we may want to check if an alternative condition is true. We achieve that using the <strong>elif</strong> statement in Python, which is short for <em>‘If the first condition is not met, check this second one’</em>. The <strong>else</strong> statement translates to <em>‘for all other conditions’</em>. In your code editor, create a script like below and execute it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># in this script, we decide on an action based on 1. our target and 2. on who we are</span>
+
+<span class="c1"># let&#39;s assign some values to our variables</span>
+<span class="n">target</span><span class="o">=</span><span class="s1">&#39;human&#39;</span>                    <span class="c1"># here, we assign the value &#39;human&#39; to the target variable</span>
+<span class="n">i_am</span><span class="o">=</span><span class="s1">&#39;dalek&#39;</span>                      <span class="c1"># here, we assign the value &#39;dalek&#39; to our identity variable</span>
+<span class="n">action</span><span class="o">=</span><span class="s1">&#39;do nothing&#39;</span>               <span class="c1"># the default action is set to &#39;do nothing&#39;</span>
+
+<span class="c1"># in the code below, we determine our action based on the values of the 2 variables above</span>
+<span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="s1">&#39;human&#39;</span><span class="p">:</span>             <span class="c1"># if the target is &#39;human&#39;, proceed down the lines of indented code</span>
+    <span class="k">if</span> <span class="n">i_am</span> <span class="o">==</span> <span class="s1">&#39;dalek&#39;</span><span class="p">:</span>           <span class="c1"># if we are &#39;dalek&#39; ...</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="s1">&#39;exterminate&#39;</span>    <span class="c1"># we set our action to &#39;exterminate&#39;</span>
+    <span class="k">elif</span> <span class="n">i_am</span> <span class="o">==</span> <span class="s1">&#39;cyberman&#39;</span><span class="p">:</span>      <span class="c1"># if we are not &#39;dalek&#39;, but we are &#39;cyberman&#39; ...</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="s1">&#39;upgrade&#39;</span>        <span class="c1"># we set our action to &#39;upgrade&#39;</span>
+    <span class="k">else</span><span class="p">:</span>                         <span class="c1"># if both checks for our identity came out negative (if we are neither &#39;dalek&#39; nor &#39;cyberman&#39;) ...</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="s1">&#39;greet human&#39;</span>    <span class="c1"># we set our action to &#39;greet human&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>                     <span class="c1"># we display the result of our decision making process - note that this function will be executed in disregard of the results of the decision making above, because it is an unindented code block and therefore outside the if statement.</span>
+</pre></div>
+</div>
+<p>Here, we have <em>nested</em> if statements. Play around with the values you assign to the variables <em>target</em> and <em>i_am</em> and execute your modified code to get a better feeling for how these if statements work.</p>
+<p>It’s also possible to combine comparisons in an if statement by using <strong>and</strong> as such:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># in this script, we decide on an action based on 1. our target and 2. on who we are</span>
+
+<span class="c1"># let&#39;s assign some values to our variables</span>
+<span class="n">target</span><span class="o">=</span><span class="s1">&#39;human&#39;</span>                    <span class="c1"># here, we assign the value &#39;human&#39; to the target variable</span>
+<span class="n">i_am</span><span class="o">=</span><span class="s1">&#39;dalek&#39;</span>                      <span class="c1"># here, we assign the value &#39;dalek&#39; to our identity variable</span>
+<span class="n">action</span><span class="o">=</span><span class="s1">&#39;do nothing&#39;</span>               <span class="c1"># the default action is set to &#39;do nothing&#39;</span>
+
+<span class="c1"># in the code below, we determine our action based on the values of the 2 variables above</span>
+<span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="s1">&#39;human&#39;</span> <span class="ow">and</span> <span class="n">i_am</span> <span class="o">==</span> <span class="s1">&#39;dalek&#39;</span><span class="p">:</span>       <span class="c1"># if the target is &#39;human&#39; and we are &#39;dalek&#39; ...</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="s1">&#39;exterminate&#39;</span>                      <span class="c1"># we set our action to &#39;exterminate&#39;</span>
+<span class="k">elif</span> <span class="n">target</span> <span class="o">==</span> <span class="s1">&#39;human&#39;</span> <span class="ow">and</span> <span class="n">i_am</span> <span class="o">==</span> <span class="s1">&#39;cyberman&#39;</span><span class="p">:</span>  <span class="c1"># if the target is &#39;human&#39; and we are &#39;cyberman&#39; ...</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="s1">&#39;upgrade&#39;</span>                          <span class="c1"># we set our action to &#39;upgrade&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>                     <span class="c1"># we display the result of our decision making process - note that this function will be executed in disregard of the results of the decision making above, because it is an unindented code block and therefore outside the if statement.</span>
+</pre></div>
+</div>
+<p>Note that this time, there is no case for <em>target == ‘human’</em> and <em>i_am</em> being neither <em>dalek</em> nor <em>cyberman</em>, because we lost one level in the if statement hierarchy. We could add this case with another <strong>elif</strong> statment like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">elif</span> <span class="n">target</span> <span class="o">==</span> <span class="s1">&#39;human&#39;</span> <span class="ow">and</span> <span class="n">i_am</span> <span class="o">!=</span> <span class="s1">&#39;dalek&#39;</span> <span class="ow">and</span> <span class="n">i_am</span> <span class="o">!=</span> <span class="s1">&#39;cyberman&#39;</span><span class="p">:</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="s1">&#39;greet human&#39;</span>
+</pre></div>
+</div>
+<p>However, this would not be particularly efficient.</p>
+<p>If an action is dependent on only one of several conditions to be true, you can use <strong>or</strong> to state that. Have a look at the third version of this decision making progress:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># in this script, we decide on an action based on 1. our target and 2. on who we are</span>
+
+<span class="c1"># let&#39;s assign some values to our variables</span>
+<span class="n">target</span><span class="o">=</span><span class="s1">&#39;human&#39;</span>                    <span class="c1"># here, we assign the value &#39;human&#39; to the target variable</span>
+<span class="n">i_am</span><span class="o">=</span><span class="s1">&#39;dalek&#39;</span>                      <span class="c1"># here, we assign the value &#39;dalek&#39; to our identity variable</span>
+<span class="n">action</span><span class="o">=</span><span class="s1">&#39;do nothing&#39;</span>               <span class="c1"># the default action is set to &#39;do nothing&#39;</span>
+
+<span class="c1"># in the code below, we determine our action based on the values of the 2 variables above</span>
+<span class="k">if</span> <span class="n">target</span> <span class="o">==</span> <span class="s1">&#39;human&#39;</span><span class="p">:</span>                         <span class="c1"># if the target is &#39;human&#39;, proceed down the lines of indented code</span>
+    <span class="k">if</span> <span class="n">i_am</span> <span class="o">==</span> <span class="s1">&#39;dalek&#39;</span> <span class="ow">or</span> <span class="n">i_am</span> <span class="o">==</span> <span class="s1">&#39;cyberman&#39;</span><span class="p">:</span> <span class="c1"># if we are &#39;dalek&#39; or &#39;cyberman&#39;...</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="s1">&#39;a bad thing&#39;</span>                <span class="c1"># we set our action to &#39;a bad thing&#39;</span>
+    <span class="k">else</span><span class="p">:</span>                                     <span class="c1"># if one of the 2 conditions above are not met ...</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="s1">&#39;greet human&#39;</span>                <span class="c1"># we set our action to &#39;greet human&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>                                 <span class="c1"># we display the result of our decision making process</span>
+</pre></div>
+</div>
+<p>If you execute this script, it will display <em>a bad thing</em>. Now change the value of the <em>i_am</em> variable to <em>‘cyberman’</em> and see what happens. It should give you the exact same result, because assigning <em>‘a bad thing’</em> to <em>action</em> is conditional on <em>i_am</em> being either <em>dalek</em> or <em>cyberman</em>.</p>
+</section>
+<section id="for-loops">
+<h2>For Loops<a class="headerlink" href="#for-loops" title="Link to this heading">¶</a></h2>
+<p><em>for loops</em>, in other languages also referred to as <em>do loops</em>, are essential in programming as they allow you to automate things. Let’s make the following array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">year</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1981</span><span class="p">,</span> <span class="mi">1982</span><span class="p">,</span> <span class="mi">1983</span><span class="p">,</span> <span class="mi">1984</span><span class="p">,</span> <span class="mi">1985</span><span class="p">,</span> <span class="mi">1986</span><span class="p">,</span> <span class="mi">1987</span><span class="p">,</span> <span class="mi">1988</span><span class="p">,</span> <span class="mi">1989</span><span class="p">,</span> <span class="mi">1990</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Assume we made a systematic mistake in our list of 10 years and we would like to correct that by adding 1 year to each of our entries. An inefficient way to do this would be:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">year</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">year</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">year</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">year</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">year</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">year</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">year</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">year</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">year</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+<span class="n">year</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>This is where <em>for loops</em> come in handy. We can tell our programme to do the same calculation for every entry in the array and <em>print</em> the updated value as such:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">year</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">year</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>We tell the programme to execute the indented line of code for each instance of the index value <em>i</em>, which is updated 10 times by increments of 1, starting with an initial value of 0. If we only want to update everything after 1984, we can specify the index value range as such:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">year</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>             <span class="c1"># the += operator allows you to shorten the correction of a value</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">year</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>This loop now explicitly starts with an index value of 4, which corresponds to the 5th value (<em>1985</em>) and continue updating the index value until the 10th entry.</p>
+<p>If you want to create a loop for all values, but do not know the length of your list, you can use the <em>len()</em> function to get it. This can be incorporated into your loop as such:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">year</span><span class="p">)):</span>
+    <span class="n">year</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</section>
+<section id="your-task">
+<h2>Your Task<a class="headerlink" href="#your-task" title="Link to this heading">¶</a></h2>
+<p>You just finished grading 9 exams on atmospheric physics (ugh!). You have 10 students (and number them in a rather dystopian manner), but only 9 of them showed up. You saved the grades in an array and entered a ridiculous number (-9999.0) for the missing student, so you know they didn’t take the exam.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.7</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">9999.0</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You now want to calculate the arithmetic mean of the students’ greades according to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+  mean = \frac { {\sum_{i=1}^{n} }g_i } n
+\end{equation}\]</div>
+<p>Since one of the student was missing, n=9. Write code for at least <strong>two different ways</strong> to calculate the mean grade based on the <em>g</em> array. Somewhere in your code, you should make use of the following:</p>
+<ul class="simple">
+<li><p>list functions</p></li>
+<li><p>comparison operators</p></li>
+<li><p>if statements</p></li>
+<li><p>for loops</p></li>
+</ul>
+<p>Try to keep your code as flexible as possible. Ideally, it should still work next year, when a different student may be missing (corresponding to a different position in your list of grades) or when more students fail to take the exam. Also make sure you comment each line of code to let other programmers know what you are doing.</p>
+<p>When you are happy with your code, put your two (or more) different methods in one file, save it as <em>[your student number]_e002.[ext]</em> and submit it via ILIAS.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Late submissions won’t be accepted!</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../E001/E001.html" class="btn btn-neutral float-left" title="E001 - Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../E003/E003.html" class="btn btn-neutral float-right" title="E003 - Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Sebastian G. Mutz.
+      <span class="lastupdated">Last updated on Sep 20, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
