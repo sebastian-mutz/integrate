@@ -67,7 +67,8 @@ Table of Contents
    :maxdepth: 2
    :caption: Coding 101 (Fortran):
 
-..    exercises/E001/f90/E001
+   exercises/info
+   exercises/E001/f90/E001
 ..
 .. .. toctree::
 ..    :maxdepth: 2
