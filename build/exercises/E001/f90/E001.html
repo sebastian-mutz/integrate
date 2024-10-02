@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E001 - Getting Started &mdash; INTEGRATE 1.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=c824535d" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/style.css?v=f511e541" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=56dcb7b8"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="E101 - Confidence Intervals" href="../../E101/E101.html" />
+    <link rel="prev" title="E005 - R/W and Visualisation" href="../../E005/py/E005.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            INTEGRATE
+              <img src="../../../_static/integrateLogo256x256_ccby_SebastianMutz.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2024
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Course Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/info.html">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/syllabus.html">Course Specifics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../general/license.html">License and Credits</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Lectures:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/A001/A001.html">Building a Climate I</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/A002/A002.html">Building a Climate II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/A003/A003.html">Building a Climate III</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/A004/A004.html">Building a Climate IV</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/A005/A005.html">Building a Climate V</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/A006/A006.html">Building a Climate VI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/A007/A007.html">Building a Climate VII</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lectures/A008/A008.html">Building a Climate VIII</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding 101 (Python):</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../info.html">Intro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../py/E001.html">E001 - Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../E002/py/E002.html">E002 - Arrays and Constructs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../E003/py/E003.html">E003 - Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../E004/py/E004.html">E004 - Classes and Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../E005/py/E005.html">E005 - R/W and Visualisation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding 101 (Fortran):</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">E001 - Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#information">Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compiled-or-interpreted">Compiled or Interpreted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workflow-setup">Workflow Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-and-compiling-a-simple-programme">Writing and Compiling a Simple Programme</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Coding Exercises:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../E101/E101.html">E101 - Confidence Intervals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../E102/E102.html">E102 - Hypothesis Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../E103/E103.html">E103 - Bayesian Classifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../E104/E104.html">E104 - Correlation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../E105/E105.html">E105 - A Simple Climate Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../E201/E201.html">E201 - Building a Weather Station</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources/dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../resources/reading.html">Reading</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Teacher Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/guide.html">Guide</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">INTEGRATE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">E001 - Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/exercises/E001/f90/E001.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="e001-getting-started">
+<h1>E001 - Getting Started<a class="headerlink" href="#e001-getting-started" title="Link to this heading">¶</a></h1>
+<p>In this exercise, you learn about some basic concepts of programming, commonly used tools, and how to write and execute a script. You may come across some important vocabulary that you are not yet familiar with. <strong>We will explore this with modern Fortran (programming language).</strong></p>
+<section id="information">
+<h2>Information<a class="headerlink" href="#information" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Topic</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Concepts</strong></p></td>
+<td><ul class="simple">
+<li><p>programme</p></li>
+<li><p>compilers</p></li>
+<li><p>IDE, code highlighting, terminal emulator</p></li>
+<li><p>data types</p></li>
+<li><p>modules (Fortran)</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Skills</strong></p></td>
+<td><ul class="simple">
+<li><p>code with only a text editor and terminal emulator</p></li>
+<li><p>create, compile and execute a programme</p></li>
+<li><p>declaring parameters and variables</p></li>
+<li><p>using built-in functions</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<aside class="topic">
+<p class="topic-title">What to Submit</p>
+<p>Submit your script for the final task of this exercise. The script should be named <em>[your student number]_e001.[ext]</em>, where <em>[ext]</em> is the file extension. In case of Python, this would be <em>.py</em>, for modern Fortran it is <em>.f90</em>, etc.</p>
+</aside>
+</section>
+<section id="compiled-or-interpreted">
+<h2>Compiled or Interpreted<a class="headerlink" href="#compiled-or-interpreted" title="Link to this heading">¶</a></h2>
+<p>There are a few differences between compiled and interpreted languages. These are highlighted below in a simplified manner to explain why we set up the workflow as described in the next section.</p>
+<p><strong>Compiled Language</strong>: The whole programme is translated into <em>machine code</em> (i.e. your computers “language”) by a so-called <strong>compiler</strong>. In the compilation process, a new file is created (separate from the text file you wrote your code into). This (executable) file can be run as a programme without the need of the original code (text file).</p>
+<ul class="simple">
+<li><p><strong>Analogy</strong>: It can be thought of as the process of translating a poem completely into another language, then reading the translated poem to an audience. The original poem (script) and translator are no longer needed.</p></li>
+<li><p><strong>Examples</strong>: Fortran, C++</p></li>
+<li><p><strong>Advantages</strong>: Usually faster performance, easy to control optimisations during compilation.</p></li>
+</ul>
+<p><strong>Interpreted Language</strong>: The programme does not have to be translated into <em>machine code</em> before execution. Instead, when you run your programme, your code (in the text file) is translated line-by-line by a so-called <strong>interpreter</strong>.</p>
+<ul class="simple">
+<li><p><strong>Analogy</strong>: It can be thought of as someone reading a Bavarian poem and translating it line-by-line into English to an audience. The original poem (script) and translator are still needed.</p></li>
+<li><p><strong>Examples</strong>: Python, JavaScript</p></li>
+<li><p><strong>Advantages</strong>: More convenient, no need for manual compilation.</p></li>
+</ul>
+</section>
+<section id="workflow-setup">
+<h2>Workflow Setup<a class="headerlink" href="#workflow-setup" title="Link to this heading">¶</a></h2>
+<p>Fortran is a compiled language. Hence, our process will be: <strong>write code &gt; compile code &gt; run executable file</strong>. This means we will need the following tools to set up our workflow:</p>
+<ul class="simple">
+<li><p>We will write our code in a text editor with code-highlighting feature. For demonstration purposes, we will use <a class="reference external" href="https://apps.kde.org/en-gb/kate/">Kate</a>. However, there are many great editors (e.g., <a class="reference external" href="https://www.gnu.org/software/emacs/">Emacs</a>).</p></li>
+</ul>
+<figure class="align-center" id="id1">
+<img alt="../../../_images/texteditor.jpg" src="../../../_images/texteditor.jpg" />
+<figcaption>
+<p><span class="caption-text">Text editors like <em>Kate</em> support code highlighting, which will make your code much easier to read!</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ul>
+<li><p>We will execute our compiled programme from command line in a terminal emulator (also referred to as console in this document). There are many great options. If you are using any Linux or Unix operating system (incl. MacOS), you will most likely have a terminal emulator already installed. If you’re using Windows, installing <a class="reference external" href="https://www.cygwin.com/">Cygwin</a> is recommended. For this tutorial, demonstrations will be done with KDE’s <a class="reference external" href="https://konsole.kde.org/">Konsole</a> and <em>bash</em> shell (command-line interpreter). For the exercises here, you do not need to know <em>bash</em> commands well. You only need to know 3 commands:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><em>ls</em> lets you view the content of your working directory (the folder  you are currently in). <em>ls -l</em> will list the contents line-by-line.</p></li>
+<li><p>You can find out which directory you are in by typing <em>pwd</em> (short for “print working directory”).</p></li>
+<li><p><em>cd</em> will change the directory you are working in. It is the equivalent of opening a folder in your file browser. For example: If you are currently in a folder <em>home/</em> that contains a subfolder named <em>doge/</em>, you can navigate to the subfolder by typing <em>cd doge</em>. If you want to navigate one folder level up, you simply type <em>cd ..</em>.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<figure class="align-center" id="id2">
+<img alt="../../../_images/terminal.jpg" src="../../../_images/terminal.jpg" />
+<figcaption>
+<p><span class="caption-text"><em>Konsole</em> is one of many well-established terminal emulators. The image demonstrates some useful bash commands. The commands are written in lines starting with $ and executed by hitting enter. The results of the commands are displayed in the other lines below them.</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>We will compile our code with the <a class="reference external" href="https://gcc.gnu.org/fortran/">gfortran</a> compiler (version 10). Additional installation instructions can be found <a class="reference external" href="https://fortran-lang.org/learn/os_setup/install_gfortran/">here</a>. The simplest way to compile your Fortran code with gfortran is by typing the following into your terminal emulator:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gfortran<span class="w"> </span><span class="o">[</span>path1<span class="o">]</span>/<span class="o">[</span>code<span class="o">]</span>.f90<span class="w"> </span>-o<span class="w"> </span><span class="o">[</span>path2<span class="o">]</span>/<span class="o">[</span>program<span class="o">]</span>.exe
+./<span class="o">[</span>program<span class="o">]</span>.exe
+</pre></div>
+</div>
+<p>With the command in the first line, you are telling the compiler to compile your script with file name <em>[code]</em> located in the folder <em>[path1]</em> and create an executable file with file name <em>[program]</em> in the folder <em>[path2]</em>. The second line will run your progam. If you are working on a Linux/Unix system, you do not need the <em>.exe</em> file extension, but it may help you identify your executables.</p>
+</section>
+<section id="writing-and-compiling-a-simple-programme">
+<h2>Writing and Compiling a Simple Programme<a class="headerlink" href="#writing-and-compiling-a-simple-programme" title="Link to this heading">¶</a></h2>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">expr2</span>
+<span class="k">implicit none</span>
+
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w">  </span><span class="c">! comment</span>
+
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span>
+<span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">x</span>
+<span class="k">end program</span>
+</pre></div>
+</div>
+<p>The console should have returned <em>“wow, many print”</em>. In this case, the input argument was <em>“wow, many print”</em>, i.e. the value to be displayed, and the function <em>print</em> displayed it.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../E005/py/E005.html" class="btn btn-neutral float-left" title="E005 - R/W and Visualisation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../E101/E101.html" class="btn btn-neutral float-right" title="E101 - Confidence Intervals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Sebastian G. Mutz.
+      <span class="lastupdated">Last updated on Sep 23, 2024.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

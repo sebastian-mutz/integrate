@@ -54,31 +54,31 @@ Table of Contents
   
 .. toctree::
    :maxdepth: 2
-   :caption: Coding Intro (Python):
-   
-   exercises/info   
-   exercises/E001/E001
-   exercises/E002/E002
-   exercises/E003/E003
-   exercises/E004/E004
-   exercises/E005/E005
+   :caption: Coding 101 (Python):
+
+   exercises/info
+   exercises/E001/py/E001
+   exercises/E002/py/E002
+   exercises/E003/py/E003
+   exercises/E004/py/E004
+   exercises/E005/py/E005
 
 .. .. toctree::
 ..    :maxdepth: 2
-..    :caption: Coding Intro (Fortran):
-
-   exercises/E001/E001_fortran
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Coding Exercises:
-
-   exercises/E101/E101
-   exercises/E102/E102
-   exercises/E103/E103
-   exercises/E104/E104
-   exercises/E105/E105
-   exercises/E201/E201
+..    :caption: Coding 101 (Fortran):
+..
+..    exercises/E001/f90/E001
+..
+.. .. toctree::
+..    :maxdepth: 2
+..    :caption: Coding Exercises:
+..
+..    exercises/E101/E101
+..    exercises/E102/E102
+..    exercises/E103/E103
+..    exercises/E104/E104
+..    exercises/E105/E105
+..    exercises/E201/E201
 
 .. .. toctree::
 ..    :maxdepth: 2
