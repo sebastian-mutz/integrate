@@ -63,23 +63,28 @@ Table of Contents
    exercises/E004/py/E004
    exercises/E005/py/E005
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Coding 101 (Fortran):
-
-   exercises/info
-   exercises/E001/f90/E001
-..
 .. .. toctree::
 ..    :maxdepth: 2
-..    :caption: Coding Exercises:
+..    :caption: Coding 101 (Fortran):
 ..
-..    exercises/E101/E101
-..    exercises/E102/E102
-..    exercises/E103/E103
-..    exercises/E104/E104
-..    exercises/E105/E105
-..    exercises/E201/E201
+..    exercises/info
+..    exercises/E001/f90/E001
+..
+.. toctree::
+   :maxdepth: 2
+   :caption: Coding Exercises:
+
+   exercises/E101/E101
+   exercises/E102/E102
+   exercises/E103/E103
+   exercises/E104/E104
+   exercises/E105/E105
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Weather Station Exercise:
+
+   exercises/E201/E201
 
 .. .. toctree::
 ..    :maxdepth: 2
