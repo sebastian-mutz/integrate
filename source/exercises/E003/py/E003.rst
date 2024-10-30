@@ -128,7 +128,7 @@ Rememer last week's assignment? You wrote code that is able to calculate the mea
 
 Additionally, write a script that defines a list of grades, imports your functions as a module and uses your implemented functions to calculate the mean grade. Make sure your code works!
 
-When you are happy with your code, name your files *[your student number]_e003_functions.[ext]* (for the scripts containing your functions) and *[your student number]_e003_main.[ext]* for your script calling the functions, zip them and submit them via ILIAS.
+When you are happy with your code, name your files *e003_functions_[your student number].[ext]* (for the scripts containing your functions) and *e003_main_[your student number].[ext]* for your script calling the functions, zip them and submit them via ILIAS.
 
 .. warning::
 

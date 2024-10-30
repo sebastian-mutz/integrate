@@ -293,7 +293,7 @@ Since one of the student was missing, n=9. Write code for at least **two differe
 
 Try to keep your code as flexible as possible. Ideally, it should still work next year, when a different student may be missing (corresponding to a different position in your list of grades) or when more students fail to take the exam. Also make sure you comment each line of code to let other programmers know what you are doing.
 
-When you are happy with your code, put your two (or more) different methods in one file, save it as *[your student number]_e002.[ext]* and submit it via ILIAS.
+When you are happy with your code, put your two (or more) different methods in one file, save it as *e002_[your student number].[ext]* and submit it via ILIAS.
 
 .. warning::
 

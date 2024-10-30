@@ -22,7 +22,7 @@ Information
 
 .. topic:: What to Submit
 
-      Submit your script(s) for the final task of this exercise. These script should be named *[your student number]_e004.[ext]* or, if you want to split your code into two scripts, *[your student number]_e004_class.[ext]* and *[your student number]_e004_main.[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for modern Fortran it is *.f90*, etc.
+      Submit your script(s) for the final task of this exercise. These script should be named *e004_[your student number].[ext]* or, if you want to split your code into two scripts, *e004_class_[your student number].[ext]* and *e004_main_[your student number].[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for modern Fortran it is *.f90*, etc.
 
       
 Object-Oriented Programming      

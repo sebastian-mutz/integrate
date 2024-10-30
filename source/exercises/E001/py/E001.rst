@@ -312,7 +312,7 @@ Now you've covered enough of the basics of practical programming in the sections
   * combines 2 functions somewhere in the script
   * includes *comments* for every instruction (executed line of code) in the script
   
-When you are happy with your script, save it as *[your student number]_e001.[ext]* and submit it.
+When you are happy with your script, save it as *e001_[your student number].[ext]* and submit it.
 
 .. warning::
 
