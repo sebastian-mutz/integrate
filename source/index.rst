@@ -86,19 +86,19 @@ Table of Contents
 
    exercises/E201/E201
 
-.. .. toctree::
-..    :maxdepth: 2
-..    :caption: Projects:
-..
-..    projects/P001/P001_info
-..    projects/P002/P002_info
-..    projects/P003/P003_info
-..    projects/P004/P004_info
-..    projects/P005/P005_info
-..    projects/P006/P006_info
-..    projects/P007/P007_info
-..    projects/P008/P008_info
-..    projects/P009/P009_info
+.. toctree::
+   :maxdepth: 2
+   :caption: Projects:
+
+   projects/P001/P001_info
+   projects/P002/P002_info
+   projects/P003/P003_info
+   projects/P004/P004_info
+   projects/P005/P005_info
+   projects/P006/P006_info
+   projects/P007/P007_info
+   projects/P008/P008_info
+   projects/P009/P009_info
 
 .. toctree::
    :maxdepth: 2
