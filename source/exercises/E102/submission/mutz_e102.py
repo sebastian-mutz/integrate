@@ -47,8 +47,9 @@ serr_jan=t2m_stdv[0]/(float(df))**0.5    # standard error january
 serr_jun=t2m_stdv[5]/(float(df))**0.5    # standard error june
 #
 # calculate the z-score/look at how far away we are from the mean (expressed in standard deviations of the sampling distribution)
-z_jan=tm_jan-t2m_mean[0]/serr_jan
-z_jun=tm_jun-t2m_mean[5]/serr_jun
+z_jan=(tm_jan-t2m_mean[0])/serr_jan
+z_jun=(tm_jun-t2m_mean[5])/serr_jun
+print(z_jan)
 #
 # calculate p-values (2-tailed test)
 p_jan=2*(1-(norm.cdf(z_jan, 0, 1)))   
