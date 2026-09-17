@@ -42,16 +42,16 @@ Fortran is a compiled language. Hence, our process will be: **write code > compi
 
 - We will execute our compiled programme from command line in a terminal emulator (also referred to as console in this document). There are many great options. If you are using any Linux or Unix operating system (incl. MacOS), you will most likely have a terminal emulator already installed. If you're using Windows, installing `Cygwin <https://www.cygwin.com/>`_ is recommended. For this tutorial, demonstrations will be done with KDE's `Konsole <https://konsole.kde.org/>`_ and *bash* shell (command-line interpreter). For the exercises here, you do not need to know *bash* commands well. You only need to know 3 commands:
 
-    1. *ls* lets you view the content of your working directory (the folder  you are currently in). *ls -l* will list the contents line-by-line.
-    2. You can find out which directory you are in by typing *pwd* (short for "print working directory").
-    3. *cd* will change the directory you are working in. It is the equivalent of opening a folder in your file browser. For example: If you are currently in a folder *home/* that contains a subfolder named *doge/*, you can navigate to the subfolder by typing *cd doge*. If you want to navigate one folder level up, you simply type *cd ..*.
+    1. ``ls`` lets you view the content of your working directory (the folder  you are currently in). *ls -l* will list the contents line-by-line.
+    2. You can find out which directory you are in by typing ``pwd`` (short for "print working directory").
+    3. ``cd`` will change the directory you are working in. It is the equivalent of opening a folder in your file browser. For example: If you are currently in a folder *home/* that contains a subfolder named *doge/*, you can navigate to the subfolder by typing *cd doge*. If you want to navigate one folder level up, you simply type *cd ..*.
 
 .. figure:: terminal.jpg
    :align: center
 
    *Konsole* is one of many well-established terminal emulators. The image demonstrates some useful bash commands. The commands are written in lines starting with $ and executed by hitting enter. The results of the commands are displayed in the other lines below them.
 
-- We will compile our code with the `gfortran <https://gcc.gnu.org/fortran/>`_ compiler (version 10). Additional installation instructions can be found `here <https://fortran-lang.org/learn/os_setup/install_gfortran/>`_. The simplest way to compile your Fortran code with gfortran is by typing the following into your terminal emulator:
+- We will compile our code with the `gfortran <https://gcc.gnu.org/fortran/>`_ compiler. Additional installation instructions can be found `here <https://fortran-lang.org/learn/os_setup/install_gfortran/>`_. The simplest way to compile your Fortran code with gfortran is by typing the following into your terminal emulator:
 
 .. code-block:: bash
 
@@ -73,8 +73,315 @@ Writing and Compiling a Simple Programme
 
     end program
 
-If you compile and execute the programme as described above, the line *"wow, many print"* should be displayed in your terminal emulator. Let's go through the programme in detail to examine what it does:
+Save this as ``printing.f90`` and compile it with
 
-- Your first line is the start of the programme, which you named *"printing"*. The last line (*"end pgoram"*) is how you end every programme you write.
-- Virtually every modern Fortran programme will have the *"implicit none"* statement above any instructions given by the programme to the computer. You are telling Fortran not to assume any specific data type for a variable based on the variable name. We'll have a look at variables and data types later. For now, the following explanation is enough: Fortran is a very special language in that it is (a) quite old, (b) continuously updated, and (c) modern versions of the language remain compatible with old Fortran. This line ensures continued backward-compatibility.
-- The actual instructions tell your computer to print (i.e. display on screen/in your terminal emulator) the words put in quotation marks. The asterisk (*) tells the computer to display/print the text in default format. The comma seperates the command (on the left side) from the words to be printed (on the right side).
+.. code-block:: bash
+
+    gfortran printing.f90 -o printing
+
+Then run it with
+
+.. code-block:: bash
+
+    ./printing
+
+The terminal should display::
+
+    wow, many print
+
+Let's go through the programme in detail:
+
+* ``program printing`` starts the programme and gives it the name ``printing``.
+* ``implicit none`` tells Fortran that every variable must be explicitly
+  declared. This is an important modern Fortran programming practice.
+* ``print *`` writes information to the terminal using Fortran's default
+  output formatting.
+* ``end program printing`` marks the end of the programme.
+
+
+Comments
+--------
+
+Comments are text in the source code that are ignored by the compiler. In
+modern Fortran, a comment begins with ``!``.
+
+For example
+
+.. code-block:: fortran
+
+    ! This is a comment.
+    print *, "Hello!"  ! This is also a comment.
+
+Comments are useful for explaining *why* code exists and for documenting
+assumptions. For this exercise, every executable instruction in your submitted
+programme should have an explanatory comment.
+
+Simple Maths
+------------
+
+Fortran provides arithmetic operators for common mathematical operations.
+
++----------+----------------------+-------------------+
+| Operator | Description          | Example           |
++==========+======================+===================+
+| ``+``    | addition             | ``20 + 22``       |
++----------+----------------------+-------------------+
+| ``-``    | subtraction          | ``2077 - 93``     |
++----------+----------------------+-------------------+
+| ``*``    | multiplication       | ``578 * 4``       |
++----------+----------------------+-------------------+
+| ``/``    | division             | ``1332 / 2``      |
++----------+----------------------+-------------------+
+| ``**``   | exponentiation       | ``16 ** 2``       |
++----------+----------------------+-------------------+
+
+Try these expressions in a programme
+
+.. code-block:: fortran
+
+    program maths
+        implicit none
+
+        print *, 20 + 22
+        print *, 2077 - 93
+        print *, 578 * 4
+        print *, 1332 / 2
+        print *, 16 ** 2
+    end program maths
+
+The output should contain values corresponding to::
+
+    42
+    1984
+    2312
+    666
+    256
+
+Notice that the type of an expression matters. For example, integer division
+is different from floating-point division
+
+.. code-block:: fortran
+
+    print *, 5 / 2
+    print *, 5.0 / 2.0
+
+The first expression uses integers, whereas the second uses real numbers.
+
+Intrinsic Functions
+-------------------
+
+Fortran provides many intrinsic functions for common mathematical and
+programming operations. These functions are built into the language and do not
+require an external library.
+
+For example, ``sqrt`` calculates a square root and ``sin`` calculates a sine
+
+.. code-block:: fortran
+
+    program functions
+        implicit none
+
+        print *, sqrt(64.0)
+        print *, sin(2.0)
+    end program functions
+
+You can combine functions and expressions. For example
+
+.. code-block:: fortran
+
+    print *, sqrt(16.0 + 48.0)
+
+The expression inside ``sqrt`` is evaluated first. Its result is then passed
+to ``sqrt``.
+
+Some useful intrinsic mathematical functions include:
+
+* ``sqrt(x)`` -- square root
+* ``abs(x)`` -- absolute value
+* ``sin(x)`` -- sine
+* ``cos(x)`` -- cosine
+* ``exp(x)`` -- exponential
+* ``log(x)`` -- natural logarithm
+
+Fortran also provides mathematical constants through standard facilities in
+modern language environments, but for this introductory exercise it is useful
+to practise declaring your own constant, as shown below.
+
+Variables and Constants
+-----------------------
+
+A variable stores a value that can change while a programme is running. A
+constant (a named parameter in Fortran) stores a value that should not change.
+
+For example
+
+.. code-block:: fortran
+
+    program variables
+        implicit none
+
+        real :: x
+        real, parameter :: scale = 0.5
+        real :: y
+
+        x = sqrt(64.0)
+        y = scale * x + 2.0
+
+        print *, "x =", x
+        print *, "y =", y
+    end program variables
+
+The declaration ``real :: x`` creates a variable named ``x`` that can store a real (floating-point) value.
+
+The declaration ``real, parameter :: scale = 0.5`` creates a named constant. The ``parameter`` attribute means that its value cannot be changed later.
+
+Unlike Python, Fortran requires variables to be declared before they are used. This is great, because it makes you think more carefully about what you want to do, and helps prevent problems down the line.
+
+
+Data Types
+----------
+
+A data type describes what kind of value a variable can store. Common intrinsic Fortran types include:
+
++--------------+--------------------------------+--------------------------+
+| Type         | Description                    | Example                  |
++==============+================================+==========================+
+| ``integer``  | whole numbers                  | ``42``, ``451``          |
++--------------+--------------------------------+--------------------------+
+| ``real``     | floating-point numbers         | ``20.77``, ``2.312``     |
++--------------+--------------------------------+--------------------------+
+| ``logical``  | logical values                 | ``.true.``, ``.false.``  |
++--------------+--------------------------------+--------------------------+
+| ``character``| text                           | ``"hello"``              |
++--------------+--------------------------------+--------------------------+
+
+For example
+
+.. code-block:: fortran
+
+    integer :: year
+    real :: temperature
+    logical :: is_ready
+    character(len=20) :: name
+
+    year = 2026
+    temperature = 20.77
+    is_ready = .true.
+    name = "Fortran"
+
+
+For numerical scientific computing, it is good practice to be deliberate
+about numerical precision. For this introductory exercise, ordinary
+``real`` values are sufficient.
+
+Modules
+-------
+
+Fortran uses modules to group related declarations, procedures, and constants.
+Modules are an important mechanism for structuring larger programmes.
+
+The following example defines a module containing a constant and a function
+
+
+.. code-block:: fortran
+
+    module geometry
+        implicit none
+
+        real, parameter :: pi = 3.141592653589793
+
+    contains
+
+        real function circle_area(radius)
+            real, intent(in) :: radius
+
+            circle_area = pi * radius ** 2
+        end function circle_area
+
+    end module geometry
+
+A programme can then use the module with ``use``
+
+.. code-block:: fortran
+
+    program module_example
+        use geometry, only: circle_area
+        implicit none
+
+        real :: area
+
+        area = circle_area(2.0)
+        print *, "area =", area
+    end program module_example
+
+The ``only`` clause makes it explicit which module entities the programme uses.
+This is a useful habit in larger Fortran projects because it makes
+dependencies easier to see.
+
+Writing a Complete Script
+-------------------------
+
+Now combine the concepts introduced above into a small programme.
+
+Create a file called ``test.f90`` containing the following
+
+.. code-block:: fortran
+
+    program test
+        implicit none
+
+        real, parameter :: radius = 2.0
+        real, parameter :: pi = 3.141592653589793
+        real :: circumference
+        real :: area
+
+        circumference = 2.0 * pi * radius
+        area = pi * radius ** 2
+
+        print *, "circumference =", circumference
+        print *, "area =", area
+    end program test
+
+Compile and execute it with
+
+.. code-block:: bash
+
+    gfortran test.f90 -o test
+    ./test
+
+The programme calculates the circumference and area of a circle with radius
+2. Notice that:
+
+* ``radius`` and ``pi`` are named constants;
+* ``circumference`` and ``area`` are variables;
+* arithmetic operators are used in the expressions;
+* ``print *`` is used to display results;
+* ``implicit none`` prevents accidental implicit variable declarations;
+* comments can be used to document each instruction.
+
+For a larger programme, you would normally move reusable functionality into
+modules and use procedures rather than placing all calculations in the main
+programme.
+
+Your Task
+---------
+
+Now you have covered enough of the basics of practical programming to start
+writing your own modern Fortran programme.
+
+Write and submit a programme that:
+
+* calculates and displays the circumference and area of a circle with a
+  radius of 2;
+* uses mathematical operators;
+* uses at least one intrinsic mathematical function;
+* declares and uses variables;
+* declares and uses at least one named constant with ``parameter``;
+* combines functions and/or expressions somewhere in the programme;
+* includes comments for every executable instruction in the programme.
+
+Save your programme as `e001_[your student number].f90` and submit it.
+
+.. warning::
+
+   Late submissions won't be accepted!
