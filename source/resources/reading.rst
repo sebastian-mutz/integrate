@@ -17,6 +17,12 @@ This page contains a few book and website references that will help you deepen y
   * Sivia, D. S. and Skilling, J.: Data Analysis - A Bayesian Tutorial , Oxford University Press, 2006. 
   * Neapolitan, R.E.: Learning Bayesian Networks - Prentice Hall, 2004.
 
+.. topic:: Fortran
+
+  * The `Fortran-lang website <https://fortran-lang.org/learn/>`_ includes tutorials that help you build on the basic Fortran skills you have learned in this course.
+  * The `Fortran Wiki <https://fortranwiki.org/fortran/show/HomePage/>`_ provides you with a list of resources, explanations of the language, an overview of packages, and more.
+  * Metcalf, M., Reid, J., Cohen, M and Bader, R.: Modern Fortran Explained: Incorporating Fortran 2023 (6th edn). Oxford University Press, 2023.
+
 .. topic:: Python 
 
   * The official `Python 3 documentation <https://docs.python.org/3/>`_ includes tutorials that help you build on the basic Python skills you have learned in this course.

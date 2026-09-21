@@ -1,5 +1,5 @@
-E001 - Getting Started
-======================
+E001 (Fortran) - Getting Started
+================================
 
 In this exercise, you learn about some basic concepts of programming, commonly used tools, and how to write and execute a script. You may come across some important vocabulary that you are not yet familiar with. **We will explore this with modern Fortran (programming language).**
 
@@ -42,9 +42,9 @@ Fortran is a compiled language. Hence, our process will be: **write code > compi
 
 - We will execute our compiled programme from command line in a terminal emulator (also referred to as console in this document). There are many great options. If you are using any Linux or Unix operating system (incl. MacOS), you will most likely have a terminal emulator already installed. If you're using Windows, installing `Cygwin <https://www.cygwin.com/>`_ is recommended. For this tutorial, demonstrations will be done with KDE's `Konsole <https://konsole.kde.org/>`_ and *bash* shell (command-line interpreter). For the exercises here, you do not need to know *bash* commands well. You only need to know 3 commands:
 
-    1. ``ls`` lets you view the content of your working directory (the folder  you are currently in). *ls -l* will list the contents line-by-line.
-    2. You can find out which directory you are in by typing ``pwd`` (short for "print working directory").
-    3. ``cd`` will change the directory you are working in. It is the equivalent of opening a folder in your file browser. For example: If you are currently in a folder *home/* that contains a subfolder named *doge/*, you can navigate to the subfolder by typing *cd doge*. If you want to navigate one folder level up, you simply type *cd ..*.
+    1. ``ls`` lets you view the content of your working directory (the folder  you are currently in). ``ls -l`` will list the contents line-by-line.
+    2. ``pwd`` (short for "print working directory") lets you find out which directory you are in.
+    3. ``cd`` will change the directory you are working in. It is the equivalent of opening a folder in your file browser. For example: If you are currently in a folder ``home`` that contains a subfolder named ``doge``, you can navigate to the subfolder by typing ``cd doge``. If you want to navigate one folder level up, you simply type ``cd ..``.
 
 .. figure:: terminal.jpg
    :align: center
@@ -73,21 +73,6 @@ Writing and Compiling a Simple Programme
 
     end program
 
-Save this as ``printing.f90`` and compile it with
-
-.. code-block:: bash
-
-    gfortran printing.f90 -o printing
-
-Then run it with
-
-.. code-block:: bash
-
-    ./printing
-
-The terminal should display::
-
-    wow, many print
 
 Let's go through the programme in detail:
 
@@ -99,13 +84,39 @@ Let's go through the programme in detail:
 * ``end program printing`` marks the end of the programme.
 
 
+Save this as ``printing.f90`` and compile it with:
+
+.. code-block:: bash
+
+    gfortran printing.f90 -o printing
+
+Here, we are asking for the Fortran code in file ``printing.f90`` to be converted into an execurable file named ``printing``. We can then run it with:
+
+.. code-block:: bash
+
+    ./printing
+
+You can also simply combine the commands in one line using ampersands:
+
+.. code-block:: bash
+
+    gfortran printing.f90 -o printing && ./printing
+
+The terminal should display::
+
+    wow, many print
+
+
+.. note::
+
+   The Fortran Package Manager (fpm) simplifies workflows and compilations, especially for larger projects. This `short tutorial <https://fpm.fortran-lang.org/tutorial/hello-fpm.html>`_ explains how you set up a Fortran project with fpm. It is worth investing a few minutes to familiarise yourself with fpm if you want to use Fortran for the later projects in this course.
+
+
 Comments
 --------
 
 Comments are text in the source code that are ignored by the compiler. In
-modern Fortran, a comment begins with ``!``.
-
-For example
+modern Fortran, a comment begins with ``!``. For example:
 
 .. code-block:: fortran
 
@@ -277,8 +288,8 @@ about numerical precision. For this introductory exercise, ordinary
 Modules
 -------
 
-Fortran uses modules to group related declarations, procedures, and constants.
-Modules are an important mechanism for structuring larger programmes.
+Fortran uses modules to group related declarations, procedures, and constants. Modules are an important mechanism for structuring larger programmes. For a larger programme, you would normally move reusable functionality into
+modules and use procedures (functions and subroutines) rather than placing all calculations in the main programme.
 
 The following example defines a module containing a constant and a function
 
@@ -318,50 +329,13 @@ The ``only`` clause makes it explicit which module entities the programme uses.
 This is a useful habit in larger Fortran projects because it makes
 dependencies easier to see.
 
-Writing a Complete Script
--------------------------
-
-Now combine the concepts introduced above into a small programme.
-
-Create a file called ``test.f90`` containing the following
-
-.. code-block:: fortran
-
-    program test
-        implicit none
-
-        real, parameter :: radius = 2.0
-        real, parameter :: pi = 3.141592653589793
-        real :: circumference
-        real :: area
-
-        circumference = 2.0 * pi * radius
-        area = pi * radius ** 2
-
-        print *, "circumference =", circumference
-        print *, "area =", area
-    end program test
-
-Compile and execute it with
+The module must be compiled before, or together with, the programme that uses
+it. A simple approach is to compile both source files in a single command:
 
 .. code-block:: bash
 
-    gfortran test.f90 -o test
-    ./test
+    gfortran geometry.f90 module_example.f90 -o module_example
 
-The programme calculates the circumference and area of a circle with radius
-2. Notice that:
-
-* ``radius`` and ``pi`` are named constants;
-* ``circumference`` and ``area`` are variables;
-* arithmetic operators are used in the expressions;
-* ``print *`` is used to display results;
-* ``implicit none`` prevents accidental implicit variable declarations;
-* comments can be used to document each instruction.
-
-For a larger programme, you would normally move reusable functionality into
-modules and use procedures rather than placing all calculations in the main
-programme.
 
 Your Task
 ---------

@@ -1,5 +1,5 @@
-E001 - Getting Started
-======================
+E001 (Python) - Getting Started
+===============================
 
 In this exercise, you learn about some basic concepts of programming, commonly used tools, and how to write and execute a script. You may come across some important vocabulary that you are not yet familiar with. **We will explore this with the Python programming language.**
 

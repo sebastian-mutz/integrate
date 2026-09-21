@@ -54,21 +54,15 @@ Table of Contents
   
 .. toctree::
    :maxdepth: 2
-   :caption: Coding 101 (Python):
+   :caption: Coding 101:
 
    exercises/info
+   exercises/E001/f90/E001
    exercises/E001/py/E001
    exercises/E002/py/E002
    exercises/E003/py/E003
    exercises/E004/py/E004
    exercises/E005/py/E005
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Coding 101 (Fortran):
-
-   exercises/info
-   exercises/E001/f90/E001
 
 .. toctree::
    :maxdepth: 2

@@ -1,5 +1,5 @@
-E005 - R/W and Visualisation
-=============================
+E005 (Python) - R/W and Visualisation
+=====================================
 
 In this exercise, you will learn about reading from files, writing into files, operations with the *numpy* library and visualising data with the *matplotlib* library. **We will explore this with the Python programming language.**
 

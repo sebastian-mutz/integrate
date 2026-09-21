@@ -1,5 +1,5 @@
-E004 - Classes and Objects
-==========================
+E004 (Python) - Classes and Objects
+===================================
 
 In this exercise, you will learn about creating your own classes and objects. **We will explore this with the Python programming language.**
 
