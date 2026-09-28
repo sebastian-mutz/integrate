@@ -33,9 +33,7 @@ Arrays
 
 Collections of data can hold multiple values, and working with them saves a
 lot of time, effort, and memory. In modern Fortran, an array is a collection
-of values of the same declared type.
-
-For example, we can create an array containing years:
+of values of the same declared type. For example, we can create an array containing years:
 
 .. code-block:: fortran
 
@@ -45,7 +43,6 @@ For example, we can create an array containing years:
 
 The array ``year`` has two elements. A Fortran array has
 a declared type, and all of its elements have that type.
-
 Fortran arrays can also contain character values. For example:
 
 .. code-block:: fortran
@@ -96,13 +93,14 @@ array.
 Fortran arrays - just like mathematical vectors - normally start at index
 **1**. This sets Fortran apart from many other languages that start with the index
 **0** and makes it more intuitive in translating mathematical equations.
+
 A good analogy for indexing are elevator controls that take you to floors with
-different contents. In an elevator panel that follows Fortran-style indexing,
-1 marks the ground floor.
+different levels (contents) by pressing the appropriate floor number (index value).
+In an elevator panel that follows Fortran-style indexing, 1 marks the ground floor.
 
 .. figure:: elevator_cc0.jpg
 
-Consider the code below:
+Let's bring this concept back to coding. Consider the code below:
 
 .. code-block:: fortran
 
@@ -163,6 +161,7 @@ For example:
 
 These intrinsic functions are especially useful because they allow common
 array operations without having to write the corresponding loop yourself.
+
 
 Comparison Operators
 --------------------
@@ -298,6 +297,7 @@ Other useful logical operators include:
 * ``.and.`` -- both conditions must be true;
 * ``.or.`` -- at least one condition must be true;
 * ``.not.`` -- reverses a logical condition.
+
 
 Do Loops
 --------
@@ -489,42 +489,6 @@ Try to keep your code as flexible as possible. Ideally, it should still work
 next year, when a different student may be missing (corresponding to a
 different position in your array) or when more students fail to take the
 exam.
-
-For example, one approach could explicitly loop through the array, ignore the
-sentinel value, and accumulate the sum and number of valid grades:
-
-.. code-block:: fortran
-
-    real :: sum_grades
-    integer :: n
-    integer :: i
-
-    sum_grades = 0.0
-    n = 0
-
-    do i = 1, size(g)
-        if (g(i) /= -9999.0) then
-            sum_grades = sum_grades + g(i)
-            n = n + 1
-        end if
-    end do
-
-    print *, "mean =", sum_grades / n
-
-A second approach could use Fortran's intrinsic array functions together with
-an array mask:
-
-.. code-block:: fortran
-
-    real :: mean
-
-    mean = sum(g, mask=g /= -9999.0) / &
-           real(count(g /= -9999.0))
-
-    print *, "mean =", mean
-
-Make sure you understand how both approaches work rather than simply copying
-them.
 
 Also make sure you comment each executable instruction in the programme to
 let other programmers know what you are doing.
