@@ -494,11 +494,7 @@ Also make sure you comment each executable instruction in the programme to
 let other programmers know what you are doing.
 
 When you are happy with your code, put your two (or more) different methods
-in one file, save it as::
-
-    e002_[your student number].f90
-
-and submit it via ILIAS.
+in one file. Save your programme as `e001_[your student number].f90` and submit it.
 
 .. warning::
 

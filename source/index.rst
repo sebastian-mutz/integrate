@@ -58,9 +58,10 @@ Table of Contents
 
    exercises/info
    exercises/E001/f90/E001
-   exercises/E002/f90/E002
    exercises/E001/py/E001
+   exercises/E002/f90/E002
    exercises/E002/py/E002
+   exercises/E003/f90/E003
    exercises/E003/py/E003
    exercises/E004/py/E004
    exercises/E005/py/E005
