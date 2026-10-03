@@ -20,10 +20,6 @@ Information
 +----------------------+--------------------------------------------------------+
 
 
-.. topic:: What to Submit
-
-      Submit your script(s) for the final task of this exercise. These script should be named ``e003_functions.f90`` and ``e003_main.f90``.
-
 Functions from Modules
 ----------------------
 

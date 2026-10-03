@@ -22,11 +22,6 @@ Information
 |                      | * let your programme make a decision                   |
 +----------------------+--------------------------------------------------------+
 
-What to Submit
-~~~~~~~~~~~~~~
-
-Submit your source file for the final task of this exercise. The file should
-be named ``e002_[your student number].f90``.
 
 Arrays
 ------

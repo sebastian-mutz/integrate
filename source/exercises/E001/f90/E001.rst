@@ -23,10 +23,6 @@ Information
 |                      |   * using built-in functions                           |
 +----------------------+--------------------------------------------------------+
 
-.. topic:: What to Submit
-
-      Submit your script for the final task of this exercise. The script should be named *[your student number]_e001.[ext]*, where *[ext]* is the file extension. In case of Python, this would be *.py*, for modern Fortran it is *.f90*, etc.
-
 
 Workflow Setup
 --------------

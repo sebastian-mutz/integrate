@@ -5,7 +5,8 @@ Introduction
 ------------
 
 In this exercise you will learn how to write your own procedures (functions and
-subroutines) and use them efficiently in a Fortran programme.
+subroutines) and use them efficiently.
+**We will explore this with the Python programming language.**
 
 Information
 -----------
@@ -28,7 +29,7 @@ Procedures
 
 Fortran procedures are independent blocks of code that perform specific tasks to keep code organised and reusable. There are two types of procedures in Fortran:
 
-- `Functions` return a single value and are used directly inside mathematical or logical expressions.
+- `Functions` return a single result and are used directly inside mathematical or logical expressions.
 - `Subroutines` do not return a value directly, but they can modify multiple input arguments. They can be used with the ``call`` statement.
 
 
@@ -77,7 +78,7 @@ Call a subroutine using ``call``:
 .. code-block:: fortran
 
    real :: total
-   call add_values(2.0, 3.0, total)
+   call s_add_values(2.0, 3.0, total)
 
 A subroutine will also allow the return of multiple values. Consider the example below:
 
@@ -90,7 +91,7 @@ A subroutine will also allow the return of multiple values. Consider the example
        product = a * b
    end subroutine s_use_values
 
-Here, the subroutine carries out 2 calculations and returms the results as two separate
+Here, the subroutine carries out 2 calculations and returns the results as two separate
 values (``total`` and ``product``)
 
 Modules
@@ -125,22 +126,13 @@ with the ``use`` statement as below:
    end program example
 
 
-Functions from Modules
-----------------------
-
-Fortran provides many useful intrinsic functions, such as ``sqrt`` and
-``sin``.
-
-.. code-block:: fortran
-
-   program intrinsic_functions
-       implicit none
-       print *, sqrt(25.0)
-       print *, sin(1.0)
-   end program intrinsic_functions
-
 Cashier Function Example
 ------------------------
+
+Let us explore functions a little more through another example. Remember that a function is a unit of code that performs a specific task based on so called input *arguments*, i.e. options and values you pass to the function when calling it, to calculate and return one value. A useful analogy for this is a cashier desk at a store.
+
+.. figure:: cashier_cc0.jpg
+
 
 Create ``cashier.f90``:
 
@@ -174,6 +166,13 @@ Create ``cashier.f90``:
 The ``lookup_price`` function returns a product price. The
 ``calculate_total`` function loops over the product list and adds the prices.
 
+.. note::
+
+   Using ``if`` statements for anything like this is not particularly elegant.
+   Instead, we would read prices from a file and/or use Fortran's ``derived types``,
+   which allow you bundle different data under a single name. In this case, we could
+   have a derived type called ``product`` that stores the product name and price.
+
 Create ``cashier_example.f90``:
 
 .. code-block:: fortran
@@ -196,34 +195,23 @@ elements have the same length.
 
 Compile both files together:
 
-.. code-block:: console
+.. code-block:: bash
 
    gfortran cashier.f90 cashier_example.f90 -o cashier_example
 
 Run the programme:
 
-.. code-block:: console
+.. code-block:: bash
 
    ./cashier_example
 
-Modules can also be compiled separately:
-
-.. code-block:: console
-
-   gfortran -c cashier.f90
-   gfortran -c cashier_example.f90
-   gfortran cashier.o cashier_example.o -o cashier_example
-
-The first command creates ``cashier.mod`` as well as ``cashier.o``. The
-``cashier.mod`` file contains information the compiler needs when another
-source file uses the module.
 
 A Function That Prints
 ~~~~~~~~~~~~~~~~~~~~~~
 
 A procedure that calculates and prints a total can instead be written as a
-subroutine. If it is another procedure in the ``cashier`` module, it can use
-``lookup_price`` directly.
+subroutine. If it is another procedure in the ``cashier`` module (placed inside
+the ``contains`` section), it can use ``lookup_price`` directly.
 
 .. code-block:: fortran
 
@@ -253,22 +241,35 @@ action.
 Unit Converter Module
 ---------------------
 
-Create ``unit_converter.f90``:
+Let's look at another example of functions. Create ``unit_converter.f90``:
 
 .. code-block:: fortran
 
+   ! This is a module consisting of several function to convert units.
    module unit_converter
        implicit none
    contains
-       real function k2c(kelvin)
-           real, intent(in) :: kelvin
-           k2c = kelvin - 273.15
-       end function k2c
 
-       real function c2k(celsius)
+       function f_k2c(kelvin) result(celsius)
+           ! This function converts Kelvin to Celsius.
+           ! Input (argument): value in Kelvin
+           ! Output (returned): value in Celsius
+
+           real, intent(in) :: kelvin
+           real             :: celsius
+           celsius = kelvin - 273.15
+       end function f_k2c
+
+       function f_c2k(celsius) result(kelvin)
+           ! This function converts Celsius to Kelvin.
+           ! Input (argument): value in Celsius
+           ! Output (returned): value in Kelvin
+
            real, intent(in) :: celsius
-           c2k = celsius + 273.15
-       end function c2k
+           real             :: kelvin
+           kelvin = celsius + 273.15
+       end function f_c2k
+
    end module unit_converter
 
 Use the functions from a programme:
@@ -276,23 +277,23 @@ Use the functions from a programme:
 .. code-block:: fortran
 
    program convert_example
-       use unit_converter, only: k2c, c2k
+       use unit_converter, only: f_k2c, f_c2k
        implicit none
 
-       print *, k2c(10.3)
-       print *, c2k(20.0)
+       print *, f_k2c(10.3)
+       print *, f_c2k(20.0)
    end program convert_example
 
 Compile and run:
 
-.. code-block:: console
+.. code-block:: bash
 
    gfortran unit_converter.f90 convert_example.f90 -o convert_example
    ./convert_example
 
 You could extend this module with additional conversion functions, including
-the millimetres-per-day and millimetres-per-annum conversions from the
-original exercise.
+the millimetres-per-day and millimetres-per-annum conversions. Thematically,
+it would fit within the same module.
 
 Task
 ----
@@ -300,69 +301,9 @@ Task
 In the previous exercise you calculated the mean grade while ignoring the
 missing-value marker ``-9999.0``. Restructure that programme using functions.
 
-Create one function for each method you used to calculate the mean. A
-loop-based method could be:
-
-.. code-block:: fortran
-
-   real function mean_loop(g)
-       real, intent(in) :: g(:)
-       real :: sum_grades
-       integer :: n
-       integer :: i
-
-       sum_grades = 0.0
-       n = 0
-
-       do i = 1, size(g)
-           if (g(i) /= -9999.0) then
-               sum_grades = sum_grades + g(i)
-               n = n + 1
-           end if
-       end do
-
-       mean_loop = sum_grades / real(n)
-   end function mean_loop
-
-A second method can use intrinsic array functions:
-
-.. code-block:: fortran
-
-   real function mean_array(g)
-       real, intent(in) :: g(:)
-       integer :: n
-
-       n = count(g /= -9999.0)
-       mean_array = sum(g, mask=g /= -9999.0) / real(n)
-   end function mean_array
-
-Place both functions in a module:
-
-.. code-block:: fortran
-
-   module mean_functions
-       implicit none
-   contains
-       ! Place mean_loop here.
-       ! Place mean_array here.
-   end module mean_functions
-
-The main programme should import and call the functions:
-
-.. code-block:: fortran
-
-   program mean_main
-       use mean_functions, only: mean_loop, mean_array
-       implicit none
-
-       real :: g(10)
-
-       g = [1.7, 2.0, -9999.0, 2.3, 1.3, &
-            1.0, 1.3, 3.3, 1.7, 1.0]
-
-       print *, "Mean using loop =", mean_loop(g)
-       print *, "Mean using array functions =", mean_array(g)
-   end program mean_main
+Create one function for each method you used to calculate the mean, and place
+both functions in a module. Your main programme should then import and call the
+functions.
 
 Think carefully about:
 
@@ -375,35 +316,15 @@ Think carefully about:
 Files to submit
 ---------------
 
-Submit two Fortran source files:
+Your submission should consist of two Fortran source files.
 
+1. The module containing your functions:
 ``e003_functions_[student number].f90``
-    The module containing your functions.
 
+2. The main programme that uses the functions:
 ``e003_main_[student number].f90``
-    The main programme that imports and uses the functions.
 
-Compile them together:
+Submit the two files as a zip archive (``e003.zip`` or ``e003.tar.gz``).
 
-.. code-block:: console
-
-   gfortran e003_functions_[your student number].f90        e003_main_[your student number].f90        -o e003_main
-
-Or compile separately:
-
-.. code-block:: console
-
-   gfortran -c e003_functions_[your student number].f90
-   gfortran -c e003_main_[your student number].f90
-   gfortran e003_functions_[your student number].o        e003_main_[your student number].o        -o e003_main
-
-Run the programme:
-
-.. code-block:: console
-
-   ./e003_main
-
-Submit the two files as a zip archive, following the course submission
-instructions.
-
-Late submissions won't be accepted!
+.. warning::
+   Late submissions won't be accepted!
